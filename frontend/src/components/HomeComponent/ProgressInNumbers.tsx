@@ -1,4 +1,8 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, lazy, Suspense } from "react";
+
+const ParticleEarth = lazy(() =>
+  import("../ParticleEarth").then((m) => ({ default: m.ParticleEarth }))
+);
 
 const STATS = [
   { value: "32+", label: "Years of Legacy" },
@@ -27,28 +31,29 @@ function easeOutCubic(t: number): number {
 }
 
 function GlobeGraphic() {
-  const [imgError, setImgError] = useState(false);
-
   return (
     <div
-      className="relative w-full flex items-center justify-center overflow-hidden"
+      className="relative w-full overflow-hidden rounded-2xl sm:rounded-3xl bg-[#05080c] ring-1 ring-white/10 shadow-2xl shadow-cyan-950/20"
       style={{ aspectRatio: "1", minHeight: "280px" }}
     >
-      {!imgError ? (
-        <img
-          src="/q2NUWUbiBuu98aEIy2fpjuA5yv0.avif"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-          onError={() => setImgError(true)}
-          aria-hidden
-          decoding="async"
-          loading="lazy"
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 45%, rgba(34,211,238,0.12), transparent 70%)",
+        }}
+        aria-hidden
+      />
+      <Suspense fallback={<div className="absolute inset-0 bg-[#05080c]" aria-hidden />}>
+        <ParticleEarth
+          particleColor="#22d3ee"
+          lineColor="#67e8f9"
+          particleSize={0.14}
+          lineOpacity={0.18}
+          autoRotationSpeed={0.85}
+          assembleOnLoad
         />
-      ) : (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4 text-center text-gray-500 text-sm">
-          <p className="font-medium">Image not loaded</p>
-        </div>
-      )}
+      </Suspense>
     </div>
   );
 }
@@ -108,11 +113,11 @@ export function ProgressInNumbers() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-10 xl:gap-12 items-center">
-          {/* Left: title, subtitle, stats grid */}
           <div className="space-y-6">
             <div
-              className={`transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
+              className={`transition-all duration-700 ease-out ${
+                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
             >
               <h2 className="text-4xl md:text-5xl lg:text-[52px] font-light text-(--apple-black) tracking-tight leading-[1.08] max-w-2xl">
                 Progress in Numbers
@@ -126,8 +131,9 @@ export function ProgressInNumbers() {
               {STATS.map((stat, index) => (
                 <div
                   key={index}
-                  className={`group rounded-xl border border-gray-100 bg-white/80 px-4 py-3 sm:px-4 sm:py-3.5 shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:border-red-100/80 hover:bg-white ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                    }`}
+                  className={`group rounded-xl border border-gray-100 bg-white/80 px-4 py-3 sm:px-4 sm:py-3.5 shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:border-red-100/80 hover:bg-white ${
+                    inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                  }`}
                   style={{ transitionDelay: `${180 + index * 50}ms` }}
                 >
                   <div className="text-xl sm:text-2xl font-bold text-red-600 tracking-tight tabular-nums group-hover:text-red-700 transition-colors duration-300 ease-out">
@@ -141,13 +147,13 @@ export function ProgressInNumbers() {
             </div>
           </div>
 
-          {/* Right: image - shifted down to align with left stats */}
           <div
-            className={`relative w-full min-h-[280px] flex justify-center pt-12 lg:pt-20 transition-all duration-700 ease-out ${inView ? "opacity-100 scale-100" : "opacity-0 scale-95"
-              }`}
+            className={`relative w-full min-h-[280px] flex justify-center pt-6 sm:pt-10 lg:pt-12 transition-all duration-700 ease-out ${
+              inView ? "opacity-100 scale-100" : "opacity-0 scale-95"
+            }`}
             style={{ transitionDelay: "300ms" }}
           >
-            <div className="w-full max-w-[480px] overflow-hidden">
+            <div className="w-full max-w-[480px] lg:max-w-[520px]">
               <GlobeGraphic />
             </div>
           </div>

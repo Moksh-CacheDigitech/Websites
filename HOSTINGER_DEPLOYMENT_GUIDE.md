@@ -1,106 +1,82 @@
-# Hostinger Deployment Guide for Cache Digitech
+# Hostinger Deployment Guide - Cache Digitech
 
-## Prerequisites
-- Hostinger hosting account with cPanel access
-- Built React application (already completed)
-- FTP client or File Manager access
+This site is set up for **Hostinger Node.js Web Apps** (Business / Cloud plans). Hostinger builds the Vite app, then runs `server.js` to serve it.
 
-## Deployment Steps
+## hPanel settings (use these exactly)
 
-### Step 1: Access Your Hostinger Control Panel
-1. Log in to your Hostinger account
-2. Navigate to your hosting dashboard
-3. Click on "Manage" for your domain
-4. Open "File Manager" or use FTP client
+| Field | Value |
+| --- | --- |
+| Framework / Application type | `Express` or `Other` |
+| Node.js version | `22` (or `20`) |
+| Build command | `npm run build` |
+| Output directory | leave blank (or `frontend/dist` if the panel requires one) |
+| Entry file | `server.js` |
+| Package manager | `npm` |
 
-### Step 2: Prepare Your Files
-The production build is ready in the `frontend/dist` folder with:
-- ✅ Optimized JavaScript and CSS files
-- ✅ All static assets (images, fonts, etc.)
-- ✅ .htaccess file for proper routing
-- ✅ index.html as entry point
+Do **not** hand-edit `public_html/.htaccess` on Node.js hosting - Hostinger regenerates it on redeploy. Routing and real HTTP 404s for unknown paths are handled in `server.js`.
 
-### Step 3: Upload Files to Hostinger
-1. **Using File Manager:**
-   - Navigate to `public_html` folder (or your domain's root folder)
-   - Delete any existing files (if this is a fresh deployment)
-   - Upload ALL contents from `frontend/dist` folder
-   - Ensure .htaccess file is uploaded (it handles React routing)
+## Deploy from GitHub (recommended)
 
-2. **Using FTP Client:**
-   - Connect to your Hostinger FTP
-   - Navigate to `public_html` directory
-   - Upload all files from `frontend/dist` folder
-   - Set proper file permissions (644 for files, 755 for folders)
+1. Push this repo to GitHub (include root `package.json` and `server.js`).
+2. In hPanel: **Websites → Add Website → Node.js web app**.
+3. Choose **Import Git repository** and connect the repo.
+4. Confirm the settings in the table above, then **Deploy**.
+5. Later pushes to the connected branch trigger rebuilds automatically.
 
-### Step 4: Configure Domain Settings
-1. Ensure your domain points to the `public_html` folder
-2. If using a subdomain, point it to the correct subfolder
-3. Enable HTTPS if available (recommended)
+## Deploy from a zip archive
 
-### Step 5: Test Your Deployment
-1. Visit your domain in a web browser
-2. Test all navigation routes
-3. Check that images and assets load correctly
-4. Verify responsive design on mobile devices
+1. From the repo root (exclude `node_modules` and `.git`):
 
-## Important Files Structure After Upload:
+```bash
+# Linux / macOS
+zip -r cachedigitech.zip . -x "node_modules/*" -x "frontend/node_modules/*" -x ".git/*" -x "*.zip"
+
+# PowerShell (Windows)
+Compress-Archive -Path * -DestinationPath cachedigitech.zip -Force
 ```
-public_html/
-├── index.html (main entry point)
-├── .htaccess (routing configuration)
-├── assets/
-│   ├── index-[hash].js (main JavaScript)
-│   ├── index-[hash].css (main CSS)
-│   └── fonts/
-├── images/
-├── servicesimages/
-├── Partners/
-└── [all other static assets]
+
+2. In hPanel: **Websites → Add Website → Node.js web app → Upload your files**.
+3. Upload the archive, confirm the settings above, then **Deploy**.
+
+## What the build does
+
+1. Root `npm install` installs Express (`server.js` runtime).
+2. `npm run build` installs frontend deps (including Vite) and runs `vite build` → `frontend/dist`.
+3. Hostinger starts `server.js`, which listens on `process.env.PORT` and serves `frontend/dist`.
+
+## Local verify (same as Hostinger)
+
+```bash
+npm install
+npm run build
+npm start
 ```
+
+Open `http://localhost:3000` and check a few deep links (refresh on `/about`, `/cloudservices`, etc.). An unknown path such as `/mn` should return **HTTP 404** while still showing the site 404 UI.
+
+## Optional: static upload only (no Node process)
+
+If you prefer classic File Manager hosting instead of a Node.js Web App:
+
+1. Run `npm run build` locally.
+2. Upload **contents** of `frontend/dist` into `public_html`.
+3. Keep the built `.htaccess` (copied from `frontend/public/.htaccess`) so SPA routes and real 404s work on Apache.
+
+This path does not use `server.js`.
 
 ## Troubleshooting
 
-### Common Issues:
-1. **404 Errors on valid Route Navigation / refresh:**
-   - Ensure `.htaccess` from `frontend/dist` (copied from `frontend/public/.htaccess`) is uploaded
-   - Check that `mod_rewrite` is enabled on Hostinger
-   - New routes must be added to the allowlist in `.htaccess` or they will return HTTP 404
+| Symptom | Fix |
+| --- | --- |
+| Build fails: missing `package.json` | Deploy from repo **root** (where root `package.json` lives), not from `frontend/` alone |
+| Build fails on `sharp` / `ffmpeg-static` | Those are `optionalDependencies` for local image scripts only; they must not block production builds. Redeploy or clear build cache |
+| App up but blank / 503 | Entry file must be `server.js`; check Runtime Logs; confirm `PORT` is not hardcoded |
+| Deep links 404 after refresh | You are on Node hosting - routing is in `server.js`, not `.htaccess`. Redeploy so Hostinger regenerates its proxy `.htaccess` |
+| 403 after redeploy | Redeploy again so Hostinger regenerates `public_html/.htaccess` (do not hand-edit it) |
+| New React route returns 404 | Add the path to `frontend/spaRouteAllowlist.js` and mirror it in `frontend/public/.htaccess` for static deploys |
 
-2. **Unknown URLs should return HTTP 404 (not 200):**
-   - Current `.htaccess` only rewrites **known** SPA paths to `index.html` (status 200)
-   - Unknown paths (e.g. `/mn`) use `ErrorDocument 404 /index.html` so the **response status is 404** while still loading the React 404 UI
-   - After changing routes in `App.jsx`, update the allowlist rules in `frontend/public/.htaccess`
+## Security notes
 
-3. **Images Not Loading:**
-   - Verify all image paths are correct
-   - Check file permissions (should be 644)
-
-4. **CSS/JS Not Loading:**
-   - Clear browser cache
-   - Check if files are uploaded correctly
-   - Verify file permissions
-
-### Performance Optimization:
-1. Enable Gzip compression in cPanel
-2. Set up browser caching rules
-3. Consider using Hostinger's CDN if available
-
-## File Sizes:
-- Total build size: ~1.2MB
-- Main JS bundle: ~954KB (275KB gzipped)
-- CSS bundle: ~127KB (19KB gzipped)
-
-## Security Notes:
-- .htaccess file is configured for proper routing
-- No sensitive information exposed in frontend build
-- All API endpoints should use HTTPS
-
-## Support:
-If you encounter issues:
-1. Check Hostinger's documentation
-2. Contact Hostinger support
-3. Verify file permissions and .htaccess configuration
-
----
-**Deployment completed successfully! Your Cache Digitech website should now be live on Hostinger.**
+- No secrets belong in the frontend bundle.
+- Set any future env vars in hPanel → Environment variables (not in git).
+- `server.js` binds to `0.0.0.0` and `process.env.PORT` as required by Hostinger.

@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import { getConsent, setConsent as setConsentStorage, resetConsent as resetConsentStorage } from '../utils/cookieManager';
 
 const CookieConsentContext = createContext(null);
 
-/** GA measurement ID - only load when consent === 'accepted' */
-const GA_MEASUREMENT_ID = 'G-S517TXV48S';
+/** GA4 Measurement ID - only load when consent === 'accepted' */
+const GA_MEASUREMENT_ID = 'G-HZ6PE1Q290';
 
 function loadGoogleAnalytics() {
   if (typeof window === 'undefined' || window.gtag) return;
@@ -71,4 +72,19 @@ export function useCookieConsent() {
     throw new Error('useCookieConsent must be used within CookieConsentProvider');
   }
   return ctx;
+}
+
+/** Send SPA page views to GA4 after cookie consent. */
+export function AnalyticsPageViews() {
+  const location = useLocation();
+  const { consent } = useCookieConsent();
+
+  useEffect(() => {
+    if (consent !== 'accepted' || typeof window.gtag !== 'function') return;
+    window.gtag('config', GA_MEASUREMENT_ID, {
+      page_path: location.pathname + location.search,
+    });
+  }, [location.pathname, location.search, consent]);
+
+  return null;
 }

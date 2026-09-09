@@ -12,6 +12,7 @@ import { isKnownSpaRoute } from "../spaRouteAllowlist.js";
 import Navbar from "./components/HomeComponent/Navbar";
 import Footer from "./components/HomeComponent/Footer";
 import CookieBanner from "./components/CookieBanner";
+import { AnalyticsPageViews } from "./context/CookieConsentContext";
 import { AnimatedRoutes } from "./components/AnimatedRoutes";
 import NotFoundPage from "./Pages/NotFoundPage";
 
@@ -179,6 +180,7 @@ function App() {
         </main>
         <Footer />
         <CookieBanner />
+        <AnalyticsPageViews />
       </div>
     </>
   );
