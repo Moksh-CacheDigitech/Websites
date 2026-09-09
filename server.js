@@ -1,5 +1,5 @@
 /**
- * Hostinger Node.js entry - serves the Vite production build from frontend/dist.
+ * Hostinger Node.js entry - serves the Vite production build.
  * Listens on process.env.PORT (required by Hostinger).
  *
  * SPA behavior matches frontend/public/.htaccess:
@@ -18,49 +18,71 @@ import {
 } from "./frontend/spaRouteAllowlist.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const distDir = path.join(__dirname, "frontend", "dist");
-const indexHtml = path.join(distDir, "index.html");
-const port = Number(process.env.PORT) || 3000;
 
-if (!fs.existsSync(indexHtml)) {
-  console.error(
-    `[server] Missing ${indexHtml}. Run "npm run build" before start.`
-  );
-  process.exit(1);
+function resolveDistDir() {
+  const candidates = [
+    path.join(__dirname, "dist"),
+    path.join(__dirname, "frontend", "dist"),
+  ];
+  for (const dir of candidates) {
+    if (fs.existsSync(path.join(dir, "index.html"))) return dir;
+  }
+  return null;
 }
+
+const distDir = resolveDistDir();
+const port = Number(process.env.PORT) || 3000;
 
 const app = express();
 app.disable("x-powered-by");
 app.use(compression());
 
-app.use(
-  express.static(distDir, {
-    index: false,
-    maxAge: "1y",
-    setHeaders(res, filePath) {
-      if (filePath.endsWith(`${path.sep}index.html`) || filePath.endsWith("index.html")) {
-        res.setHeader("Cache-Control", "no-cache");
-      }
-    },
-  })
-);
+if (!distDir) {
+  console.error(
+    "[server] Build output missing. Expected dist/index.html or frontend/dist/index.html. Set Build command to: npm run build"
+  );
+  app.get("*", (_req, res) => {
+    res
+      .status(503)
+      .type("html")
+      .send(
+        "<!doctype html><html><body><h1>Build output missing</h1><p>In hPanel set Build command to <code>npm run build</code>, Entry file to <code>server.js</code>, then Redeploy.</p></body></html>"
+      );
+  });
+} else {
+  const indexHtml = path.join(distDir, "index.html");
+  console.log(`[server] Serving static files from ${distDir}`);
 
-app.get("*", (req, res) => {
-  const urlPath = req.path || "/";
+  app.use(
+    express.static(distDir, {
+      index: false,
+      maxAge: "1y",
+      setHeaders(res, filePath) {
+        if (filePath.endsWith("index.html")) {
+          res.setHeader("Cache-Control", "no-cache");
+        }
+      },
+    })
+  );
 
-  if (shouldSkipSpaCheck(urlPath)) {
-    res.status(404).type("text").send("Not Found");
-    return;
-  }
+  app.get("*", (req, res) => {
+    const urlPath = req.path || "/";
 
-  if (isKnownSpaRoute(urlPath)) {
-    res.sendFile(indexHtml);
-    return;
-  }
+    if (shouldSkipSpaCheck(urlPath)) {
+      res.status(404).type("text").send("Not Found");
+      return;
+    }
 
-  res.status(404).sendFile(indexHtml);
-});
+    if (isKnownSpaRoute(urlPath)) {
+      res.sendFile(indexHtml);
+      return;
+    }
 
-app.listen(port, "0.0.0.0", () => {
-  console.log(`[server] Cache Digitech listening on 0.0.0.0:${port}`);
+    res.status(404).sendFile(indexHtml);
+  });
+}
+
+// Hostinger assigns PORT; do not hardcode. Match their Express docs (no host bind).
+app.listen(port, () => {
+  console.log(`[server] Cache Digitech listening on port ${port}`);
 });

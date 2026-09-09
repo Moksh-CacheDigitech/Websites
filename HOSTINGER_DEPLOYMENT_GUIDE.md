@@ -8,10 +8,19 @@ This site is set up for **Hostinger Node.js Web Apps** (Business / Cloud plans).
 | --- | --- |
 | Framework / Application type | `Express` or `Other` |
 | Node.js version | `22` (or `20`) |
-| Build command | `npm run build` |
-| Output directory | leave blank (or `frontend/dist` if the panel requires one) |
+| Build command | `npm run build` (**required** - do not leave blank) |
+| Output directory | `dist` |
 | Entry file | `server.js` |
 | Package manager | `npm` |
+
+### 503 Service Unavailable
+
+Usually means the Node process crashed or never started. Most common cause: **Build command left blank** (Express default), so `dist/` was never created and the app could not serve files.
+
+1. Open the website in hPanel → Deployments / Runtime Logs.
+2. Confirm Build command is `npm run build` and Entry file is `server.js`.
+3. Click **Redeploy** / **Restart**.
+4. If build logs show OOM or timeout, pick Node 22 and redeploy once more.
 
 Do **not** hand-edit `public_html/.htaccess` on Node.js hosting - Hostinger regenerates it on redeploy. Routing and real HTTP 404s for unknown paths are handled in `server.js`.
 
@@ -41,8 +50,8 @@ Compress-Archive -Path * -DestinationPath cachedigitech.zip -Force
 ## What the build does
 
 1. Root `npm install` installs Express (`server.js` runtime).
-2. `npm run build` installs frontend deps (including Vite) and runs `vite build` → `frontend/dist`.
-3. Hostinger starts `server.js`, which listens on `process.env.PORT` and serves `frontend/dist`.
+2. `npm run build` installs frontend deps (including Vite), runs `vite build` → `frontend/dist`, then copies to root `dist/`.
+3. Hostinger starts `server.js`, which listens on `process.env.PORT` and serves `dist/`.
 
 ## Local verify (same as Hostinger)
 
@@ -70,7 +79,7 @@ This path does not use `server.js`.
 | --- | --- |
 | Build fails: missing `package.json` | Deploy from repo **root** (where root `package.json` lives), not from `frontend/` alone |
 | Build fails on `sharp` / `ffmpeg-static` | Those are `optionalDependencies` for local image scripts only; they must not block production builds. Redeploy or clear build cache |
-| App up but blank / 503 | Entry file must be `server.js`; check Runtime Logs; confirm `PORT` is not hardcoded |
+| App up but blank / 503 | Entry file must be `server.js`; Build command must be `npm run build`; Output directory `dist`; check Runtime Logs |
 | Deep links 404 after refresh | You are on Node hosting - routing is in `server.js`, not `.htaccess`. Redeploy so Hostinger regenerates its proxy `.htaccess` |
 | 403 after redeploy | Redeploy again so Hostinger regenerates `public_html/.htaccess` (do not hand-edit it) |
 | New React route returns 404 | Add the path to `frontend/spaRouteAllowlist.js` and mirror it in `frontend/public/.htaccess` for static deploys |
