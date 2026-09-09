@@ -1,11 +1,8 @@
 /**
- * Hostinger Node.js entry - serves the Vite production build.
- * Listens on process.env.PORT (required by Hostinger).
+ * Hostinger Node.js entry (optional local / Express mode).
+ * Preferred Hostinger deploy is static React (no entry file) - see HOSTINGER_DEPLOYMENT_GUIDE.md.
  *
- * SPA behavior matches frontend/public/.htaccess:
- * - Known routes → index.html (200)
- * - Unknown HTML navigations → index.html with HTTP 404 (React 404 UI)
- * - Missing static assets → plain 404
+ * Serves Vite build from the first folder that contains index.html.
  */
 import compression from "compression";
 import express from "express";
@@ -18,14 +15,26 @@ import {
 } from "./frontend/spaRouteAllowlist.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const cwd = process.cwd();
 
 function resolveDistDir() {
   const candidates = [
     path.join(__dirname, "dist"),
     path.join(__dirname, "frontend", "dist"),
+    path.join(cwd, "dist"),
+    path.join(cwd, "frontend", "dist"),
+    // Hostinger sometimes publishes Output directory into public_html
+    path.join(__dirname, "..", "public_html"),
+    path.join(cwd, "public_html"),
+    path.join(__dirname, "..", "public_html", "dist"),
+    path.join(cwd, "public_html", "dist"),
   ];
   for (const dir of candidates) {
-    if (fs.existsSync(path.join(dir, "index.html"))) return dir;
+    try {
+      if (fs.existsSync(path.join(dir, "index.html"))) return dir;
+    } catch {
+      // ignore unreadable paths
+    }
   }
   return null;
 }
@@ -39,15 +48,23 @@ app.use(compression());
 
 if (!distDir) {
   console.error(
-    "[server] Build output missing. Expected dist/index.html or frontend/dist/index.html. Set Build command to: npm run build"
+    "[server] Build output missing. For Hostinger use Application type React, Build: npm run build, Output: dist, Entry file: (empty)."
   );
   app.get("*", (_req, res) => {
     res
       .status(503)
       .type("html")
-      .send(
-        "<!doctype html><html><body><h1>Build output missing</h1><p>In hPanel set Build command to <code>npm run build</code>, Entry file to <code>server.js</code>, then Redeploy.</p></body></html>"
-      );
+      .send(`<!doctype html><html><body style="font-family:sans-serif;max-width:40rem;margin:2rem auto;padding:0 1rem">
+<h1>Build output missing</h1>
+<p>This site should be deployed as a <strong>static React</strong> app on Hostinger (not Express).</p>
+<ol>
+<li>Application type: <code>React</code></li>
+<li>Build command: <code>npm run build</code></li>
+<li>Output directory: <code>dist</code></li>
+<li>Entry file: <strong>leave empty</strong></li>
+<li>Redeploy</li>
+</ol>
+</body></html>`);
   });
 } else {
   const indexHtml = path.join(distDir, "index.html");
@@ -82,7 +99,6 @@ if (!distDir) {
   });
 }
 
-// Hostinger assigns PORT; do not hardcode. Match their Express docs (no host bind).
 app.listen(port, () => {
   console.log(`[server] Cache Digitech listening on port ${port}`);
 });

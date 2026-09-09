@@ -1,59 +1,44 @@
 # Hostinger Deployment Guide - Cache Digitech
 
-This site is set up for **Hostinger Node.js Web Apps** (Business / Cloud plans). Hostinger builds the Vite app, then runs `server.js` to serve it.
+This site is a **Vite + React SPA**. On Hostinger Node.js Web Apps, deploy it as **static React** (Hostinger builds `dist/` and serves those files). Do **not** use Express / `server.js` on Hostinger.
 
 ## hPanel settings (use these exactly)
 
 | Field | Value |
 | --- | --- |
-| Framework / Application type | `Express` or `Other` |
+| Framework / Application type | **`React`** (or `Vite`) |
 | Node.js version | `22` (or `20`) |
-| Build command | `npm run build` (**required** - do not leave blank) |
+| Build command | `npm run build` |
 | Output directory | `dist` |
-| Entry file | `server.js` |
+| Entry file | **leave empty** |
 | Package manager | `npm` |
 
-### 503 Service Unavailable
+### You are seeing "Build output missing"
 
-Usually means the Node process crashed or never started. Most common cause: **Build command left blank** (Express default), so `dist/` was never created and the app could not serve files.
+That page means Hostinger is still running **`server.js` (Express mode)**. Express + Output `dist` often moves the build out of the Node app folder, so the server cannot find `index.html`.
 
-1. Open the website in hPanel → Deployments / Runtime Logs.
-2. Confirm Build command is `npm run build` and Entry file is `server.js`.
-3. Click **Redeploy** / **Restart**.
-4. If build logs show OOM or timeout, pick Node 22 and redeploy once more.
+**Fix in hPanel → change settings → Redeploy:**
 
-Do **not** hand-edit `public_html/.htaccess` on Node.js hosting - Hostinger regenerates it on redeploy. Routing and real HTTP 404s for unknown paths are handled in `server.js`.
+1. Application type → **React**
+2. Entry file → **clear / empty** (remove `server.js`)
+3. Build command → `npm run build`
+4. Output directory → `dist`
+5. Save and **Redeploy**
 
 ## Deploy from GitHub (recommended)
 
-1. Push this repo to GitHub (include root `package.json` and `server.js`).
+1. Push this repo to GitHub (repo **root** has `package.json`).
 2. In hPanel: **Websites → Add Website → Node.js web app**.
-3. Choose **Import Git repository** and connect the repo.
-4. Confirm the settings in the table above, then **Deploy**.
-5. Later pushes to the connected branch trigger rebuilds automatically.
-
-## Deploy from a zip archive
-
-1. From the repo root (exclude `node_modules` and `.git`):
-
-```bash
-# Linux / macOS
-zip -r cachedigitech.zip . -x "node_modules/*" -x "frontend/node_modules/*" -x ".git/*" -x "*.zip"
-
-# PowerShell (Windows)
-Compress-Archive -Path * -DestinationPath cachedigitech.zip -Force
-```
-
-2. In hPanel: **Websites → Add Website → Node.js web app → Upload your files**.
-3. Upload the archive, confirm the settings above, then **Deploy**.
+3. Import the Git repository / branch `CacheDigitech.com`.
+4. Set the table above (React, no entry file), then **Deploy**.
 
 ## What the build does
 
-1. Root `npm install` installs Express (`server.js` runtime).
-2. `npm run build` installs frontend deps (including Vite), runs `vite build` → `frontend/dist`, then copies to root `dist/`.
-3. Hostinger starts `server.js`, which listens on `process.env.PORT` and serves `dist/`.
+1. Root `npm install` (light - Express is only for local preview).
+2. `npm run build` installs the Vite app under `frontend/`, builds it, then copies `frontend/dist` → root `dist/`.
+3. Hostinger publishes `dist/` to the site (static files + `.htaccess` for SPA routes).
 
-## Local verify (same as Hostinger)
+## Local preview
 
 ```bash
 npm install
@@ -61,31 +46,27 @@ npm run build
 npm start
 ```
 
-Open `http://localhost:3000` and check a few deep links (refresh on `/about`, `/cloudservices`, etc.). An unknown path such as `/mn` should return **HTTP 404** while still showing the site 404 UI.
+`npm start` runs `server.js` locally only. Hostinger production should not use an entry file.
 
-## Optional: static upload only (no Node process)
+## Optional: classic File Manager upload
 
-If you prefer classic File Manager hosting instead of a Node.js Web App:
-
-1. Run `npm run build` locally.
-2. Upload **contents** of `frontend/dist` into `public_html`.
-3. Keep the built `.htaccess` (copied from `frontend/public/.htaccess`) so SPA routes and real 404s work on Apache.
-
-This path does not use `server.js`.
+1. `npm run build` locally.
+2. Upload **contents** of `dist/` (or `frontend/dist/`) into `public_html`.
+3. Keep `.htaccess` so deep links and real 404s work.
 
 ## Troubleshooting
 
 | Symptom | Fix |
 | --- | --- |
-| Build fails: missing `package.json` | Deploy from repo **root** (where root `package.json` lives), not from `frontend/` alone |
-| Build fails on `sharp` / `ffmpeg-static` | Those are `optionalDependencies` for local image scripts only; they must not block production builds. Redeploy or clear build cache |
-| App up but blank / 503 | Entry file must be `server.js`; Build command must be `npm run build`; Output directory `dist`; check Runtime Logs |
-| Deep links 404 after refresh | You are on Node hosting - routing is in `server.js`, not `.htaccess`. Redeploy so Hostinger regenerates its proxy `.htaccess` |
-| 403 after redeploy | Redeploy again so Hostinger regenerates `public_html/.htaccess` (do not hand-edit it) |
-| New React route returns 404 | Add the path to `frontend/spaRouteAllowlist.js` and mirror it in `frontend/public/.htaccess` for static deploys |
+| "Build output missing" | Switch to **React**, clear Entry file, Output `dist`, Redeploy |
+| 503 Service Unavailable | Same as above; check Deployments build logs for a failed `npm run build` |
+| Build fails: missing `package.json` | Deploy from repo **root**, not `frontend/` alone |
+| Build fails on `sharp` / `ffmpeg-static` | Optional local image tools only; should not block production. Clear cache and redeploy |
+| Deep links 404 after refresh | Confirm `.htaccess` is inside published `dist` (from `frontend/public/.htaccess`) |
+| 403 after redeploy | Redeploy again; do not hand-edit Hostinger-generated proxy files if any |
+| New React route returns 404 | Add it to `frontend/spaRouteAllowlist.js` and `frontend/public/.htaccess` |
 
 ## Security notes
 
-- No secrets belong in the frontend bundle.
-- Set any future env vars in hPanel → Environment variables (not in git).
-- `server.js` binds to `0.0.0.0` and `process.env.PORT` as required by Hostinger.
+- No secrets in the frontend bundle.
+- Set env vars only in hPanel if needed later.
