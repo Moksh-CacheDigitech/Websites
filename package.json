@@ -3,18 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Cache Digitech website - Hostinger Node.js Web App",
+  "description": "Cache Digitech website - Hostinger static React (Vite) deploy",
   "engines": {
     "node": ">=20 <25"
   },
   "scripts": {
     "dev": "npm run dev --prefix frontend",
-    "build": "npm install --prefix frontend --include=dev && npm run build --prefix frontend && node scripts/sync-dist.mjs",
-    "start": "node server.js",
-    "preview": "npm run build && node server.js"
-  },
-  "dependencies": {
-    "compression": "^1.8.0",
-    "express": "^4.21.2"
+    "build": "npm install --prefix frontend --include=dev && npm run build --prefix frontend",
+    "start": "npx --yes serve release -s -l 3000",
+    "preview": "npm run build && npm start"
   }
 }

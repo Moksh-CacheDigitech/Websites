@@ -11,6 +11,9 @@ out
 .vite
 *.zip
 
+# NOTE: do NOT ignore /release - Hostinger looks for that output folder after build.
+# Locally you can delete release/ anytime; avoid committing it.
+
 # Environment and secrets
 .env
 .env.local
