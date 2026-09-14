@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="carGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+  
+  <!-- Road -->
+  <rect x="0" y="200" width="400" height="100" fill="#374151"/>
+  <rect x="0" y="240" width="400" height="4" fill="#FCD34D" opacity="0.8"/>
+  
+  <!-- Car Body -->
+  <ellipse cx="200" cy="180" rx="80" ry="25" fill="url(#carGradient)"/>
+  <rect x="140" y="155" width="120" height="50" rx="25" fill="url(#carGradient)"/>
+  
+  <!-- Car Windows -->
+  <rect x="150" y="165" width="100" height="20" rx="10" fill="#E5E7EB" opacity="0.9"/>
+  
+  <!-- Wheels -->
+  <circle cx="160" cy="205" r="15" fill="#1F2937"/>
+  <circle cx="240" cy="205" r="15" fill="#1F2937"/>
+  <circle cx="160" cy="205" r="8" fill="#6B7280"/>
+  <circle cx="240" cy="205" r="8" fill="#6B7280"/>
+  
+  <!-- Headlights -->
+  <circle cx="120" cy="170" r="6" fill="#FEF3C7"/>
+  <circle cx="280" cy="170" r="6" fill="#FEF3C7"/>
+  
+  <!-- IoT Signals -->
+  <g opacity="0.7">
+    <circle cx="200" cy="120" r="3" fill="#EF4444">
+      <animate attributeName="r" values="3;8;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="100" r="2" fill="#10B981">
+      <animate attributeName="r" values="2;6;2" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="100" r="2" fill="#8B5CF6">
+      <animate attributeName="r" values="2;6;2" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Connected Lines -->
+  <line x1="200" y1="120" x2="180" y2="100" stroke="#10B981" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="120" x2="220" y2="100" stroke="#8B5CF6" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Title -->
+  <text x="200" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1F2937">Automotive</text>
+  <text x="200" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6B7280">Connected & Smart Vehicles</text>
+</svg>

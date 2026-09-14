@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { fetchTeamMembers } from "../../lib/sanityQueries";
 
 interface TeamMember {
   id: number;
@@ -11,11 +12,7 @@ interface TeamMember {
   imageOffsetY?: number;
 }
 
-const TeamSection: React.FC = () => {
-  const [visibleIds, setVisibleIds] = useState<Set<number>>(new Set());
-  const cardRefs = useRef<Map<number, HTMLElement | null>>(new Map());
-
-  const teamMembers: TeamMember[] = [
+const FALLBACK_TEAM: TeamMember[] = [
     { id: 1, name: "Prarthana Gupta", designation: "Chairperson & Managing Director", image: "/team/prarthna.webp", link: "https://www.linkedin.com/in/prarthana-gupta-112510a5/", imageScale: 1.1 },
     { id: 2, name: "Shraddha Gupta", designation: "Chief Executive Officer", image: "/team/shraddha.webp", link: "https://www.linkedin.com/in/shraddha--gupta/", imageScale: 1 },
     { id: 4, name: "Vinod Pulyani", designation: "Chief Finance Officer", image: "/team/Vinod.webp", link: "https://www.linkedin.com/in/vinod-pulyani-6701426/", imageScale: 1.20 },
@@ -30,6 +27,22 @@ const TeamSection: React.FC = () => {
     { id: 15, name: "Gajendra Dixit", designation: "Manager - Supply Chain ", image: "/team/gajender.webp", link: "/", imageScale: 1.20 },
     { id: 16, name: "Kapil Chaudhary", designation: "Manager -Supply Chain ", image: "/team/kapil.webp", link: "/", imageScale: 1.20 },
   ];
+
+const TeamSection: React.FC = () => {
+  const [visibleIds, setVisibleIds] = useState<Set<number>>(new Set());
+  const cardRefs = useRef<Map<number, HTMLElement | null>>(new Map());
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>(FALLBACK_TEAM);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchTeamMembers().then(({ items, error }) => {
+      if (cancelled || error || !items?.length) return;
+      setTeamMembers(items as TeamMember[]);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const getColumns = (screen: "mobile" | "desktop") => (screen === "mobile" ? 2 : 4);
 

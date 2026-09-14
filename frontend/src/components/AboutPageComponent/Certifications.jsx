@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { fetchCertifications } from "../../lib/sanityQueries";
 
-function Certifications({ sectionOnly = false }) {
-  const certifications = [
+const FALLBACK_CERTIFICATIONS = [
     { name: "ISO 9001:2015", logo: "/iso9001.webp", description: "Quality Management System" },
     { name: "ISO 27001:2022", logo: "/iso27001.webp", description: "Information Security Management" },
     { name: "MSME Registered", logo: "/msme.webp", description: "Micro, Small & Medium Enterprises" },
     { name: "NISC Registered", logo: "/nisc.webp", description: "National Information Solutions Cooperative" },
     { name: "WEConnect International", logo: "/weconnect.webp", description: "Women-Owned Business Certification" },
   ];
+
+function Certifications({ sectionOnly = false }) {
+  const [certifications, setCertifications] = useState(FALLBACK_CERTIFICATIONS);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchCertifications().then(({ items, error }) => {
+      if (cancelled || error || !items?.length) return;
+      setCertifications(items);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
     <div className={sectionOnly ? "w-full" : "w-full min-h-screen bg-[#fafafa]"}>

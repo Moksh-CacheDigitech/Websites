@@ -1,13 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Calendar, User, Clock, Tag, ArrowLeft } from 'lucide-react';
 import { HARDCODED_BLOGS } from '../data/blogsAndHighlights';
+import { fetchPostById } from '../lib/sanityQueries';
+import PortableTextBody from '../components/PortableTextBody';
 import NotFoundPage from './NotFoundPage';
+
+function formatDate(value) {
+  if (!value) return '';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
 
 export default function BlogDetailPage() {
   const { id } = useParams();
-  const post = HARDCODED_BLOGS.find((b) => String(b.id) === String(id)) ?? null;
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    fetchPostById(id).then((cmsPost) => {
+      if (cancelled) return;
+      if (cmsPost) {
+        setPost(cmsPost);
+      } else {
+        const local = HARDCODED_BLOGS.find(
+          (blog) => String(blog.id) === String(id) || blog.slug === id,
+        );
+        setPost(local || null);
+      }
+      setLoading(false);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center text-gray-500">
+        Loading...
+      </div>
+    );
+  }
 
   if (!post) {
     return <NotFoundPage />;
@@ -25,7 +63,6 @@ export default function BlogDetailPage() {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Left: photo */}
           {post.image && (
             <div className="rounded-xl overflow-hidden bg-gray-100 shadow-md shrink-0">
               <ImageWithFallback
@@ -38,7 +75,6 @@ export default function BlogDetailPage() {
             </div>
           )}
 
-          {/* Right: title, meta, text (full width when no image) */}
           <div className={`min-w-0 ${!post.image ? 'lg:col-span-2' : ''}`}>
             <header className="mb-6">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black leading-tight mb-4">
@@ -47,7 +83,7 @@ export default function BlogDetailPage() {
               <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-sm text-gray-500">
                 <span className="inline-flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-1.5">
                   <Calendar className="w-4 h-4 shrink-0" />
-                  {post.date}
+                  {formatDate(post.date)}
                 </span>
                 {post.readTime && (
                   <span className="inline-flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-1.5">
@@ -69,9 +105,13 @@ export default function BlogDetailPage() {
                 )}
               </div>
             </header>
-            <div className="text-gray-700 text-base sm:text-lg leading-relaxed whitespace-pre-wrap">
-              {post.content ?? post.excerpt}
-            </div>
+            {post.body ? (
+              <PortableTextBody value={post.body} />
+            ) : (
+              <div className="text-gray-700 text-base sm:text-lg leading-relaxed whitespace-pre-wrap">
+                {post.content ?? post.excerpt}
+              </div>
+            )}
           </div>
         </div>
       </article>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { INNOVATION_PROJECTS } from "../data/innovationProjects";
+import { fetchInnovationProjects } from "../lib/sanityQueries";
 import {
   Lightbulb,
   Cpu,
@@ -152,6 +153,18 @@ const INNOVATION_SPOTLIGHT = [
 
 export default function InnovationsPage() {
   usePageScroll();
+  const [projects, setProjects] = useState(INNOVATION_PROJECTS);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchInnovationProjects().then(({ items, error }) => {
+      if (cancelled || error || !items?.length) return;
+      setProjects(items);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
     <div className="w-full min-h-screen bg-white overflow-x-hidden min-w-0">
@@ -459,7 +472,7 @@ export default function InnovationsPage() {
             <div className="mt-3 sm:mt-6 w-16 h-1 bg-red-500/80 rounded-full mx-auto" aria-hidden />
           </header>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-            {INNOVATION_PROJECTS.map((project) => (
+            {projects.map((project) => (
               <Link
                 key={project.slug}
                 to={`/innovations/projects/${project.slug}`}

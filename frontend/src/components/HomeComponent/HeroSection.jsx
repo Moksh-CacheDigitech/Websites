@@ -5,6 +5,7 @@ import { useChatFocus } from '../../context/ChatFocusContext';
 import { useChat } from '../../context/ChatContext';
 import { useAppLoader } from '../../context/AppLoaderContext';
 import { HARDCODED_HIGHLIGHTS } from '../../data/blogsAndHighlights';
+import { fetchHighlights, fetchLogos } from '../../lib/sanityQueries';
 
 const WhoWeAre = lazy(() => import('./Whoweare'));
 const CEOSection = lazy(() =>
@@ -982,7 +983,7 @@ const PARTNER_CARD_WIDTH = 96;   // w-24
 const PARTNER_GAP = 16;          // gap-4
 
 /** Load DomeGallery + @use-gesture only when partners section is near viewport (lighter initial JS). */
-function LazyPartnersGlobe() {
+function LazyPartnersGlobe({ partners = OEM_PARTNERS }) {
   const [shouldLoad, setShouldLoad] = useState(false);
   const containerRef = useRef(null);
 
@@ -1022,7 +1023,7 @@ function LazyPartnersGlobe() {
           }
         >
           <DomeGalleryLazy
-            images={OEM_PARTNERS.map((p) => ({ src: p.logo, alt: p.name, label: p.level }))}
+            images={partners.map((p) => ({ src: p.logo, alt: p.name, label: p.level }))}
             fit={0.62}
             fitBasis="height"
             minRadius={320}
@@ -1048,7 +1049,20 @@ function LazyPartnersGlobe() {
 }
 
 function OEMAlliancesSection() {
-  const partnerSetWidth = OEM_PARTNERS.length * PARTNER_CARD_WIDTH + (OEM_PARTNERS.length - 1) * PARTNER_GAP;
+  const [partners, setPartners] = useState(OEM_PARTNERS);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchLogos('partner').then(({ items, error }) => {
+      if (cancelled || error || !items?.length) return;
+      setPartners(items.map((item) => ({ name: item.name, logo: item.logo, level: item.level })));
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const partnerSetWidth = partners.length * PARTNER_CARD_WIDTH + (partners.length - 1) * PARTNER_GAP;
   const partnerTrackWidth = partnerSetWidth * 2;
 
   return (
@@ -1098,7 +1112,7 @@ function OEMAlliancesSection() {
                   animation: `partners-marquee 28s linear infinite`,
                 }}
               >
-                {[...OEM_PARTNERS, ...OEM_PARTNERS].map((p, i) => (
+                {[...partners, ...partners].map((p, i) => (
                   <div key={`${p.name}-${i}`} className="shrink-0 w-24 h-16 flex items-center justify-center bg-white rounded-xl shadow-sm border border-gray-100 p-2">
                     <img
                       src={p.logo}
@@ -1113,7 +1127,7 @@ function OEMAlliancesSection() {
               </div>
             </div>
             {/* Desktop: dome gallery (lazy + viewport-gated) */}
-            <LazyPartnersGlobe />
+            <LazyPartnersGlobe partners={partners} />
           </div>
         </div>
       </div>
@@ -1134,6 +1148,25 @@ const PREMIUM_PARTNERS = [
 ];
 
 function PremiumPartnersSection() {
+  const [partners, setPartners] = useState(PREMIUM_PARTNERS);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchLogos('partner').then(({ items, error }) => {
+      if (cancelled || error || !items?.length) return;
+      const preferred = items.filter((item) => /titanium|premier|gold|silver|csp/i.test(`${item.level} ${item.category}`));
+      const next = (preferred.length ? preferred : items.slice(0, 8)).map((item) => ({
+        name: item.name,
+        tier: item.level,
+        logo: item.logo,
+      }));
+      setPartners(next);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <section
       className="relative overflow-hidden py-12 md:py-16 px-6 sm:px-8 lg:px-12"
@@ -1151,11 +1184,11 @@ function PremiumPartnersSection() {
           <div className="mt-3 w-12 h-0.5 bg-red-500/60 rounded-full mx-auto" aria-hidden />
         </header>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
-          {PREMIUM_PARTNERS.map((partner) => (
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-3xl mx-auto">
+          {partners.map((partner) => (
             <div
               key={partner.name}
-              className="group flex flex-col items-center justify-center rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-red-100/60 p-3 sm:p-4 transition-all duration-300"
+              className="group flex w-[calc((100%-0.75rem)/2)] sm:w-[calc((100%-2rem)/3)] flex-col items-center justify-center rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-red-100/60 p-3 sm:p-4 transition-all duration-300"
             >
               <div className="w-full aspect-square max-w-[64px] max-h-[64px] flex items-center justify-center mb-2">
                 <img
@@ -1180,7 +1213,22 @@ function PremiumPartnersSection() {
 function LatestHighlightsSection() {
   const [viewWidth, setViewWidth] = useState(1200);
   const [cardHovered, setCardHovered] = useState(false);
-  const panels = HARDCODED_HIGHLIGHTS;
+  const [panels, setPanels] = useState(HARDCODED_HIGHLIGHTS);
+  const [eyebrow, setEyebrow] = useState('Insights');
+  const [heading, setHeading] = useState('Latest Highlights');
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchHighlights().then(({ highlights, section, error }) => {
+      if (cancelled || error || !highlights) return;
+      setPanels(highlights);
+      if (section?.eyebrow) setEyebrow(section.eyebrow);
+      if (section?.heading) setHeading(section.heading);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     const updateSize = () => setViewWidth(window.innerWidth);
@@ -1241,10 +1289,10 @@ function LatestHighlightsSection() {
         {/* Section header */}
         <div className="shrink-0 flex flex-col items-center text-center mb-8">
           <p className="text-4xl font-extrabold tracking-[0.25em] uppercase text-red-500 mb-2">
-            Insights
+            {eyebrow}
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-[52px] font-light text-(--apple-black) tracking-tight leading-[1.08] max-w-2xl mx-auto">
-            Latest Highlights
+            {heading}
           </h2>
         </div>
 

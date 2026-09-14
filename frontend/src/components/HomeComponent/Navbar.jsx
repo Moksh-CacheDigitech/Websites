@@ -2,12 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { Menu, ChevronLeft, ChevronRight, ChevronDown, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { navLinks } from "./navLinks";
+import { fetchNavItems } from "../../lib/sanityQueries";
 
 /* -- Sections that are direct links (no dropdown) -- */
 const DIRECT_LINK_SECTIONS = ["Contact"];
 
 /* -- Menu structure -- */
-const menuData = {
+const FALLBACK_MENUS = {
   "About Us": {
     items: ["Profile of Cache", "Leadership Team", "Our Alliances", "Awards & Certifications", "Leadership Vision", "Blogs"],
   },
@@ -114,8 +115,36 @@ const menuData = {
   },
 };
 
+const CMS_MENUS = ["What We Do", "Services", "Industries"];
+
+function applyNavItems(items) {
+  const next = structuredClone(FALLBACK_MENUS);
+  const hrefs = {};
+  for (const menu of CMS_MENUS) {
+    const rows = items.filter((item) => item.menu === menu);
+    if (!rows.length) continue;
+    const groups = rows.filter((item) => !item.parent);
+    const submenus = {};
+    for (const group of groups) {
+      const children = rows.filter((item) => item.parent === group.label);
+      if (children.length) submenus[group.label] = children.map((child) => child.label);
+      if (group.href) hrefs[`${menu}::${group.label}`] = group.href;
+    }
+    for (const row of rows) {
+      if (row.parent && row.href) hrefs[`${menu}::${row.label}`] = row.href;
+    }
+    next[menu] = {
+      items: groups.map((group) => group.label),
+      ...(Object.keys(submenus).length ? { submenus } : {}),
+    };
+  }
+  return { menus: next, hrefs };
+}
+
 function Navbar() {
   const logoUrl = "/navbar-logo.svg";
+  const [menus, setMenus] = useState(FALLBACK_MENUS);
+  const [cmsHrefs, setCmsHrefs] = useState({});
 
   // Mobile sidebar
   const [menuOpen, setMenuOpen] = useState(false);
@@ -207,43 +236,56 @@ function Navbar() {
   // Close mega-menu on route change
   useEffect(() => { setMegaOpen(null); }, [location.pathname]);
 
+  useEffect(() => {
+    let cancelled = false;
+    fetchNavItems().then(({ items, error }) => {
+      if (cancelled || error || !items?.length) return;
+      const applied = applyNavItems(items);
+      setMenus(applied.menus);
+      setCmsHrefs(applied.hrefs);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const submenuNavigation = Object.fromEntries(
     navLinks.map((l) => [l.label, { route: l.route, sectionId: l.sectionId ?? null }])
   );
 
+  const resolveHref = (section, item) => {
+    const cmsHref = cmsHrefs[`${section}::${item}`];
+    if (cmsHref) return cmsHref;
+    const navItem = submenuNavigation[item];
+    if (!navItem) return null;
+    return navItem.sectionId ? `${navItem.route}#${navItem.sectionId}` : navItem.route;
+  };
+
   const handleItemClick = (section, item) => {
-    const nestedItems = menuData[section]?.submenus?.[item];
+    const nestedItems = menus[section]?.submenus?.[item];
     const hasNested = nestedItems && nestedItems.length > 0;
     // Single-item submenu that matches the group name → treat as direct link
     if (hasNested && !(nestedItems.length === 1 && nestedItems[0] === item)) {
       setActiveNestedSubmenu(item);
       return;
     }
-    const navItem = submenuNavigation[item];
-    if (!navItem) return;
+    const href = resolveHref(section, item);
+    if (!href) return;
     setMenuOpen(false);
     setActiveSubmenu(null);
     setActiveNestedSubmenu(null);
     setMegaOpen(null);
-    if (navItem.sectionId) {
-      navigate(`${navItem.route}#${navItem.sectionId}`);
-    } else {
-      navigate(navItem.route);
-    }
+    navigate(href);
   };
 
   const isMobileDevice = () =>
     typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches;
 
   const handleMegaItemClick = (section, item) => {
-    const navItem = submenuNavigation[item];
-    if (!navItem) return;
+    const href = resolveHref(section, item);
+    if (!href) return;
     setMegaOpen(null);
-    if (navItem.sectionId) {
-      navigate(`${navItem.route}#${navItem.sectionId}`);
-    } else {
-      navigate(navItem.route);
-    }
+    navigate(href);
   };
 
   return (
@@ -287,12 +329,12 @@ function Navbar() {
 
           {/* Center: Desktop nav links - dropdown sections vs direct links */}
           <div className="hidden md:flex items-center gap-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ">
-            {Object.keys(menuData).map((section) => {
+            {Object.keys(menus).map((section) => {
               const isDirectLink = DIRECT_LINK_SECTIONS.includes(section);
-              const directRoute = isDirectLink && menuData[section]?.items?.[0]
-                ? (submenuNavigation[menuData[section].items[0]]?.sectionId
-                  ? `${submenuNavigation[menuData[section].items[0]].route}#${submenuNavigation[menuData[section].items[0]].sectionId}`
-                  : submenuNavigation[menuData[section].items[0]]?.route)
+              const directRoute = isDirectLink && menus[section]?.items?.[0]
+                ? (submenuNavigation[menus[section].items[0]]?.sectionId
+                  ? `${submenuNavigation[menus[section].items[0]].route}#${submenuNavigation[menus[section].items[0]].sectionId}`
+                  : submenuNavigation[menus[section].items[0]]?.route)
                 : null;
 
               if (isDirectLink && directRoute) {
@@ -380,14 +422,14 @@ function Navbar() {
 
                 {/* Menu items */}
                 <div className="flex-1">
-                  {menuData[megaOpen]?.submenus ? (
+                  {menus[megaOpen]?.submenus ? (
                     /* Two-level: each main heading in its own column */
                     <div className="grid grid-cols-4 gap-6">
-                      {menuData[megaOpen].items.map((group) => (
+                      {menus[megaOpen].items.map((group) => (
                         <div key={group} className="flex flex-col">
                           <h4 className="text-[10px] font-bold tracking-[0.12em] uppercase text-(--apple-gray) mb-3">{group}</h4>
                           <div className="space-y-0.5">
-                            {(menuData[megaOpen].submenus[group] || []).map((item) => (
+                            {(menus[megaOpen].submenus[group] || []).map((item) => (
                               <button
                                 key={item}
                                 onClick={() => handleMegaItemClick(megaOpen, item)}
@@ -403,7 +445,7 @@ function Navbar() {
                   ) : (
                     /* Single-level items */
                     <div className="grid grid-cols-3 gap-2">
-                      {menuData[megaOpen].items.map((item) => (
+                      {menus[megaOpen].items.map((item) => (
                         <button
                           key={item}
                           onClick={() => handleMegaItemClick(megaOpen, item)}
@@ -453,7 +495,7 @@ function Navbar() {
 
         {/* Sidebar Menu */}
         <div className="flex-1 overflow-y-auto p-4">
-          {Object.entries(menuData).map(([section, data], index) => {
+          {Object.entries(menus).map(([section, data], index) => {
             const isDirectLink = DIRECT_LINK_SECTIONS.includes(section);
             const directRoute = isDirectLink && data?.items?.[0]
               ? (submenuNavigation[data.items[0]]?.sectionId
@@ -538,10 +580,10 @@ function Navbar() {
 
           <div className="p-4">
             {(activeNestedSubmenu
-              ? menuData[activeSubmenu].submenus[activeNestedSubmenu]
+              ? menus[activeSubmenu].submenus[activeNestedSubmenu]
               : activeSubmenu === "Innovations"
-                ? ["Overview", ...menuData[activeSubmenu].items]
-                : menuData[activeSubmenu].items
+                ? ["Overview", ...menus[activeSubmenu].items]
+                : menus[activeSubmenu].items
             ).map((item, index) => (
               <div
                 key={index}
@@ -550,7 +592,7 @@ function Navbar() {
                 onClick={() => handleItemClick(activeSubmenu, item)}
               >
                 <span className="text-[15px] font-medium">{item}</span>
-                {menuData[activeSubmenu]?.submenus?.[item] && (
+                {menus[activeSubmenu]?.submenus?.[item] && (
                   <ChevronRight className="h-4 w-4 text-gray-400" />
                 )}
               </div>

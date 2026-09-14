@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, CheckCircle, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { getSectionConfig, isSectionKey } from "../data/sectionRegistry";
 import { pageBySlug, isSlugValid } from "../data/serviceSubPageTypes";
+import { fetchServicePage } from "../lib/sanityQueries";
 import NotFoundPage from "./NotFoundPage";
 
 export default function ServiceSubPage({ section }) {
@@ -19,7 +20,31 @@ export default function ServiceSubPage({ section }) {
   }
 
   const pagesBySlug = pageBySlug(config);
-  const page = pagesBySlug[slug];
+  const localPage = pagesBySlug[slug];
+  const [cmsPage, setCmsPage] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchServicePage(slug, section).then(({ page: remote }) => {
+      if (!cancelled) setCmsPage(remote);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [slug, section]);
+
+  const page = cmsPage
+    ? {
+        ...localPage,
+        ...cmsPage,
+        heroImage: cmsPage.heroImage || localPage.heroImage,
+        bodyImage: cmsPage.bodyImage || localPage.bodyImage,
+        offerings: (cmsPage.offerings?.length ? cmsPage.offerings : localPage.offerings).map((item, index) => ({
+          ...item,
+          icon: localPage.offerings?.[index]?.icon || Sparkles,
+        })),
+      }
+    : localPage;
   const introParagraphs = page.introParagraphs ?? [];
   const hasHighlights = page.highlights?.length > 0;
   const hasOfferings = page.offerings?.length > 0;
@@ -37,7 +62,7 @@ export default function ServiceSubPage({ section }) {
         <div className="relative flex-1 flex flex-col justify-end max-w-7xl mx-auto w-full px-4 sm:px-6 pt-24 sm:pt-28 pb-10 sm:pb-14">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 bg-white/15 border border-white/25 rounded-full text-white text-[10px] sm:text-xs font-medium w-fit mb-3">
             <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
-            {config.badgeLabel}
+            {page.badgeLabel || config.badgeLabel}
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight max-w-4xl">
             {page.title}
@@ -47,17 +72,17 @@ export default function ServiceSubPage({ section }) {
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link
-              to="/contactus"
+              to={page.ctaHref || "/contactus"}
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white text-sm font-semibold rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
             >
-              Talk to us
+              {page.ctaLabel || "Talk to us"}
               <ArrowRight className="w-4 h-4" aria-hidden />
             </Link>
             <Link
-              to={config.overviewRoute}
+              to={page.overviewRoute || config.overviewRoute}
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-lg border border-white/30 transition-colors"
             >
-              {config.overviewLabel}
+              {page.overviewLabel || config.overviewLabel}
             </Link>
           </div>
         </div>
@@ -216,17 +241,17 @@ export default function ServiceSubPage({ section }) {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
             <Link
-              to="/contactus"
+              to={page.ctaHref || "/contactus"}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-500 text-white text-sm font-semibold rounded-lg transition-colors"
             >
               Get in touch
               <ArrowRight className="w-4 h-4" aria-hidden />
             </Link>
             <Link
-              to={config.overviewRoute}
+              to={page.overviewRoute || config.overviewRoute}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-white/90 text-sm font-semibold rounded-lg border border-white/25 hover:bg-white/10 transition-colors"
             >
-              {config.overviewLabel}
+              {page.overviewLabel || config.overviewLabel}
             </Link>
           </div>
         </div>

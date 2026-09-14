@@ -1,0 +1,32 @@
+{
+  "name": "cachedigitech-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sanity Studio for Cache Digitech website CMS",
+  "main": "package.json",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/vision": "4.18.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "4.18.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20 <25"
+  }
+}

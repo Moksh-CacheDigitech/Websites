@@ -5,6 +5,7 @@ import { ArrowRight, TrendingUp, Clock, Users, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { scrollToTarget } from "../../hooks/usePageScroll";
+import { fetchCaseStudies } from "../../lib/sanityQueries";
 
 // Define types for case study data
 interface CaseStudyResults {
@@ -18,6 +19,7 @@ interface CaseStudy {
   title: string;
   industry: string;
   challenge: string;
+  solution?: string;
   results: CaseStudyResults;
   image: string;
   duration: string;
@@ -323,6 +325,18 @@ const caseStudies = [
 export function CaseStudiesSection() {
   const location = useLocation();
   const [selectedStudy, setSelectedStudy] = useState<CaseStudy | null>(null);
+  const [studies, setStudies] = useState<CaseStudy[]>(caseStudies);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchCaseStudies().then(({ items, error }) => {
+      if (cancelled || error || !items?.length) return;
+      setStudies(items as CaseStudy[]);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Scroll to section when linked from industry pages or solutions
   useEffect(() => {
@@ -585,7 +599,7 @@ export function CaseStudiesSection() {
         </div>
 
         <div className="space-y-6">
-          {caseStudies.map((study, index) => (
+          {studies.map((study, index) => (
             <div key={study.id}>
               <Card className="overflow-hidden h-auto hover:shadow-2xl transition-all duration-300 group bg-linear-to-br from-white to-gray-50 border-0 shadow-lg">
                 <div className={`grid lg:grid-cols-2 lg:items-stretch gap-4 lg:gap-0 ${index % 2 !== 0 ? 'lg:grid-flow-col-dense' : ''}`}>
@@ -702,7 +716,7 @@ export function CaseStudiesSection() {
                       <h3 className="text-lg font-bold text-red-600">Challenge</h3>
                     </div>
                     <p className="text-red-600 leading-relaxed text-sm font-medium">
-                      {getDetailedContent(selectedStudy.title, 'challenge')}
+                      {selectedStudy.solution ? selectedStudy.challenge : getDetailedContent(selectedStudy.title, 'challenge')}
                     </p>
                   </div>
 
@@ -715,7 +729,7 @@ export function CaseStudiesSection() {
                       <h3 className="text-lg font-bold text-green-600">Solution</h3>
                     </div>
                     <p className="text-green-600 leading-relaxed text-sm font-medium">
-                      {getDetailedContent(selectedStudy.title, 'solution')}
+                      {selectedStudy.solution || getDetailedContent(selectedStudy.title, 'solution')}
                     </p>
                   </div>
                 </div>

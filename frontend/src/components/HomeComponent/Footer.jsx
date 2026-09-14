@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { usePlacement } from "../../context/PlacementsContext";
+import { fetchSiteSettings } from "../../lib/sanityQueries";
 import { navLinks } from "./navLinks";
 import LiquidNavigation from "./LiquidNavigation";
 
@@ -54,6 +55,38 @@ const SOCIALS = [
 function Footer() {
   const navigate = useNavigate();
   const [mobileOpenSection, setMobileOpenSection] = useState(null);
+  const [settings, setSettings] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchSiteSettings().then(({ settings: cms, error }) => {
+      if (cancelled || error || !cms) return;
+      setSettings(cms);
+      if (cms.defaultSeoDescription && typeof document !== "undefined") {
+        let meta = document.querySelector('meta[name="description"]');
+        if (!meta) {
+          meta = document.createElement("meta");
+          meta.setAttribute("name", "description");
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute("content", cms.defaultSeoDescription);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const socials = SOCIALS.map((item) => {
+    const match = settings?.socialLinks?.find(
+      (link) => String(link.platform || "").toLowerCase() === item.label.toLowerCase(),
+    );
+    if (item.label === "Email" && settings?.email) {
+      return { ...item, href: `mailto:${settings.email}` };
+    }
+    return match?.url ? { ...item, href: match.url } : item;
+  });
+  const copyrightName = settings?.copyrightName || "Cache Digitech Pvt. Ltd.";
   const footerLogoUrl = usePlacement("global", "footer", "bgImage") || "/navbar-logo.svg";
   /* -- Mobile footer (accordion style, light gradient) -- */
   const mobileFooter = (
@@ -93,7 +126,7 @@ function Footer() {
         {/* Social - liquid navigation */}
         <div className="flex flex-col items-center gap-3 py-8">
           <span className="text-sm text-gray-500">Follow us</span>
-          <LiquidNavigation items={SOCIALS} />
+          <LiquidNavigation items={socials} />
         </div>
 
         {/* Contact Us button */}
@@ -119,7 +152,7 @@ function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-xs text-gray-500 pt-2 border-t border-white/10">
-          &copy; {new Date().getFullYear()} Cache Digitech Pvt. Ltd.
+          &copy; {new Date().getFullYear()} {copyrightName}
         </p>
       </div>
     </footer>
@@ -258,11 +291,11 @@ function Footer() {
         <div className="border-t border-white/10 shrink-0">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} Cache Digitech Pvt. Ltd.
+              &copy; {new Date().getFullYear()} {copyrightName}
             </p>
             <div className="flex items-center gap-4">
               <span className="text-sm text-gray-500 shrink-0">Follow us</span>
-              <LiquidNavigation items={SOCIALS} />
+              <LiquidNavigation items={socials} />
             </div>
           </div>
         </div>

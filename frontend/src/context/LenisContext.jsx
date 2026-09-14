@@ -12,11 +12,11 @@ let activeLenis = null;
  * duration mode makes wheel scrolling feel too fast / uneven).
  */
 const LENIS_OPTIONS = {
-  lerp: 0.08,
+  lerp: 0.05,
   smoothWheel: true,
   syncTouch: false,
-  wheelMultiplier: 0.85,
-  touchMultiplier: 1.1,
+  wheelMultiplier: 0.65,
+  touchMultiplier: 0.9,
   orientation: 'vertical',
   gestureOrientation: 'vertical',
   anchors: false,

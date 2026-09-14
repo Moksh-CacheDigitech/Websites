@@ -1,12 +1,36 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Card, CardContent, CardHeader } from "../components/ui/card";
 import { Calendar, User } from "lucide-react";
 import { HARDCODED_BLOGS } from "../data/blogsAndHighlights";
+import { fetchPosts } from "../lib/sanityQueries";
+
+function formatDate(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
 
 export default function BlogsPage() {
-  const posts = [...HARDCODED_BLOGS].sort((a, b) => a.id - b.id);
+  const [posts, setPosts] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchPosts().then(({ posts: cmsPosts, error }) => {
+      if (cancelled) return;
+      if (error || !cmsPosts) {
+        setPosts([...HARDCODED_BLOGS].sort((a, b) => a.id - b.id));
+        return;
+      }
+      setPosts(cmsPosts);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -22,22 +46,25 @@ export default function BlogsPage() {
             </p>
           </div>
 
-          {posts.length === 0 && (
+          {posts === null && (
+            <div className="text-center py-16 text-gray-500">Loading articles...</div>
+          )}
+          {posts && posts.length === 0 && (
             <div className="text-center py-16 text-gray-500">No blog posts yet.</div>
           )}
-          {posts.length > 0 && (
+          {posts && posts.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((post, idx) => (
                 <Card
-                  key={post.id}
+                  key={post._id || post.slug || post.id}
                   className="h-full transition-all duration-300 group cursor-pointer border-0 shadow-md hover:shadow-lg"
-                  onClick={() => navigate(`/blog/${post.id}`)}
+                  onClick={() => navigate(`/blog/${post.slug || post.id}`)}
                   role="button"
                   tabIndex={0}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
-                      navigate(`/blog/${post.id}`);
+                      navigate(`/blog/${post.slug || post.id}`);
                     }
                   }}
                 >
@@ -55,7 +82,7 @@ export default function BlogsPage() {
                   <CardContent className="p-4 flex flex-col h-full">
                     <div className="flex items-center text-xs text-gray-500 mb-2">
                       <Calendar className="w-3.5 h-3.5 mr-1.5 shrink-0" />
-                      <span>{post.date}</span>
+                      <span>{formatDate(post.date)}</span>
                       <span className="mx-1.5">•</span>
                       <span>{post.readTime}</span>
                     </div>
