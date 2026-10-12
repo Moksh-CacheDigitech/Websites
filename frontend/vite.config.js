@@ -17,6 +17,12 @@ export default defineConfig({
     tailwindcss(),
     spaAllowlist404Plugin(),
   ],
+  resolve: {
+    alias: {
+      // Framer marketplace components import `framer`; stub for Vite.
+      framer: path.resolve(__dirname, 'src/shims/framer.js'),
+    },
+  },
   build: {
     outDir: hostingerOutDir,
     emptyOutDir: true,

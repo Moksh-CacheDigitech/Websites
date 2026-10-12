@@ -296,7 +296,7 @@ export function fetchInnovationProjects() {
 
 export function fetchTeamMembers() {
   return fetchList(teamMembersQuery, {}, (doc, index) => ({
-    id: doc.sortOrder || index + 1,
+    id: doc._id || `team-${index + 1}`,
     _id: doc._id,
     name: doc.name,
     designation: doc.designation,
@@ -437,30 +437,30 @@ export function fetchServicePage(slug, section = '') {
     .then((doc) => ({
       page: doc
         ? {
-            title: doc.title,
-            shortTitle: doc.shortTitle || doc.title,
-            tagline: doc.tagline || '',
-            badgeLabel: doc.badgeLabel,
-            overviewLabel: doc.overviewLabel,
-            overviewRoute: doc.overviewRoute,
-            ctaLabel: doc.ctaLabel || 'Talk to us',
-            ctaHref: doc.ctaHref || '/contactus',
-            intro: doc.intro || '',
-            introParagraphs: doc.introParagraphs || [],
-            highlights: doc.highlights || [],
-            offerings: (doc.offerings || []).map((item) => ({
-              title: item.title,
-              description: item.description || '',
-            })),
-            listSections: (doc.listSections || []).map((section) => ({
-              title: section.title,
-              intro: section.intro,
-              items: section.items || [],
-              footnote: section.footnote,
-            })),
-            heroImage: doc.heroImage ? urlFor(doc.heroImage).width(1800).url() : '',
-            bodyImage: doc.bodyImage ? urlFor(doc.bodyImage).width(1400).url() : '',
-          }
+          title: doc.title,
+          shortTitle: doc.shortTitle || doc.title,
+          tagline: doc.tagline || '',
+          badgeLabel: doc.badgeLabel,
+          overviewLabel: doc.overviewLabel,
+          overviewRoute: doc.overviewRoute,
+          ctaLabel: doc.ctaLabel || 'Talk to us',
+          ctaHref: doc.ctaHref || '/contactus',
+          intro: doc.intro || '',
+          introParagraphs: doc.introParagraphs || [],
+          highlights: doc.highlights || [],
+          offerings: (doc.offerings || []).map((item) => ({
+            title: item.title,
+            description: item.description || '',
+          })),
+          listSections: (doc.listSections || []).map((section) => ({
+            title: section.title,
+            intro: section.intro,
+            items: section.items || [],
+            footnote: section.footnote,
+          })),
+          heroImage: doc.heroImage ? urlFor(doc.heroImage).width(1800).url() : '',
+          bodyImage: doc.bodyImage ? urlFor(doc.bodyImage).width(1400).url() : '',
+        }
         : null,
       error: null,
     }))
