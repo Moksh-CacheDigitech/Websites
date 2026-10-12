@@ -1,0 +1,1 @@
+import{j as r}from"./index-x7GkJGm_.js";import"./vendor-router-C8Jo7Woj.js";import t from"./ImageSlider-BnCHPxif.js";import i from"./Certifications-Dm-YnZYG.js";import"./vendor-lenis-D7TmsVAo.js";import"./vendor-lucide-qUk9DJBi.js";function p(){return r.jsxs(r.Fragment,{children:[r.jsx(t,{}),r.jsx(i,{sectionOnly:!0})]})}export{p as default};

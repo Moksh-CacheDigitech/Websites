@@ -1,6 +1,4 @@
-import { useEffect, useState, useRef, lazy, Suspense } from "react";
-
-const EarthGlobe = lazy(() => import("./EarthGlobe"));
+import { useEffect, useState, useRef } from "react";
 
 const STATS = [
   { value: "32+", label: "Years of Legacy" },
@@ -29,49 +27,27 @@ function easeOutCubic(t: number): number {
 }
 
 function GlobeGraphic() {
-  const hostRef = useRef<HTMLDivElement>(null);
-  const [mountGlobe, setMountGlobe] = useState(false);
-
-  useEffect(() => {
-    const host = hostRef.current;
-    if (!host) return;
-
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
-          setMountGlobe(true);
-          io.disconnect();
-        }
-      },
-      { root: null, threshold: 0.2, rootMargin: "0px 0px -6% 0px" },
-    );
-
-    io.observe(host);
-    return () => io.disconnect();
-  }, []);
+  const [imgError, setImgError] = useState(false);
 
   return (
     <div
-      ref={hostRef}
-      className="relative w-full overflow-hidden rounded-2xl"
-      style={{
-        aspectRatio: "1",
-        minHeight: "280px",
-        background: "radial-gradient(circle at 35% 28%, #dcecff 0%, #b7d4f5 42%, #8eb6e6 100%)",
-      }}
+      className="relative w-full flex items-center justify-center overflow-hidden"
+      style={{ aspectRatio: "1", minHeight: "280px" }}
     >
-      {mountGlobe ? (
-        <Suspense
-          fallback={
-            <div className="absolute inset-0 flex items-center justify-center text-slate-500/70 text-sm">
-              Loading globe...
-            </div>
-          }
-        >
-          <EarthGlobe />
-        </Suspense>
+      {!imgError ? (
+        <img
+          src="/q2NUWUbiBuu98aEIy2fpjuA5yv0.avif"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          onError={() => setImgError(true)}
+          aria-hidden
+          decoding="async"
+          loading="lazy"
+        />
       ) : (
-        <div className="absolute inset-0" aria-hidden />
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4 text-center text-gray-500 text-sm">
+          <p className="font-medium">Image not loaded</p>
+        </div>
       )}
     </div>
   );
@@ -165,13 +141,13 @@ export function ProgressInNumbers() {
             </div>
           </div>
 
-          {/* Right: centered Earth globe */}
+          {/* Right: earth image */}
           <div
             className={`relative w-full min-h-[280px] flex items-center justify-center transition-all duration-700 ease-out ${inView ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
             style={{ transitionDelay: "300ms" }}
           >
-            <div className="w-full max-w-[480px]">
+            <div className="w-full max-w-[480px] overflow-hidden">
               <GlobeGraphic />
             </div>
           </div>
