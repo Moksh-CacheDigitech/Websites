@@ -47,6 +47,16 @@ npm run build
 npm start
 ```
 
+## RAG chatbot (separate Node app)
+
+The marketing site stays **static React**. The chatbot API is a **second Hostinger Node.js app** in `chat-api/`.
+
+1. Deploy `chat-api` with entry `server.js`, set `OPENAI_API_KEY` and `ALLOWED_ORIGIN` in hPanel.
+2. Point a subdomain (e.g. `api.cachedigitech.com`) at that Node app.
+3. Set `VITE_CHAT_API_URL=https://api.cachedigitech.com` on the static React build, then redeploy `release/`.
+
+Full steps: [`chat-api/README.md`](chat-api/README.md).
+
 ## Troubleshooting
 
 | Symptom | Fix |

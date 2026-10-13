@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from "react";
-import { fetchLogos } from "../../lib/sanityQueries";
+import React, { useRef, useEffect } from "react";
 
-const FALLBACK_CLIENTS = [
+function ClientsCards() {
+  const clients = [
     { name: "Aditya Birla", img: "/clients/adityabirla.webp" },
     { name: "Agic Bricks", img: "/clients/agicbricks.webp" },
     { name: "Airtel", img: "/clients/airtel.webp" },
@@ -37,20 +37,6 @@ const FALLBACK_CLIENTS = [
     { name: "RJ CORP", img: "/clients/rjcorp.webp" },
 
   ];
-
-function ClientsCards() {
-  const [clients, setClients] = useState(FALLBACK_CLIENTS);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchLogos("client").then(({ items, error }) => {
-      if (cancelled || error || !items?.length) return;
-      setClients(items.map((item) => ({ name: item.name, img: item.img || item.logo })));
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   // Duplicate for infinite scroll
   const sliderClients = [...clients, ...clients];

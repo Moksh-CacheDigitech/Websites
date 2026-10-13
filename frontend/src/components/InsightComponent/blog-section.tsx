@@ -1,31 +1,14 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Calendar, User } from "lucide-react";
 import { HARDCODED_BLOGS } from "../../data/blogsAndHighlights";
-import { fetchPosts } from "../../lib/sanityQueries";
 import StudioShowcaseStack from "./StudioShowcaseStack";
 
 export function BlogSection() {
-  const [posts, setPosts] = useState(null);
+  const posts = [...HARDCODED_BLOGS].sort((a, b) => a.id - b.id);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    let cancelled = false;
-    fetchPosts().then(({ posts: cmsPosts, error }) => {
-      if (cancelled) return;
-      if (error || !cmsPosts) {
-        setPosts([...HARDCODED_BLOGS].sort((a, b) => a.id - b.id));
-        return;
-      }
-      setPosts(cmsPosts);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const stackItems = (posts || []).map((post) => ({
-    id: post.slug || post.id,
+  const stackItems = posts.map((post) => ({
+    id: post.id,
     image: post.image,
     title: post.title,
     date: post.date,
@@ -50,9 +33,9 @@ export function BlogSection() {
         </div>
       </div>
 
-      {posts === null || posts.length === 0 ? (
+      {posts.length === 0 ? (
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center py-12 text-gray-500">
-          {posts === null ? "Loading articles..." : "No blog posts yet."}
+          No blog posts yet.
         </div>
       ) : (
         <div className="relative w-full pb-8 md:pb-10 overflow-visible">

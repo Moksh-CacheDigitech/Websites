@@ -1,0 +1,474 @@
+{
+  "generatedAt": "2026-10-13T10:21:31.667Z",
+  "count": 78,
+  "chunks": [
+    {
+      "id": "c1",
+      "title": "About Cache Digitech",
+      "source": "company",
+      "text": "Cache Digitech Pvt. Ltd is a leading System Integration, Consulting and IT Infrastructure company with over three decades of experience. From New Delhi, Mumbai, and Dubai we help organizations innovate, secure, and scale. We serve enterprises across telecom, BFSI, manufacturing, and the public sector with a global partner ecosystem and a focus on digital transformation. Core offerings include IT Infrastructure, Cloud, Cybersecurity, Data & AI, Managed Services, Consulting, Networking, and Telecom solutions."
+    },
+    {
+      "id": "c2",
+      "title": "Contact and offices",
+      "source": "company",
+      "text": "Contact Cache Digitech: Email info@cachedigitech.com (replies within 24 hours). Phone +91 180030 94333 (Mon-Fri, 9am-6pm IST). Delhi Office: CRC2 Building Cache Digitech Sultanpur, Delhi 110030. Mumbai Office: 404, C-Wing, Eastern Court Junction, Tejapal & Parleshwar Road, Vile Parle East, Mumbai 400057. Dubai Office: Compass Building, Al Hulaila, AL Hulaila Industrial Zone-FZ, Ras Al Khaimah, UAE. Website contact form: /contactus."
+    },
+    {
+      "id": "c3",
+      "title": "Leadership team",
+      "source": "company",
+      "text": "Cache Digitech leadership team: Prarthana Gupta - Chairperson & Managing Director; Shraddha Gupta - Chief Executive Officer; Vinod Pulyani - Chief Finance Officer; Sourabh Srivastava - Chief Information Security Officer & Data Protection Officer; Naresh Kumar - Vice President - Infra; Anurag Singh - Vice President - Operation; Varun Vohra - Pre-Sales Manager; Manohar Singh - Senior Sales Manager; Geetanjali Kumar - Vice President - Legal & Compliance; Shweta Gaba - General Manager - HR; Mehak Verma - Manager - Employee Relation; Gajendra Dixit - Manager - Supply Chain; Kapil Chaudhary - Manager - Supply Chain."
+    },
+    {
+      "id": "c4",
+      "title": "Service catalog overview",
+      "source": "company",
+      "text": "Cache Digitech service areas: Cloud Solutions (strategy, hybrid, security, consulting, architecture, managed cloud, DevOps, multi-cloud billing, AI CoE, cloud application transformation); Cybersecurity; Infrastructure; Data Analytics and AI; Managed Services (network and end-user); Consulting; Telecom; How We Deliver methodology. Visitors can explore pages under /cloudservices, /cybersecurity, /infrastructureservice, /aianddataservice, /manageservices, /consultingservice, /telecom, /how-we-deliver, /innovations, /insights, /blogs."
+    },
+    {
+      "id": "c5",
+      "title": "Unlocking Business Value with Enterprise AI: A Strategic Guide",
+      "source": "blog/5",
+      "text": "Unlocking Business Value with Enterprise AI: A Strategic Guide. Category: AI & Data. How intelligent automation is transforming enterprise operations - from streamlining workflows to enabling data-driven decisions at scale. Enterprise adoption of artificial intelligence has moved from pilot projects to core business strategy. Organizations that integrate AI into their operations report significant gains in efficiency, customer experience, and decision quality. This article outlines how to approach AI adoption in a structured, measurable way. The first step is to identify high-impact use cases that align with business objectives. Common starting points include customer service automation, predictive maintenance, demand forecasting, and intelligent document processing. Prioritizing use cases with clear ROI and manageable data requirements reduces risk and accelerates time to value. Data readiness is critical. AI initiatives depend on accessible, clean, and well-governed data. Many enterprises find that data integration and quality work - often in partnership with experienced system integrators - delivers as much value as the AI models themselves. Establishing a data foundation early pays dividends across analytics and AI. Implementation should follow a phased approach: proof of concept, pilot with a defined scope, and then scaled rollout with monitoring and governance. Cache Digitech supports clients through each phase, from architecture design and integration to ongoing optimization, ensuring that AI investments translate into sustained business outcomes."
+    },
+    {
+      "id": "c6",
+      "title": "Hybrid Cloud Architecture: Best Practices for Modern Enterprises",
+      "source": "blog/6",
+      "text": "Hybrid Cloud Architecture: Best Practices for Modern Enterprises. Category: Cloud. Designing and operating workloads across on-premises and multiple clouds while maintaining security, cost control, and flexibility. Hybrid cloud has become the default operating model for many enterprises. By combining on-premises infrastructure with public and private cloud services, organizations can optimize for performance, compliance, and cost while preserving flexibility for future change. A successful hybrid strategy starts with a clear workload placement framework. Not every application belongs in the public cloud; latency-sensitive, highly regulated, or legacy systems often remain on-premises or in a dedicated private cloud. Defining placement criteria - based on data sovereignty, performance, and total cost of ownership - helps teams make consistent, defensible decisions. Network and identity are the backbone of hybrid operations. Reliable connectivity between locations, consistent identity and access management, and unified monitoring are non-negotiable. Many enterprises adopt a cloud management platform or central operations hub to maintain visibility and control across environments. Migration and modernization should be iterative. Lift-and-shift can deliver quick wins, but refactoring and re-architecting key applications for cloud-native patterns often yield better long-term outcomes. Partnering with an integration specialist like Cache Digitech can help you balance speed with strategic technical debt management and achieve a sustainable hybrid cloud posture."
+    },
+    {
+      "id": "c7",
+      "title": "Cybersecurity in the Hybrid Cloud Era: Protecting Your Digital Estate",
+      "source": "blog/7",
+      "text": "Cybersecurity in the Hybrid Cloud Era: Protecting Your Digital Estate. Category: Security. Practical strategies to secure workloads, data, and identities across on-premises and multi-cloud environments. As enterprises extend their footprint across data centers and multiple clouds, the attack surface grows. Cybersecurity must evolve from perimeter-focused models to identity-centric, data-aware protection that works consistently wherever workloads run. Identity and access management (IAM) is the cornerstone. Strong authentication, least-privilege access, and centralized identity governance reduce the risk of credential misuse and lateral movement. Implementing single sign-on and multi-factor authentication across all environments is a baseline expectation for modern security postures. Data protection requires encryption in transit and at rest, plus clear policies for classification and handling. In hybrid and multi-cloud setups, key management and data loss prevention need to work across boundaries. Many organizations adopt a unified security operations center (SOC) or extended detection and response (XDR) to get a single view of threats and anomalies. Compliance and audit readiness are ongoing requirements. Regulations such as GDPR, HIPAA, and sector-specific mandates demand documented controls and evidence. Working with a partner that understands both technology and compliance helps you design security that meets today’s standards and adapts to tomorrow’s. Cache Digitech’s cybersecurity practice helps clients assess, design, and operate secure hybrid and cloud environments."
+    },
+    {
+      "id": "c8",
+      "title": "Digital Transformation: From Strategy to Execution",
+      "source": "blog/1",
+      "text": "Digital Transformation: From Strategy to Execution. Category: Strategy. Turning digital ambitions into measurable outcomes through clear governance, capability building, and the right technology partnerships. Digital transformation is less about technology for its own sake and more about reimagining how the organization creates value for customers and operates at scale. Success depends on aligning strategy, people, process, and technology in a coherent program. Leadership alignment is essential. Transformation programs that lack executive sponsorship or cross-functional ownership often stall. Defining a clear vision, set of priorities, and success metrics - and communicating them consistently - helps align teams and manage expectations. Capability building goes hand in hand with technology adoption. Upskilling existing staff, hiring for new roles, and establishing centers of excellence create the human foundation for sustained change. Training and change management are often under-invested; they are critical to adoption and ROI. Technology selection should support business outcomes rather than drive them. Cloud, data platforms, integration, and security form the backbone of most transformations. Working with a system integrator that understands your industry and can deliver end-to-end - from strategy and design to implementation and support - reduces risk and accelerates results. Cache Digitech has helped numerous enterprises navigate this journey with structured methodologies and proven delivery."
+    },
+    {
+      "id": "c9",
+      "title": "Data-Driven Decision Making: Building an Analytics-Ready Organization",
+      "source": "blog/2",
+      "text": "Data-Driven Decision Making: Building an Analytics-Ready Organization. Category: AI & Data. How to turn data into a strategic asset and embed analytics into daily operations and long-term planning. Organizations that treat data as a strategic asset consistently outperform those that do not. The difference lies not only in technology but in governance, culture, and the ability to turn insights into action. A modern data architecture typically includes a central data lake or warehouse, integrated data pipelines, and curated datasets for business intelligence and advanced analytics. Cloud data platforms have made it easier to scale storage and compute and to adopt machine learning, but they require thoughtful design to avoid sprawl and cost overruns. Data governance - ownership, quality, privacy, and security - is what makes data trustworthy and usable. Defining roles, standards, and processes early helps prevent conflicting definitions and duplicate efforts. Many enterprises establish a data office or steering committee to maintain focus and resolve trade-offs. From there, use cases drive adoption. Starting with high-visibility reports, self-service dashboards, or targeted predictive models builds credibility and creates demand for more. Cache Digitech supports clients in designing data platforms, implementing pipelines, and enabling analytics and AI use cases so that data truly drives decisions."
+    },
+    {
+      "id": "c10",
+      "title": "Building Resilient IT Infrastructure for the Modern Enterprise",
+      "source": "blog/3",
+      "text": "Building Resilient IT Infrastructure for the Modern Enterprise. Category: Infrastructure. Designing for availability, scalability, and future growth across data center and cloud. Resilience is the ability to maintain or quickly restore operations in the face of failures, demand spikes, or disruptive events. For IT infrastructure, that means designing for redundancy, automation, and observability from the outset. High availability starts with eliminating single points of failure. That applies to hardware, network paths, power, and critical application components. In cloud and hybrid setups, multi-AZ or multi-region designs and failover procedures must be tested regularly. Many organizations adopt infrastructure as code (IaC) to ensure consistency and repeatability across environments. Scalability - both horizontal and vertical - should be planned for growth and variability. Auto-scaling and load balancing in the cloud help manage cost while meeting performance requirements. On-premises, capacity planning and modular expansion strategies keep options open without over-provisioning. Monitoring, alerting, and incident management complete the picture. Without visibility into performance, capacity, and errors, teams cannot respond effectively. Establishing runbooks, escalation paths, and post-incident reviews builds organizational resilience. Cache Digitech helps enterprises design, build, and operate infrastructure that meets these goals, whether on-premises, in the cloud, or in a hybrid model."
+    },
+    {
+      "id": "c11",
+      "title": "The Value of Managed Services: Focus on Business, Not Infrastructure",
+      "source": "blog/8",
+      "text": "The Value of Managed Services: Focus on Business, Not Infrastructure. Category: Managed Services. How managed services free internal teams to innovate while experts handle operations, security, and continuous improvement. Managed services allow organizations to offload day-to-day operation, maintenance, and support of IT systems to specialized providers. The result is often better availability, security, and cost predictability - and more capacity for internal teams to focus on strategic initiatives. The scope of managed services can range from infrastructure (servers, storage, network) to applications, security, and end-user support. Defining clear boundaries, service levels, and escalation paths in the contract and operating model is essential. Well-defined SLAs and regular governance meetings keep both parties aligned. Choosing a partner with deep expertise in your technology stack and industry reduces risk. Look for proven delivery, certifications, and references. The best managed service providers act as an extension of your team, offering proactive recommendations and continuous improvement, not just break-fix support. Cost is often a driver, but the real benefit is predictability and the ability to scale expertise up or down as needs change. Cache Digitech’s managed services practice combines operational excellence with a strong understanding of modern infrastructure and security, helping clients run their technology reliably while they focus on growth."
+    },
+    {
+      "id": "c12",
+      "title": "Cloud Migration: Planning and Executing a Successful Move",
+      "source": "blog/4",
+      "text": "Cloud Migration: Planning and Executing a Successful Move. Category: Cloud. A structured approach to moving workloads to the cloud while minimizing risk and maximizing business value. Cloud migration is a major undertaking that can deliver agility, scalability, and cost benefits - when executed with a clear plan and the right expertise. Rushed or ad-hoc migrations often lead to cost overruns, performance issues, and security gaps. A migration program typically begins with discovery and assessment. Inventory applications and dependencies, classify by complexity and criticality, and estimate effort and risk. Many organizations use a framework such as the 6 Rs (rehost, replatform, repurchase, refactor, retire, retain) to decide the right approach per workload. Prioritization and sequencing matter. Migrate in waves, starting with less critical or more cloud-ready workloads to build experience and confidence. Dependencies between systems must be mapped so that migration order does not break integrations or business processes. Execution requires strong project management, technical leadership, and often partnership with a system integrator. Testing, cutover, and hypercare phases should be planned in detail. Post-migration optimization - right-sizing, reserved capacity, and architectural improvements - often unlocks additional value. Cache Digitech supports clients through the full migration lifecycle, from strategy and assessment to execution and optimization."
+    },
+    {
+      "id": "c13",
+      "title": "Zero Trust Security: Why Assume Breach and Verify Explicitly",
+      "source": "blog/9",
+      "text": "Zero Trust Security: Why Assume Breach and Verify Explicitly. Category: Security. Implementing zero trust principles to protect identities, devices, and data in a perimeter-less world. Zero trust is a security model that assumes the network is already compromised and therefore does not rely on network location as a basis for trust. Every access request is verified explicitly, and least-privilege access is enforced consistently. Core zero trust principles include verifying identity (strong authentication, MFA), validating device health (compliance, patch level), limiting access (just-in-time, just-enough), and segmenting applications and data. Micro-segmentation and software-defined perimeters reduce lateral movement and limit blast radius. Implementation is typically phased. Start with identity and access: multi-factor authentication, conditional access policies, and identity governance. Then extend to device trust and application access controls. Network segmentation and data protection can follow as the program matures. Zero trust is as much about culture and process as technology. It requires collaboration between security, IT, and business units. Partnering with experts who have implemented zero trust in similar environments can accelerate adoption and avoid common pitfalls. Cache Digitech’s security practice helps organizations assess their readiness, design a roadmap, and implement zero trust controls that align with business and risk tolerance."
+    },
+    {
+      "id": "c14",
+      "title": "The Future of Work: Technology, Experience, and Security",
+      "source": "blog/10",
+      "text": "The Future of Work: Technology, Experience, and Security. Category: Workplace. How hybrid work, employee experience, and secure digital ecosystems are shaping the next era of enterprise technology. The way we work has changed for good. Hybrid and remote models are now standard, and employees expect seamless, secure access to tools and data from anywhere. Delivering a great employee experience while maintaining security and compliance is a key differentiator for organizations. Unified communication and collaboration platforms - backed by reliable network and identity - form the foundation. Ensuring consistent performance, whether at the office or at home, requires attention to connectivity, device management, and support. Employee experience (EX) initiatives that simplify onboarding, self-service, and help desk interactions improve satisfaction and productivity. Security cannot be an afterthought. Endpoint protection, conditional access, data loss prevention, and security awareness training are essential in a distributed workforce. Balancing usability with security - for example, through single sign-on and managed devices - reduces friction while maintaining control. IT leaders are increasingly measured on both operational metrics and EX outcomes. Partnering with a provider that understands workplace technology, security, and user experience helps you build a future-ready environment. Cache Digitech supports enterprises in designing and managing the technology that powers modern work, so your people can perform at their best."
+    },
+    {
+      "id": "c15",
+      "title": "Ingram Micro APAC Female Leader of the Year 2025",
+      "source": "highlight/Award & Recognition",
+      "text": "Award & Recognition: Ingram Micro APAC Female Leader of the Year 2025. Our leadership was honoured with the Ingram Micro APAC Female Leader of the Year 2025 award, announced at the Ingram Micro ONE Global Innovation Summit in Washington, DC, and later presented at the Pinnacle Summit in India. This recognition reflects the trust of our customers, the support of our partners, and the dedication of our team working with a strong customer-first mindset."
+    },
+    {
+      "id": "c16",
+      "title": "Cache Digitech at India Mobile Congress 2025",
+      "source": "highlight/Event",
+      "text": "Event: Cache Digitech at India Mobile Congress 2025. At IMC 2025, we reaffirmed our commitment to designing, building, and managing technology ecosystems that power modern enterprises. For over three decades, Cache Digitech has been enabling innovation across IT Infrastructure, Cloud, Cybersecurity, Data & AI, and Managed Services - ensuring technology runs seamlessly and delivers excellence every day."
+    },
+    {
+      "id": "c17",
+      "title": "Acquisition Champion Award at Dell Technologies Partner Summit India 2025",
+      "source": "highlight/Award",
+      "text": "Award: Acquisition Champion Award at Dell Technologies Partner Summit India 2025. Cache Digitech was honored with the Acquisition Champion Award at the Dell Technologies Partner Summit India 2025, recognizing our innovative customer acquisition strategy. This achievement reflects the dedication of Team Cache and the strong partnership we share with Dell Technologies in driving growth and innovation."
+    },
+    {
+      "id": "c18",
+      "title": "Cache Digitech Named Nutanix Enterprise Partner of the Year - North",
+      "source": "highlight/Award & Recognition",
+      "text": "Award & Recognition: Cache Digitech Named Nutanix Enterprise Partner of the Year - North. Cache Digitech has been recognized as the \"Enterprise Partner of the Year - North\" by Nutanix, highlighting our strong capabilities in delivering enterprise-grade infrastructure and cloud solutions. This recognition reflects the trust of our partners and the dedication of Team Cache in driving impactful technology outcomes for customers."
+    },
+    {
+      "id": "c19",
+      "title": "Women in Tech: Diverse Minds, Disruptive Ideas at IMC 2025",
+      "source": "highlight/Event",
+      "text": "Event: Women in Tech: Diverse Minds, Disruptive Ideas at IMC 2025. At India Mobile Congress 2025, Cache Digitech's leadership moderated the session \"Women in Tech: Diverse Minds, Disruptive Ideas,\" highlighting the importance of diversity in driving innovation. The discussion brought together industry leaders to explore strategies for empowering women in technology and building more inclusive, forward-thinking workplaces."
+    },
+    {
+      "id": "c20",
+      "title": "Dell Technologies Channel Partner of the Year - Services Business India (FY24)",
+      "source": "highlight/Award & Recognition",
+      "text": "Award & Recognition: Dell Technologies Channel Partner of the Year - Services Business India (FY24). Cache Digitech was honored with the Channel Partner of the Year - Services Business India (FY24) award by Dell Technologies. This recognition highlights our commitment to delivering innovative IT services and reflects the dedication of Team Cache and the strong partnerships that drive our continued success."
+    },
+    {
+      "id": "c21",
+      "title": "Fireside Chat on the Future of Work at ETCIO Annual Conclave 2024",
+      "source": "highlight/Event",
+      "text": "Event: Fireside Chat on the Future of Work at ETCIO Annual Conclave 2024. At ETCIO Annual Conclave 2024, Cache Digitech leadership participated in an exclusive fireside chat on the Future of Work, exploring Employee Experience (EX), Customer Experience (CX), and Security. The session highlighted how hybrid workplaces, evolving workforce expectations, and secure digital ecosystems are shaping the next era of enterprise technology."
+    },
+    {
+      "id": "c22",
+      "title": "Techbank",
+      "source": "innovation/techbank",
+      "text": "Techbank - AI-powered talent acquisition and resume intelligence.. Techbank.Ai is an AI-powered talent acquisition and resume intelligence platform designed to transform how organizations discover and hire talent. The system enables candidates to upload resumes while automatically extracting skills, experience, certifications, and education using AI-based parsing. It provides advanced analytics dashboards for administrators, allowing them to track recruitment metrics, manage candidate pipelines, and match candidates to job descriptions using semantic search and intelligent ranking. With dedicated portals for guests, freelancers, and employees, Techbank centralizes the entire hiring lifecycle from application to onboarding. Features: AI-based parsing to extract skills, experience, certifications, and education from resumes; Advanced analytics dashboards for recruitment metrics and candidate pipelines; Semantic search and intelligent ranking to match candidates to job descriptions; Dedicated portals for guests, freelancers, and employees; End-to-end hiring lifecycle from application to onboarding; Centralized talent discovery and hiring in one platform"
+    },
+    {
+      "id": "c23",
+      "title": "Bid Intelligence",
+      "source": "innovation/bid-intelligence",
+      "text": "Bid Intelligence - AI-powered RFP and tender analysis for procurement.. Bid Intelligence is an AI-powered RFP and tender analysis platform built to simplify complex procurement processes. The platform automatically extracts key requirements, technical specifications, and financial parameters from tender documents using intelligent document processing. It analyzes risk factors, highlights compliance requirements, and assists teams in generating cost estimates and structured responses. By transforming unstructured RFP documents into actionable insights, the system enables organizations to respond to bids faster, improve accuracy, and increase win rates. Features: Automatic extraction of requirements, technical specs, and financial parameters from tenders; Intelligent document processing for unstructured RFP documents; Risk analysis and compliance requirement highlighting; Cost estimation and structured response generation; Faster bid response with improved accuracy and higher win rates; Actionable insights from complex procurement documents"
+    },
+    {
+      "id": "c24",
+      "title": "AskCache",
+      "source": "innovation/askcache",
+      "text": "AskCache - Enterprise AI knowledge and solution architecture assistant.. AskCache.ai is an enterprise AI knowledge and solution architecture assistant built using Retrieval-Augmented Generation (RAG). The platform combines internal knowledge bases, technical documentation, and infrastructure guidelines to generate intelligent responses for complex technology queries. It can automatically produce infrastructure architecture diagrams, bill of materials (BoM), solution designs, and estimated pricing, effectively functioning as a digital solution architect for IT teams and sales engineers. Features: RAG-powered responses from knowledge bases and technical documentation; Automatic generation of infrastructure architecture diagrams; Bill of materials (BoM), solution designs, and estimated pricing; Digital solution architect for IT and sales engineering; Intelligent answers to complex technology queries; Combines internal knowledge with infrastructure guidelines"
+    },
+    {
+      "id": "c25",
+      "title": "CRM",
+      "source": "innovation/crm",
+      "text": "CRM - Centralized enterprise CRM for the full customer lifecycle.. Cache CRM is a centralized enterprise customer relationship management platform designed to manage the entire customer lifecycle-from lead generation and sales tracking to order processing, compliance management, and deployment workflows. The system eliminates fragmented tools by integrating all operational processes into a single platform. Its workflow-driven architecture ensures every action, document, and approval is traceable in real time, providing full transparency, audit readiness, and operational control across departments. Features: End-to-end customer lifecycle: leads, sales, orders, compliance, deployment; Single platform replacing fragmented tools; Workflow-driven architecture with real-time traceability; Full transparency and audit readiness for every action and approval; Operational control across sales and delivery departments; Integrated compliance management and deployment workflows"
+    },
+    {
+      "id": "c26",
+      "title": "HRMS",
+      "source": "innovation/hrms",
+      "text": "HRMS - Comprehensive HR platform to digitize and automate operations.. Cache HRMS is a comprehensive human resource management platform designed to digitize and automate internal HR operations. It centralizes employee records, attendance tracking, leave management, expense processing, payroll management, and approval workflows into a single secure system. With strong access controls and audit tracking, the platform reduces operational errors, prevents unauthorized modifications, and provides management with real-time visibility into workforce operations. Features: Centralized employee records, attendance, leave, and expenses; Payroll management and approval workflows in one secure system; Strong access controls and audit tracking; Reduced operational errors and prevention of unauthorized changes; Real-time visibility into workforce operations for management; Digitized and automated HR operations end to end"
+    },
+    {
+      "id": "c27",
+      "title": "Employee App",
+      "source": "innovation/employee-app",
+      "text": "Employee App - Digital performance management with transparency and accountability.. The Employee Performance App is a digital performance management system designed to improve transparency and accountability across the workforce. The platform enables structured goal setting, continuous performance monitoring, and detailed manager feedback mechanisms. Integrated geo-location tracking provides real-time visibility into field operations and employee presence, enabling organizations to monitor productivity and make data-driven decisions related to performance and growth. Features: Structured goal setting and continuous performance monitoring; Detailed manager feedback mechanisms; Integrated geo-location for field operations and presence visibility; Real-time visibility into productivity and presence; Data-driven decisions for performance and growth; Transparency and accountability across the workforce"
+    },
+    {
+      "id": "c28",
+      "title": "Cache BI",
+      "source": "innovation/cache-bi",
+      "text": "Cache BI - Business intelligence and analytics on an enterprise data lake.. Cache BI is an in-house business intelligence and analytics platform built on a centralized enterprise data lake architecture. The system securely consolidates data from internal systems such as CRM, operational databases, and business applications. It enables departments to access customized dashboards, reports, and visual analytics tailored to their operational needs. By transforming raw enterprise data into actionable insights, Cache BI empowers leadership and teams to make faster, data-driven decisions. Features: Centralized data lake from CRM, databases, and business applications; Customized dashboards, reports, and visual analytics per department; Secure consolidation and access to enterprise data; Actionable insights from raw data for leadership and teams; Faster, data-driven decision-making; Tailored to operational needs across the organization"
+    },
+    {
+      "id": "c29",
+      "title": "EDM",
+      "source": "innovation/edm",
+      "text": "EDM - Enterprise Digital Marketing: assets, leads, and campaign effectiveness.. The Enterprise Digital Marketing (EDM) Platform provides a centralized environment for managing digital marketing assets and tracking lead generation activities. Administrators can upload whitepapers, brochures, and other downloadable resources while automatically capturing user engagement data and lead information. The system enables marketing teams to analyze asset performance, export lead lists, and integrate insights into sales workflows for improved campaign effectiveness. Features: Centralized management of whitepapers, brochures, and downloadable assets; Automatic capture of engagement data and lead information; Asset performance analysis for marketing teams; Export of lead lists and integration with sales workflows; Improved campaign effectiveness through data and insights; End-to-end view of digital marketing and lead generation"
+    },
+    {
+      "id": "c30",
+      "title": "Mail Integration",
+      "source": "innovation/mail-integration",
+      "text": "Mail Integration - AI Mail Operations Platform for high-volume enterprise email.. The AI Mail Operations Platform is designed to manage and automate high-volume enterprise email workflows. Using artificial intelligence, the platform automatically reads incoming emails, classifies them based on intent, prioritizes urgent messages, and routes them to the appropriate departments. It also detects potential leads, escalations, and spam while generating intelligent summaries for quick decision-making. The system significantly reduces manual workload, improves response times, and ensures no critical communication is missed. Features: AI-powered reading, classification by intent, and prioritization of emails; Automatic routing to the right departments; Detection of leads, escalations, and spam; Intelligent summaries for quick decision-making; Reduced manual workload and improved response times; No critical communication missed"
+    },
+    {
+      "id": "c31",
+      "title": "Cache GPT",
+      "source": "innovation/cache-gpt",
+      "text": "Cache GPT - Secure, on-premises generative AI for the enterprise.. Cache GPT is a secure, on-premises generative AI platform designed as an enterprise alternative to public AI chat systems. It enables organizations to leverage conversational AI for knowledge retrieval, document assistance, and internal productivity while ensuring complete data privacy and compliance. By operating within the company's infrastructure, it provides AI capabilities without exposing sensitive information to external platforms. Features: On-premises deployment-data never leaves your infrastructure; Conversational AI for knowledge retrieval and document assistance; Internal productivity with complete data privacy and compliance; No exposure of sensitive information to external platforms; Enterprise alternative to public AI chat systems"
+    },
+    {
+      "id": "c32",
+      "title": "Cache DB",
+      "source": "innovation/cache-db",
+      "text": "Cache DB - Automated database management for secure enterprise deployment.. Cache DB is an automated database management platform designed for secure enterprise deployments. The system simplifies database provisioning, monitoring, backup management, and performance optimization through automated workflows and centralized administration. With built-in security and reliability features, it helps organizations manage critical data infrastructure efficiently. Features: Simplified provisioning, monitoring, backup, and performance optimization; Automated workflows and centralized administration; Built-in security and reliability for enterprise deployment; Efficient management of critical data infrastructure; Reduced operational overhead for database teams"
+    },
+    {
+      "id": "c33",
+      "title": "Cache DOC",
+      "source": "innovation/cache-doc",
+      "text": "Cache DOC - Enterprise document management with version control and collaboration.. Cache DOC is an enterprise document management system that provides secure storage, version control, and collaborative document workflows. It enables organizations to manage contracts, reports, policies, and internal documentation with structured access controls and complete version history. This ensures document traceability, compliance, and efficient knowledge management across teams. Features: Secure storage with version control and complete version history; Collaborative document workflows and access controls; Management of contracts, reports, policies, and internal docs; Document traceability and compliance; Efficient knowledge management across teams"
+    },
+    {
+      "id": "c34",
+      "title": "Web & App Development",
+      "source": "innovation/custom-app-development",
+      "text": "Web & App Development - Tailored software solutions built for your business needs.. Web & App Development delivers end-to-end software solutions designed around your workflows and goals. From web and mobile applications to internal tools and integrations, we build scalable, secure systems using modern stacks and best practices. Our teams combine product thinking with engineering excellence to ship solutions that improve productivity, automate processes, and integrate seamlessly with your existing infrastructure. Features: Web, mobile, and internal tool development from concept to deployment; Scalable architecture and modern technology stacks; Integration with existing systems and APIs; Security, performance, and maintainability by default; Ongoing support and iterative improvement"
+    },
+    {
+      "id": "c35",
+      "title": "Cloud & Application Transformation",
+      "source": "cloud/cloud-application-transformation",
+      "text": "Cloud & Application Transformation Zero Downtime. Zero Friction. Instant Scale. Turn Monoliths into Agile, Cloud-Native Engines. Stop worrying about cutover risks and business disruption. We refactor and replatform legacy systems into microservices, containerized stacks (Kubernetes/Docker), and serverless architectures designed for speed and reliability. Whether moving legacy VMs, complex SAP ERPs, or mission-critical databases, our automated migration pipelines transfer your workloads to AWS, Azure, or GCP smoothly and securely. Highlight: 100% data integrity with synchronous replication Highlight: Automated landing zone architecture tailored to compliance rules Highlight: Full leverage of hyperscale funding programs (AWS MAP, Azure AMMP) Highlight: Instant auto-scaling during traffic spikes Highlight: Zero-downtime CI/CD deployment pipelines - Cloud Readiness Assessment - Migration Strategy & Planning - Discovery & Dependency Mapping - Application Rehosting (Lift & Shift) - Business Continuity & Downtime Management - Security & Compliance During Migration - Post-Migration Validation & Optimization"
+    },
+    {
+      "id": "c36",
+      "title": "Cloud Managed Services",
+      "source": "cloud/managed-cloud-services",
+      "text": "Cloud Managed Services Eliminate Cloud Waste. Reclaim Up to 30% of Your Budget. Streamline your procurement process. Our fully operational, enterprise-grade Network Operations Center (NOC) and Security Operations Center (SOC) ensure zero blind spots, proactive threat hunting, and rapid incident response. Consolidate your AWS, Azure, and GCP bills into a single, transparent monthly invoice with custom discount structures, simplified AUD/INR billing, and no administrative friction. Highlight: Complimentary 14-Day Cloud Cost Audit Highlight: Automated resource scheduling and rightsizing Highlight: Real-time anomaly alerts preventing surprise invoices Highlight: 24/7/365 Live Monitoring: Automated health checks across all multi-cloud endpoints Highlight: Autonomous Threat Triage: Real-time SIEM log ingestion and incident remediation Highlight: Strict SLAs: Guarantees fast response and resolution times for mission-critical alerts - Cloud Cost Assessment & Optimization - FinOps Strategy & Implementation - Reserved Instances & Savings Plans Optimization - Auto Scaling & Resource Scheduling - Cloud Usage Monitoring & Analytics - Performance & Cost Optimization - Continuous FinOps Monitoring & Reporting"
+    },
+    {
+      "id": "c37",
+      "title": "Multi-Cloud Billing & Spend Management",
+      "source": "cloud/multi-cloud-billing",
+      "text": "Multi-Cloud Billing & Spend Management One Vendor. Three Clouds. Zero Financial Complexity. Streamline your procurement process. Consolidate your AWS, Azure, and GCP bills into a single, transparent monthly invoice with custom discount structures, simplified AUD/INR billing, and no administrative friction. Highlight: Single-window billing management across AWS, Azure, and GCP Highlight: Unlocks custom partner discount structures and volume rebates Highlight: Dedicated billing specialists managing commitment plans"
+    },
+    {
+      "id": "c38",
+      "title": "AI Center of Excellence (CoE)",
+      "source": "cloud/ai-coe",
+      "text": "AI Center of Excellence (CoE) From Raw Data to Autonomous Enterprise AI. Stop experimenting with static AI chatbots - build production-ready intelligence that drives top-line revenue. The Cache Digitech AI CoE builds customized Large Language Models (LLMs), Retrieval-Augmented Generation (RAG) pipelines, and autonomous agentic workflows natively on AWS Bedrock, Azure OpenAI, and GCP Vertex AI. Highlight: Funded AI PoC Program: Test customized Generative AI use cases in under 3 weeks using hyperscaler credits Highlight: Enterprise Search & Knowledge Engines: Turn internal PDFs, logs, and database streams into instant natural-language query tools Highlight: Autonomous Workflow Automation: Deploy intelligent AI agents to automate L1 support, threat triage, and repetitive back-office tasks"
+    },
+    {
+      "id": "c39",
+      "title": "Cloud Strategy",
+      "source": "cloud/cloud-strategy",
+      "text": "Cloud Strategy Roadmaps, readiness, and business-aligned cloud adoption. Define where cloud creates the most value for your enterprise. We assess readiness, align stakeholders, and build a phased roadmap that balances speed, risk, and ROI. Highlight: Cloud readiness and maturity assessment Highlight: Target operating model and governance design Highlight: Business case, TCO, and FinOps-aware planning"
+    },
+    {
+      "id": "c40",
+      "title": "Hybrid Cloud",
+      "source": "cloud/hybrid-cloud",
+      "text": "Hybrid Cloud Connect on-premises and cloud without compromising control. Unify private and public environments with consistent networking, identity, and operations. Ideal when data residency, latency, or legacy integration matters. Highlight: Hybrid connectivity and identity patterns Highlight: Consistent security and compliance posture Highlight: Workload placement and portability guidance"
+    },
+    {
+      "id": "c41",
+      "title": "Cloud Security",
+      "source": "cloud/cloud-security",
+      "text": "Cloud Security Zero-trust principles, compliance, and continuous hardening. Protect workloads, data, and identities across multi-cloud estates. We embed security into architecture, pipelines, and day-2 operations - not as an afterthought. Highlight: Identity, IAM, and least-privilege design Highlight: Data protection, encryption, and key management Highlight: Detection, logging, and compliance alignment"
+    },
+    {
+      "id": "c42",
+      "title": "Cloud Consulting",
+      "source": "cloud/cloud-consulting",
+      "text": "Cloud Consulting Expert guidance from discovery through execution. Work alongside senior practitioners to clarify goals, choose platforms, and de-risk complex programs - from first landing zone to global scale-out. Highlight: Vendor-neutral advice across AWS, Azure, and GCP Highlight: Architecture reviews and well-architected alignment Highlight: Program structure, milestones, and stakeholder comms"
+    },
+    {
+      "id": "c43",
+      "title": "Cloud Architecture",
+      "source": "cloud/cloud-architecture",
+      "text": "Cloud Architecture Landing zones, scalability, and resilient system design. Design foundations that scale: multi-account structures, networking, identity, observability, and disaster recovery - documented for your teams to own. Highlight: Landing zone and multi-account strategy Highlight: Network, edge, and global traffic patterns Highlight: DR, backup, and recovery architecture"
+    },
+    {
+      "id": "c44",
+      "title": "DevOps & Automation",
+      "source": "cloud/devops-automation",
+      "text": "DevOps & Automation CI/CD, GitOps, and infrastructure as code at enterprise scale. Accelerate delivery with automated pipelines, repeatable environments, and measurable quality gates - from commit to production. Highlight: CI/CD pipeline design and implementation Highlight: IaC, GitOps, and environment promotion patterns Highlight: Testing automation and release governance"
+    },
+    {
+      "id": "c45",
+      "title": "Security Consulting",
+      "source": "cybersecurity/security-consulting",
+      "text": "Security Consulting Strategy, architecture, and governance for enterprise security. Cache Digitech delivers security consulting to design and harden your security posture. We align strategy with business risk, define target operating models, and implement governance frameworks - from zero-trust architecture to compliance readiness. Highlight: Security strategy and risk assessment aligned to business objectives Highlight: Zero-trust and identity-centric architecture design Highlight: Compliance mapping and audit readiness (ISO 27001, SOC 2, regulatory)"
+    },
+    {
+      "id": "c46",
+      "title": "Infrastructure & Endpoint Security",
+      "source": "cybersecurity/infrastructure-endpoint-security",
+      "text": "Infrastructure & Endpoint Security Perimeter, network, and endpoint protection at scale. We design and manage hardened perimeters - NGFW, intrusion detection, network segmentation, and DDoS mitigation - plus endpoint resilience with EDR/XDR, patch compliance, and automated containment to prevent lateral movement. Highlight: NGFW management, deep packet inspection, and VPN connectivity Highlight: Intrusion detection and network segmentation to prevent lateral movement Highlight: EDR/XDR, endpoint hygiene, and automated containment"
+    },
+    {
+      "id": "c47",
+      "title": "Threat Monitoring & Response",
+      "source": "cybersecurity/threat-monitoring-response",
+      "text": "Threat Monitoring & Response Unified SOC: surveillance, triage, and lifecycle orchestration. Our Managed SOC serves as a unified security command center - continuous surveillance across hybrid-cloud and on-premise, intelligent triage to prioritize critical threats, threat hunting for APTs, and end-to-end lifecycle orchestration from detection to recovery. Highlight: 24/7 monitoring across hybrid-cloud and on-premise environments Highlight: SIEM with UEBA behavioral analytics and SOAR automated response Highlight: Faster threat detection, streamlined incident response, and continuous enterprise protection"
+    },
+    {
+      "id": "c48",
+      "title": "Vulnerability Management",
+      "source": "cybersecurity/vulnerability-management",
+      "text": "Vulnerability Management Discover, prioritize, and remediate risk before threats become incidents. Proactively reduce cyber risk through continuous vulnerability discovery, risk-based prioritization, and guided remediation. We help organizations strengthen their security posture with automated assessments and actionable insights before threats become incidents. Highlight: Continuous vulnerability discovery across hybrid estates Highlight: Risk-based prioritization aligned to business impact Highlight: Guided remediation with actionable, audit-ready insights"
+    },
+    {
+      "id": "c49",
+      "title": "Data & Cloud Security",
+      "source": "cybersecurity/data-cloud-security",
+      "text": "Data & Cloud Security Identity, data sovereignty, and cloud-native protection. Protect sensitive business data through intelligent discovery, classification, monitoring, and policy-driven controls across endpoints, the cloud, email, and hybrid environments - ensuring security, compliance, and business continuity. We also secure identity and cloud posture with zero-trust IAM, CSPM, and workload protection. Highlight: DLP with discovery, classification, and policy-driven controls Highlight: Zero-trust identity, MFA, PAM, and least-privilege access governance Highlight: CSPM, CASB, workload protection, and cloud data posture"
+    },
+    {
+      "id": "c50",
+      "title": "Security Audits & Compliance",
+      "source": "cybersecurity/security-audits-compliance",
+      "text": "Security Audits & Compliance VAPT, adversarial simulations, and audit-ready assurance. We shift organizations from reactive defense to proactive resilience through full-spectrum auditing - automated and manual testing across network, web, mobile, and API - adversarial simulations, architecture assessment, and risk prioritization with proof-of-closure and audit-ready reports. Highlight: VAPT, DAST/SAST, and pen-test orchestration Highlight: Adversarial simulations and business-logic testing Highlight: CVSS-based prioritization and remediation validation"
+    },
+    {
+      "id": "c51",
+      "title": "Infrastructure Consulting",
+      "source": "infrastructure/infrastructure-consulting",
+      "text": "Infrastructure Consulting Assessment, strategy, and architecture for infrastructure and data protection. We design the right infrastructure and data protection strategy - current-state server, storage, network, and backup assessment, RPO/RTO definition, risk and resilience assessment, and end-to-end architecture with capacity planning and cost optimization. Highlight: Infrastructure and data protection assessment Highlight: Architecture and solution design for HA and BC/DR Highlight: Capacity planning, sizing, and license optimization"
+    },
+    {
+      "id": "c52",
+      "title": "Infrastructure Design",
+      "source": "infrastructure/infrastructure-design",
+      "text": "Infrastructure Design End-to-end infrastructure and backup architecture. We deliver end-to-end infrastructure architecture - high availability, business continuity, and compliance-aligned designs for server, storage, network, and backup. From HLD to implementation-ready specs. Highlight: Server, storage, network, and backup architecture Highlight: High availability and business continuity design Highlight: Compliance-aligned designs"
+    },
+    {
+      "id": "c53",
+      "title": "Infrastructure Deployment",
+      "source": "infrastructure/infrastructure-deployment",
+      "text": "Infrastructure Deployment Rack, stack, virtualization, and validation. We build stable, scalable compute and storage platforms - server deployment (rack and stack, firmware, OS hardening, validation), virtualization and HCI (VMware/Hyper-V/KVM), and storage implementation with zoning and performance validation. Highlight: Server deployment, firmware, OS, and validation Highlight: Virtualization and HCI implementation Highlight: Storage array installation and configuration"
+    },
+    {
+      "id": "c54",
+      "title": "Infrastructure Management",
+      "source": "infrastructure/infrastructure-management",
+      "text": "Infrastructure Management Ongoing optimization, performance, and lifecycle. We optimize and manage your infrastructure lifecycle - performance tuning, VM right-sizing, server consolidation, availability enhancement, and proactive monitoring. Keep platforms healthy and cost-efficient. Highlight: Performance tuning and capacity optimization Highlight: VM right-sizing and server consolidation Highlight: Proactive monitoring and incident response"
+    },
+    {
+      "id": "c55",
+      "title": "Data Center Migration",
+      "source": "infrastructure/data-center-migration",
+      "text": "Data Center Migration Plan and execute DC moves with minimal risk. We plan and execute data center migrations - workload discovery, dependency mapping, wave planning, and cutover with validation and rollback strategy. Minimize downtime and risk for server, storage, and network moves. Highlight: Discovery, dependency mapping, and wave planning Highlight: Application and data migration execution Highlight: Cutover, validation, and hypercare"
+    },
+    {
+      "id": "c56",
+      "title": "IT Infrastructure Solutions",
+      "source": "infrastructure/it-infrastructure-solutions",
+      "text": "IT Infrastructure Solutions End-to-end infrastructure solutions for enterprise IT. We deliver full-stack IT infrastructure solutions - servers, storage, networking, and backup - aligned to your business and compliance needs. From design through deployment and managed operations. Highlight: Integrated server, storage, network, and backup Highlight: Hybrid IT and cloud integration Highlight: Vendor-neutral design and implementation"
+    },
+    {
+      "id": "c57",
+      "title": "Data Center Management",
+      "source": "infrastructure/data-center-management",
+      "text": "Data Center Management Operate and optimize your data center estate. We manage data center operations - capacity, power, cooling, and asset lifecycle - with monitoring, change management, and continuous improvement. Ensure availability and efficiency across facilities. Highlight: Capacity, power, and cooling management Highlight: Asset lifecycle and change management Highlight: Monitoring and incident response"
+    },
+    {
+      "id": "c58",
+      "title": "Network Infrastructure (LAN/WAN/Wireless)",
+      "source": "infrastructure/network-infrastructure",
+      "text": "Network Infrastructure (LAN/WAN/Wireless) Fast, secure, and resilient connectivity. We design and deploy LAN, WAN, and wireless networks - VLANs, routing, switching, redundancy, and failover. Advanced networking includes leaf-spine, SDN, and traffic optimization with security (firewall, segmentation, zero-trust, remote access). Highlight: LAN, WAN, and data center network design Highlight: VLANs, routing, switching, redundancy Highlight: Network security and zero-trust design"
+    },
+    {
+      "id": "c59",
+      "title": "Server & Storage Management",
+      "source": "infrastructure/server-storage-management",
+      "text": "Server & Storage Management Compute and storage operations and optimization. We manage server and storage estates - provisioning, performance, capacity, and lifecycle. SAN, NAS, object storage, all-flash and hybrid, with data migration and validation for DB, ERP, VDI, and AI workloads. Highlight: Server and storage lifecycle management Highlight: SAN, NAS, object, and tiered storage Highlight: Data migration and validation"
+    },
+    {
+      "id": "c60",
+      "title": "Virtualization & Hypervisor Management",
+      "source": "infrastructure/virtualization-hypervisor-management",
+      "text": "Virtualization & Hypervisor Management VMware, Hyper-V, KVM, and HCI at scale. We deploy and manage virtualization and hypervisor platforms - VMware, Hyper-V, KVM - and HCI with HA, clustering, and resource optimization. Ensure efficient, resilient virtual infrastructure. Highlight: VMware, Hyper-V, KVM deployment and management Highlight: HCI implementation and HA/clustering Highlight: Resource optimization and capacity planning"
+    },
+    {
+      "id": "c61",
+      "title": "Backup & Disaster Recovery",
+      "source": "infrastructure/backup-disaster-recovery",
+      "text": "Backup & Disaster Recovery Protect data and ensure rapid recovery. We design and implement backup and DR - RPO/RTO-driven strategy, backup architecture (on-prem, cloud, hybrid), implementation (server, VM, DB, application), cloud backup, replication, DR runbooks, and scheduled testing. Highlight: Backup strategy, architecture, and implementation Highlight: Cloud backup and long-term archival Highlight: DR design, replication, runbooks, and testing"
+    },
+    {
+      "id": "c62",
+      "title": "Data Platforms",
+      "source": "data-analytics/data-platforms",
+      "text": "Data Platforms Modern data lakes, warehouses, and unified data foundations. We design and implement cloud-native data platforms - data lakes, lakehouses, and warehouses - to centralize and govern your data for analytics and AI. From ingestion and storage to cataloging and quality, we build scalable foundations for real-time and batch workloads. Highlight: Data lake and lakehouse design and implementation Highlight: Unified cataloging, lineage, and data quality Highlight: Batch and real-time ingestion pipelines"
+    },
+    {
+      "id": "c63",
+      "title": "Advanced Analytics",
+      "source": "data-analytics/advanced-analytics",
+      "text": "Advanced Analytics BI, forecasting, and insight-driven decision support. Turn data into decisions with self-service BI, dashboards, and advanced analytics - forecasting, segmentation, and predictive models. We enable business and technical users to explore data and act on insights with governance and performance at scale. Highlight: Self-service BI and executive dashboards Highlight: Statistical and predictive analytics Highlight: Reporting and visualization best practices"
+    },
+    {
+      "id": "c64",
+      "title": "AI Automation",
+      "source": "data-analytics/ai-automation",
+      "text": "AI Automation ML ops, automation, and intelligent process improvement. We implement AI and ML at scale - from model development and MLOps to GenAI integration and intelligent automation. Automate workflows, improve accuracy, and embed AI into products and operations with responsible governance. Highlight: MLOps, model lifecycle, and feature stores Highlight: GenAI integration and responsible AI governance Highlight: Process automation and intelligent workflows"
+    },
+    {
+      "id": "c65",
+      "title": "Intelligent CRM",
+      "source": "data-analytics/intelligent-crm",
+      "text": "Intelligent CRM Data-driven customer engagement and lifecycle analytics. Unify customer data and analytics to power CRM and engagement - 360° views, segmentation, churn prediction, and campaign effectiveness. We integrate data platforms with CRM and marketing tools for insight-driven customer strategies. Highlight: Customer 360 and unified data models Highlight: Segmentation, propensity, and churn analytics Highlight: CRM and marketing tool integration"
+    },
+    {
+      "id": "c66",
+      "title": "Data Security & Governance",
+      "source": "data-analytics/data-security-governance",
+      "text": "Data Security & Governance Privacy, compliance, and secure data lifecycle. We implement data governance and security so analytics and AI run on a compliant, auditable foundation - classification, access controls, privacy-by-design, and alignment to GDPR, DPDP, and industry regulations. Highlight: Data classification and access policies Highlight: Privacy-by-design and consent management Highlight: Audit trails and compliance reporting"
+    },
+    {
+      "id": "c67",
+      "title": "Network Managed Services",
+      "source": "managed-services/network-managed-services",
+      "text": "Network Managed Services Delivering Intelligent, Secure & Always-On Network Infrastructure A high-performing, secure, and resilient network is the backbone of every digital enterprise. Cache Digitech's Network Managed Services provide end-to-end management of enterprise LAN, WAN, Wi-Fi, SD-WAN, Internet Edge, and Data Center Networks, ensuring seamless connectivity, enhanced security, and superior user experience across distributed locations. Our proactive, SLA-driven approach leverages 24x7 monitoring, automation, predictive analytics, ITIL best practices, and continuous optimization to maximize network availability, minimize downtime, and improve operational efficiency. Whether supporting branch offices, campuses, manufacturing facilities, retail outlets, or hybrid workplaces, we provide complete lifecycle ownership of your network infrastructure. - 24x7 Network Operations Center (NOC) - Real-Time Network Monitoring - Event & Fault Management - Incident Detection & Resolution - Root Cause Analysis (RCA) - Network Health Checks - SLA Monitoring & Reporting"
+    },
+    {
+      "id": "c68",
+      "title": "IT Infrastructure Managed Services",
+      "source": "managed-services/it-infrastructure-management",
+      "text": "IT Infrastructure Managed Services Building a Secure, Resilient & Always-On IT Infrastructure Today's businesses depend on highly available, secure, and scalable IT infrastructure to support mission-critical applications and digital transformation initiatives. Cache Digitech delivers end-to-end Infrastructure Managed Services that ensure your server, storage, virtualization, and data center environments operate at peak performance while minimizing business risk and operational complexity. Our proactive management approach combines 24x7 monitoring, automation, preventive maintenance, performance optimization, and ITIL-aligned service delivery to maximize infrastructure availability, improve operational efficiency, and reduce total cost of ownership (TCO). Whether deployed on-premises, in private cloud, public cloud, or hybrid environments, we provide a single point of accountability for your entire infrastructure ecosystem. - Physical & Virtual Server Administration - Windows & Linux Server Management - Server Provisioning & Configuration - OS Installation, Upgrades & Hardening - Patch & Firmware Management - Performance Monitoring & Optimization - Server Health Checks & Preventive Maintenance"
+    },
+    {
+      "id": "c69",
+      "title": "Cloud Managed Services",
+      "source": "managed-services/cloud-managed-services",
+      "text": "Cloud Managed Services 24/7 cloud operations and FinOps. We manage your cloud estate - AWS, Azure, GCP - monitoring, security posture, cost optimization, and incident response. Proactive operations, FinOps, and compliance so you focus on building, not plumbing. Highlight: Multi-cloud monitoring and operations Highlight: Security posture and compliance Highlight: FinOps and cost optimization"
+    },
+    {
+      "id": "c70",
+      "title": "Security Operations (SOC / SIEM / MDR)",
+      "source": "managed-services/security-operations-soc-siem-mdr",
+      "text": "Security Operations (SOC / SIEM / MDR) Managed detection and response. We deliver managed security operations-SOC, SIEM, and MDR-with 24/7 monitoring, threat detection, and response. SIEM/SOAR, threat intelligence, and XDR with clear escalation and incident lifecycle management. Highlight: 24/7 SOC monitoring and triage Highlight: SIEM, SOAR, and XDR management Highlight: Threat detection and response playbooks"
+    },
+    {
+      "id": "c71",
+      "title": "DevOps & Automation Services",
+      "source": "managed-services/devops-automation-services",
+      "text": "DevOps & Automation Services CI/CD, IaC, and platform operations. We operate and evolve your DevOps and automation - CI/CD pipelines, IaC, GitOps, and platform tooling. Run, maintain, and improve delivery pipelines and infrastructure automation with SRE practices. Highlight: CI/CD and pipeline operations Highlight: IaC and GitOps management Highlight: Platform and tooling support"
+    },
+    {
+      "id": "c72",
+      "title": "End-User & Workplace Services",
+      "source": "managed-services/end-user-workplace-support",
+      "text": "End-User & Workplace Services Empower a Modern, Secure & Productive Digital Workplace Cache Digitech delivers comprehensive End-User & Workplace Managed Services that ensure employees remain productive, connected, and secure - whether working from the office, home, or on the move. Our outcome-driven support model combines Service Desk, Field Services, Endpoint Management, Collaboration Support, and Workplace Automation to deliver a seamless digital employee experience. Backed by standardized ITIL processes, measurable SLAs, proactive monitoring, and continuous service improvement, we help organizations reduce downtime, enhance user satisfaction, and optimize IT support costs. - 24x7 Service Desk (L1/L2/L3 Support) - Desktop, Laptop & Thin Client Management - Remote & Onsite End-User Support - Endpoint Configuration & Lifecycle Management - Device Imaging, Provisioning & Zero-Touch Deployment - Unified Endpoint Management (UEM) - Microsoft Intune, SCCM & MDM Administration - Identity & Access Management (IAM) - Microsoft 365 & Collaboration Support - Active Directory & Azure AD Administration - Software Deployment & Patch Management - Asset & License Management - Printer & Peripheral Support - VIP & Executive Support Services - Virtual Desktop Infrastructure (VDI) Support - Endpoint Security & Compliance Management - Employee Onboarding, Moves, Adds & Changes (MACD) - Knowledge Management & Self-Service Portal - Workplace Analytics & User Experience Monitoring"
+    },
+    {
+      "id": "c73",
+      "title": "Strategy Consulting",
+      "source": "consulting/strategy-consulting",
+      "text": "Strategy Consulting IT and business strategy aligned to outcomes. We help define IT and digital strategy aligned to business goals - current-state assessment, target operating model, roadmap, and investment prioritization. Executive and technical workshops to align stakeholders and de-risk execution. Highlight: IT and digital strategy and roadmap Highlight: Target operating model and governance Highlight: Stakeholder alignment and business case"
+    },
+    {
+      "id": "c74",
+      "title": "Infrastructure Advisory",
+      "source": "consulting/infrastructure-advisory",
+      "text": "Infrastructure Advisory Infrastructure strategy, design, and optimization guidance. We advise on infrastructure strategy - server, storage, network, and cloud - assessment, architecture options, migration and modernization paths, and vendor selection. Independent guidance to optimize spend and performance. Highlight: Infrastructure assessment and options analysis Highlight: Architecture and migration advisory Highlight: Vendor and technology selection"
+    },
+    {
+      "id": "c75",
+      "title": "Security Consulting",
+      "source": "consulting/security-consulting",
+      "text": "Security Consulting Security strategy, architecture, and risk assessment. We provide security consulting - strategy, architecture, and risk assessment - aligned to zero-trust and compliance. Same depth as our Cybersecurity practice: advisory workshops, security design, and audit readiness. Highlight: Security strategy and risk assessment Highlight: Zero-trust and compliance-aligned architecture Highlight: Audit readiness and remediation guidance"
+    },
+    {
+      "id": "c76",
+      "title": "Risk & Compliance",
+      "source": "consulting/risk-compliance",
+      "text": "Risk & Compliance Risk assessment and regulatory compliance. We help assess and manage IT risk and compliance - control frameworks, gap analysis, regulatory mapping (GDPR, DPDP, industry standards), and remediation planning. Maintain an audit-ready, risk-aware posture. Highlight: Risk assessment and control frameworks Highlight: Regulatory and standards mapping Highlight: Remediation and continuous compliance"
+    },
+    {
+      "id": "c77",
+      "title": "IT Audits",
+      "source": "consulting/it-audits",
+      "text": "IT Audits Independent IT and security audits. We conduct independent IT audits - controls testing, evidence collection, and audit reports - aligned to internal audit and external compliance requirements. Identify gaps and provide actionable recommendations. Highlight: Controls testing and evidence collection Highlight: Audit reports and management summaries Highlight: Recommendations and follow-up tracking"
+    },
+    {
+      "id": "c78",
+      "title": "Process Optimization",
+      "source": "consulting/process-optimization",
+      "text": "Process Optimization IT process improvement and operational excellence. We optimize IT processes - service management, change, incident, problem - and align to ITIL or your operating model. Reduce friction, improve quality, and establish continuous improvement loops. Highlight: Process assessment and design Highlight: ITIL and operational alignment Highlight: Continuous improvement and metrics"
+    }
+  ]
+}

@@ -1,25 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePageScroll } from '../hooks/usePageScroll';
-import { fetchNewsletterIssues } from "../lib/sanityQueries";
 
 function NewsletterPage() {
   usePageScroll();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
-  const [issues, setIssues] = useState([]);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchNewsletterIssues().then(({ items, error }) => {
-      if (cancelled || error || !items) return;
-      setIssues(items);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -72,22 +59,6 @@ function NewsletterPage() {
             <p className="mt-4 text-green-600 font-medium text-center">
               Thank you for subscribing. We&apos;ll be in touch.
             </p>
-          )}
-          {issues.length > 0 && (
-            <div className="mt-12 space-y-4">
-              <h3 className="text-lg font-semibold text-center text-(--apple-black)">Latest issues</h3>
-              {issues.map((issue) => (
-                <a
-                  key={issue.id}
-                  href={issue.link || "#subscribe"}
-                  className="block rounded-xl border border-gray-200 p-4 hover:border-red-200"
-                >
-                  <p className="text-xs text-gray-500">{issue.date}</p>
-                  <p className="font-semibold text-gray-900">{issue.title}</p>
-                  {issue.summary && <p className="text-sm text-gray-600 mt-1">{issue.summary}</p>}
-                </a>
-              ))}
-            </div>
           )}
         </div>
       </section>

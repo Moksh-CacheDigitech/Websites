@@ -1,37 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Check } from "lucide-react";
 import { INNOVATION_PROJECTS } from "../data/innovationProjects";
-import { fetchInnovationProjects } from "../lib/sanityQueries";
 import NotFoundPage from "./NotFoundPage";
 
 const FALLBACK_HERO_IMAGE = "/hero-bg-image.webp";
 
 export default function InnovationsProjectPage() {
   const { slug } = useParams();
-  const local = INNOVATION_PROJECTS.find((p) => p.slug === slug) || null;
-  const [project, setProject] = useState(local);
-  const [ready, setReady] = useState(Boolean(local));
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchInnovationProjects().then(({ items, error }) => {
-      if (cancelled) return;
-      if (!error && items?.length) {
-        setProject(items.find((p) => p.slug === slug) || null);
-      } else {
-        setProject(INNOVATION_PROJECTS.find((p) => p.slug === slug) || null);
-      }
-      setReady(true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [slug]);
-
-  if (!ready) {
-    return <div className="min-h-screen bg-white flex items-center justify-center text-gray-500">Loading...</div>;
-  }
+  const project = INNOVATION_PROJECTS.find((p) => p.slug === slug);
 
   if (!project) {
     return <NotFoundPage />;

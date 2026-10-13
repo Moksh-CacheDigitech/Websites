@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import { fetchLogos } from '../../lib/sanityQueries';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Award, Globe, Handshake, Target } from 'lucide-react';
@@ -7,7 +6,6 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 function PartnershipCards() {
   const [benefitsVisible, setBenefitsVisible] = useState(false);
-  const [cmsPartners, setCmsPartners] = useState(null);
   const [logosVisible, setLogosVisible] = useState(false);
   const benefitsRef = useRef(null);
   const logosRef = useRef(null);
@@ -22,10 +20,6 @@ function PartnershipCards() {
     };
     createObserver(benefitsRef, setBenefitsVisible);
     createObserver(logosRef, setLogosVisible);
-    fetchLogos('partner').then(({ items, error }) => {
-      if (error || !items?.length) return;
-      setCmsPartners(items);
-    });
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
@@ -110,14 +104,11 @@ function PartnershipCards() {
     group.items.map((partner) => ({ ...partner, category: group.category }))
   );
   const seenLogos = new Set();
-  const fallbackPartners = allPartners.filter((p) => {
+  const uniquePartners = allPartners.filter((p) => {
     if (seenLogos.has(p.logo)) return false;
     seenLogos.add(p.logo);
     return true;
   });
-  const uniquePartners = cmsPartners?.length
-    ? cmsPartners.map((p) => ({ name: p.name, level: p.level, logo: p.logo, category: p.category }))
-    : fallbackPartners;
 
   const partnershipBenefits = [
     { icon: Award, title: 'Certified Excellence', description: 'Gold and platinum partnerships with leading technology vendors' },

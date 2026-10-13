@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { usePageScroll } from '../hooks/usePageScroll';
-import { fetchOffers } from "../lib/sanityQueries";
 
 const OFFERS = [
   {
@@ -27,18 +26,6 @@ const OFFERS = [
 function OffersPage() {
   usePageScroll();
   const navigate = useNavigate();
-  const [offers, setOffers] = useState(OFFERS);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchOffers().then(({ items, error }) => {
-      if (cancelled || error || !items?.length) return;
-      setOffers(items);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -61,7 +48,7 @@ function OffersPage() {
             Current offers
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {offers.map((offer, i) => (
+            {OFFERS.map((offer, i) => (
               <div
                 key={i}
                 className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-lg hover:border-red-100 transition-all duration-300 flex flex-col"
@@ -77,7 +64,7 @@ function OffersPage() {
                 </p>
                 <button
                   type="button"
-                  onClick={() => navigate(offer.href || "/contactus")}
+                  onClick={() => navigate("/contactus")}
                   className="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   {offer.cta}

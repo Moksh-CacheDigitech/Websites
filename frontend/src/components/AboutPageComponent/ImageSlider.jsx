@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react';
 import { Trophy } from 'lucide-react';
 import SequentialCarousel from './SequentialCarousel';
-import { fetchAwards } from '../../lib/sanityQueries';
 
 const AWARD_SLIDES = [
   { id: 1, name: 'Best Women Entrepreneur Award', image: '/awards/Best Women Enterpreneur Award 1.avif' },
@@ -19,19 +17,6 @@ const AWARD_SLIDES = [
 ];
 
 const AwardsSection = () => {
-  const [slides, setSlides] = useState(AWARD_SLIDES);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchAwards().then(({ items, error }) => {
-      if (cancelled || error || !items?.length) return;
-      setSlides(items);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
   return (
     <div className="w-full min-h-screen bg-[#fafafa]">
       <section
@@ -61,7 +46,7 @@ const AwardsSection = () => {
 
         <div className="relative w-full h-[min(54vh,500px)] min-h-[420px] max-h-[540px] overflow-visible">
           <SequentialCarousel
-            items={slides}
+            items={AWARD_SLIDES}
             cardGap={260}
             cardWidth={280}
             animationDuration={650}

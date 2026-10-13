@@ -1,8 +1,0 @@
-node_modules
-dist
-.sanity
-*.log
-.env
-.env.*
-!.env.example
-.DS_Store

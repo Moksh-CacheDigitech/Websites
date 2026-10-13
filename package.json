@@ -12,7 +12,8 @@
     "build": "npm install --prefix frontend --include=dev && npm run build --prefix frontend",
     "start": "npx --yes serve release -s -l 3000",
     "preview": "npm run build && npm start",
-    "studio": "npm run dev --prefix studio",
-    "studio:deploy": "npm run deploy --prefix studio"
+    "chat:dev": "npm run dev --prefix chat-api",
+    "chat:start": "npm start --prefix chat-api",
+    "chat:index": "npm run index --prefix chat-api"
   }
 }

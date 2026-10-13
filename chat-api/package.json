@@ -1,0 +1,23 @@
+{
+  "name": "cachedigitech-chat-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Cache Digitech RAG chatbot API for Hostinger Node.js",
+  "engines": {
+    "node": ">=20 <25"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "extract": "node scripts/extract-corpus.mjs",
+    "embed": "node scripts/embed-corpus.mjs",
+    "index": "npm run extract && npm run embed"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "openai": "^4.104.0"
+  }
+}

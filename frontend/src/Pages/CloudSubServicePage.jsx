@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, CheckCircle, Cloud, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -7,7 +7,6 @@ import {
   isCloudSubPageSlug,
   resolveCloudSubPageSlug,
 } from "../data/cloudSubPages";
-import { fetchServicePage } from "../lib/sanityQueries";
 import NotFoundPage from "./NotFoundPage";
 
 export default function CloudSubServicePage() {
@@ -21,31 +20,7 @@ export default function CloudSubServicePage() {
   if (!resolved) {
     return <NotFoundPage />;
   }
-  const localPage = cloudSubPageBySlug[resolved];
-  const [cmsPage, setCmsPage] = useState(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchServicePage(resolved, 'cloud').then(({ page: remote }) => {
-      if (!cancelled) setCmsPage(remote);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [resolved]);
-
-  const page = cmsPage
-    ? {
-        ...localPage,
-        ...cmsPage,
-        heroImage: cmsPage.heroImage || localPage.heroImage,
-        bodyImage: cmsPage.bodyImage || localPage.bodyImage,
-        offerings: (cmsPage.offerings?.length ? cmsPage.offerings : localPage.offerings || []).map((item, index) => ({
-          ...item,
-          icon: localPage.offerings?.[index]?.icon || Sparkles,
-        })),
-      }
-    : localPage;
+  const page = cloudSubPageBySlug[resolved];
   const introParagraphs = page.introParagraphs ?? [];
   const hasHighlights = page.highlights?.length > 0;
   const hasOfferings = page.offerings?.length > 0;
