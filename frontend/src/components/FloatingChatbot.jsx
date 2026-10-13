@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useChat } from '../context/ChatContext';
+import ChatMessageContent from './ChatMessageContent';
 
 const SUGGESTIONS = [
   'What cloud services do you offer?',
@@ -137,8 +138,8 @@ const FloatingChatbot = () => {
                   <div className="cd-chat-mini-mark shrink-0 mb-0.5" aria-hidden>
                     <img src="/Cachelogo.webp" alt="" className="w-3.5 h-3.5 object-contain" />
                   </div>
-                  <div className="cd-chat-bubble-ai flex-1 max-w-[88%] leading-relaxed px-3.5 py-3 text-[13.5px] text-(--apple-black) whitespace-pre-wrap">
-                    {msg.content}
+                  <div className="cd-chat-bubble-ai flex-1 max-w-[88%] leading-relaxed px-3.5 py-3 text-[13.5px] text-(--apple-black)">
+                    <ChatMessageContent content={msg.content} />
                   </div>
                 </div>
               ) : (

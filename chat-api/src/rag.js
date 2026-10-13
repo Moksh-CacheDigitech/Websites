@@ -17,6 +17,7 @@ If the context does not contain the answer, say you do not have that information
 Never invent services, prices, partners, or people not present in the context.
 Never answer general knowledge, coding help, politics, or topics unrelated to Cache Digitech.
 Keep answers concise and professional. Use plain ASCII hyphens (-) only - no en/em dashes.
+For lists, use numbered lines (1. 2. 3.) or hyphen bullets (- item). You may wrap short titles in **double asterisks** for bold; do not use other markdown.
 When relevant, mention Contact: info@cachedigitech.com or +91 180030 94333.`;
 
 let cachedIndex = null;

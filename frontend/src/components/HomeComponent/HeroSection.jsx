@@ -5,6 +5,7 @@ import { useChatFocus } from '../../context/ChatFocusContext';
 import { useChat } from '../../context/ChatContext';
 import { useAppLoader } from '../../context/AppLoaderContext';
 import { HARDCODED_HIGHLIGHTS } from '../../data/blogsAndHighlights';
+import ChatMessageContent from '../ChatMessageContent';
 
 const WhoWeAre = lazy(() => import('./Whoweare'));
 const CEOSection = lazy(() =>
@@ -599,8 +600,8 @@ const HeroSection = () => {
                       <div className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ background: `linear-gradient(135deg, ${cb.accentFrom}, ${cb.accentTo})` }}>
                         <span className="material-symbols-outlined text-white text-[14px]">auto_awesome</span>
                       </div>
-                      <div className="flex-1 p-4 rounded-xl shadow-sm whitespace-pre-wrap text-[14px] bg-white/90 border border-slate-100" style={{ color: cb.aiBubbleText }}>
-                        {msg.content}
+                      <div className="flex-1 p-4 rounded-xl shadow-sm text-[14px] bg-white/90 border border-slate-100" style={{ color: cb.aiBubbleText }}>
+                        <ChatMessageContent content={msg.content} />
                       </div>
                     </div>
                   ) : (
