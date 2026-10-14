@@ -228,21 +228,18 @@ const FloatingChatbot = () => {
         </div>
       )}
 
-      <button
-        type="button"
-        onClick={() => setOpen(!open)}
-        className={`cd-chat-fab ${open ? 'cd-chat-fab--open' : ''}`}
-        aria-label={open ? 'Close chat' : 'Open Cache Digitech assistant'}
-        aria-expanded={open}
-      >
-        {!open && <span className="cd-chat-fab-ring" aria-hidden />}
-        <span
-          className={`material-symbols-outlined text-[26px] transition-transform duration-300 ease-out ${open ? 'text-(--apple-black) rotate-90' : 'text-white rotate-0'
-            }`}
+      {!open && (
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="cd-chat-fab"
+          aria-label="Open Cache Digitech assistant"
+          aria-expanded={false}
         >
-          {open ? 'close' : 'forum'}
-        </span>
-      </button>
+          <span className="cd-chat-fab-ring" aria-hidden />
+          <span className="material-symbols-outlined text-[26px] text-white">forum</span>
+        </button>
+      )}
     </>
   );
 };
