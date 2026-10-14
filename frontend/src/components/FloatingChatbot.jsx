@@ -200,7 +200,7 @@ const FloatingChatbot = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          <div className="cd-chat-footer shrink-0 px-3.5 sm:px-4 pb-[max(0.85rem,env(safe-area-inset-bottom))] sm:pb-4 pt-2 bg-[#fafafa] border-t border-black/5">
+          <div className="cd-chat-footer shrink-0 px-3.5 sm:px-4 pb-3 sm:pb-4 pt-2 bg-[#fafafa] border-t border-black/5">
             <div className="cd-chat-composer flex items-center gap-2 pl-3.5 sm:pl-4 pr-1.5 py-1.5">
               <input
                 ref={popupInputRef}
@@ -218,7 +218,7 @@ const FloatingChatbot = () => {
                 type="button"
                 onClick={() => sendMessage()}
                 disabled={loading || !input.trim()}
-                className="cd-chat-send shrink-0 w-11 h-11 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-200 disabled:opacity-35 disabled:scale-100 hover:scale-[1.04] active:scale-95"
+                className="cd-chat-send shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 disabled:opacity-35 disabled:scale-100 hover:scale-[1.04] active:scale-95"
                 aria-label="Send message"
               >
                 <span className="material-symbols-outlined text-white text-[20px]">arrow_upward</span>
@@ -237,9 +237,8 @@ const FloatingChatbot = () => {
       >
         {!open && <span className="cd-chat-fab-ring" aria-hidden />}
         <span
-          className={`material-symbols-outlined text-[26px] transition-transform duration-300 ease-out ${
-            open ? 'text-(--apple-black) rotate-90' : 'text-white rotate-0'
-          }`}
+          className={`material-symbols-outlined text-[26px] transition-transform duration-300 ease-out ${open ? 'text-(--apple-black) rotate-90' : 'text-white rotate-0'
+            }`}
         >
           {open ? 'close' : 'forum'}
         </span>
