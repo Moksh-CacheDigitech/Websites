@@ -54,3 +54,6 @@ backend/uploads
 
 # Optional and local
 *.local
+
+release/globe/
+
