@@ -33,7 +33,7 @@ RewriteRule ^(service/infra|service/network|service/cloud-solutions)/?$ /index.h
 RewriteRule ^(cloudservices|cybersecurity|infrastructureservice|aianddataservice|manageservices|consultingservice)/?$ /index.html [L,QSA,NC]
 RewriteRule ^(grc-dashboard|telecom|contact|insights|blogs|case-studies|admin|community|developerteam|contactus)/?$ /index.html [L,QSA,NC]
 RewriteRule ^(about|about/profile|about/awards|about/certifications|about/alliances|about/leadership)/?$ /index.html [L,QSA,NC]
-RewriteRule ^(innovations|privacy-policy|terms-of-use|careers|epf-amendment-notice)/?$ /index.html [L,QSA,NC]
+RewriteRule ^(innovations|ai-ops-coe|privacy-policy|terms-of-use|careers|epf-amendment-notice)/?$ /index.html [L,QSA,NC]
 RewriteRule ^(campaigns|newsletter|offers|how-we-deliver)/?$ /index.html [L,QSA,NC]
 
 # Dynamic segments (prefix allowlist; invalid slugs still get 200 — React shows 404 UI)

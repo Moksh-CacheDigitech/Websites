@@ -204,4 +204,37 @@ export const INNOVATION_PROJECTS = [
       "Ongoing support and iterative improvement",
     ],
   },
+  {
+    name: "iConnectPlus ERP",
+    slug: "iconnectplus-erp",
+    tagline: "Unified ERP for finance, inventory, sales, and operations.",
+    description:
+      "iConnectPlus ERP is an integrated enterprise resource planning platform that unifies finance, inventory, procurement, sales, and operations in one system. It gives leadership real-time visibility across the business, streamlines approvals and compliance, and reduces manual handoffs between departments. Built for mid-to-large enterprises, it supports scalable modules, role-based access, and reporting that turns operational data into actionable decisions.",
+    image: "/images/innovations/crm.webp",
+    features: [
+      "Unified finance, inventory, procurement, sales, and operations",
+      "Real-time dashboards and cross-department visibility",
+      "Workflow-driven approvals and audit-ready compliance",
+      "Role-based access and modular scale-as-you-grow design",
+      "Reduced manual handoffs and operational latency",
+      "Actionable reporting for leadership and ops teams",
+    ],
+  },
 ];
+
+/** Projects shown on the AI Ops CoE page (subset of INNOVATION_PROJECTS). */
+export const AI_OPS_FEATURED_PROJECT_SLUGS = [
+  "techbank",
+  "bid-intelligence",
+  "crm",
+  "hrms",
+  "mail-integration",
+  "iconnectplus-erp",
+  "custom-app-development",
+];
+
+export function getAiOpsFeaturedProjects() {
+  const bySlug = Object.fromEntries(INNOVATION_PROJECTS.map((p) => [p.slug, p]));
+  return AI_OPS_FEATURED_PROJECT_SLUGS.map((slug) => bySlug[slug]).filter(Boolean);
+}
+

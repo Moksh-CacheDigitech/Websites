@@ -7,7 +7,7 @@ import LiquidNavigation from "./LiquidNavigation";
 
 /* -- Footer nav: same headings as navbar -- */
 const FOOTER_NAV = [
-  { heading: "About Us", items: ["Profile of Cache", "Leadership Team", "Our Alliances", "Awards & Certifications", "Innovations", "Leadership Vision", "Blogs"] },
+  { heading: "About Us", items: ["Profile of Cache", "Leadership Team", "Our Alliances", "Awards & Certifications", "AI Ops CoE", "Leadership Vision", "Blogs"] },
   { heading: "Products", items: ["Cloud", "Cybersecurity", "Data Analytics & AI", "Infra & Networking"] },
   { heading: "Services", items: ["Consulting & Auditing", "Managed Services", "GRC"] },
   { heading: "Industries", items: ["Telecom", "BFSI", "Automobile & Manufacturing", "Retail", "Healthcare & Hospitality", "Governance", "IT & ITES"] },

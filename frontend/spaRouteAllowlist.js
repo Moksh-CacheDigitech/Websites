@@ -31,6 +31,7 @@ const EXACT = new Set([
   "/about/alliances",
   "/about/leadership",
   "/innovations",
+  "/ai-ops-coe",
   "/privacy-policy",
   "/terms-of-use",
   "/careers",

@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { navLinks } from "./navLinks";
 
 /* -- Sections that are direct links (no dropdown) -- */
-const DIRECT_LINK_SECTIONS = ["Contact"];
+const DIRECT_LINK_SECTIONS = ["Contact", "AI Ops CoE"];
 
 /* -- Menu structure -- */
 const menuData = {
@@ -49,19 +49,8 @@ const menuData = {
       ],
     },
   },
-  "Innovations": {
-    items: [
-      "Finance & Enterprise Solutions",
-      "Operations & Compliance",
-      "Workforce & Productivity",
-      "GenAI and software solutions",
-    ],
-    submenus: {
-      "Finance & Enterprise Solutions": ["Techbank", "CRM", "Bid Intelligence"],
-      "Operations & Compliance": ["EDM", "Cache DOC"],
-      "Workforce & Productivity": ["HRMS", "Employee App", "Mail Integration"],
-      "GenAI and software solutions": ["AskCache", "Cache GPT", "Cache BI", "Cache DB", "Web & App Development"],
-    },
+  "AI Ops CoE": {
+    items: ["AI Ops CoE"],
   },
   "Services": {
     items: ["Cloud", "Consulting & Auditing", "Managed Services", "Infrastructure & Networking"],
@@ -141,6 +130,7 @@ function Navbar() {
   const darkHeroPaths = [
     "/about/profile",
     "/innovations",
+    "/ai-ops-coe",
     "/cybersecurity",
     "/cloud",
     "/cloudservices",
@@ -365,17 +355,6 @@ function Navbar() {
                 <div className="w-40 shrink-0">
                   <h3 className="text-base font-bold text-(--apple-black) mb-1">{megaOpen}</h3>
                   <div className="w-6 h-0.5 bg-red-500 rounded-full" />
-                  {megaOpen === "Innovations" && (
-                    <button
-                      onClick={() => {
-                        setMegaOpen(null);
-                        navigate("/innovations");
-                      }}
-                      className="mt-3 block w-full text-left text-sm font-medium text-gray-600 hover:text-red-600 transition-colors"
-                    >
-                      Overview
-                    </button>
-                  )}
                 </div>
 
                 {/* Menu items */}
@@ -539,9 +518,7 @@ function Navbar() {
           <div className="p-4">
             {(activeNestedSubmenu
               ? menuData[activeSubmenu].submenus[activeNestedSubmenu]
-              : activeSubmenu === "Innovations"
-                ? ["Overview", ...menuData[activeSubmenu].items]
-                : menuData[activeSubmenu].items
+              : menuData[activeSubmenu].items
             ).map((item, index) => (
               <div
                 key={index}

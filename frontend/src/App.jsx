@@ -12,8 +12,6 @@ import { isKnownSpaRoute } from "../spaRouteAllowlist.js";
 import Navbar from "./components/HomeComponent/Navbar";
 import Footer from "./components/HomeComponent/Footer";
 import CookieBanner from "./components/CookieBanner";
-// Chatbot temporarily hidden - re-enable by rendering <FloatingChatbot />
-// import FloatingChatbot from "./components/FloatingChatbot";
 import { AnalyticsPageViews } from "./context/CookieConsentContext";
 import { AnimatedRoutes } from "./components/AnimatedRoutes";
 import NotFoundPage from "./Pages/NotFoundPage";
@@ -30,6 +28,7 @@ const ContactUsPage = lazy(() => import("./Pages/ContactUsPage"));
 const AboutCache = lazy(() => import("./Pages/AboutPage"));
 const InnovationsPage = lazy(() => import("./Pages/InnovationsPage"));
 const InnovationsProjectPage = lazy(() => import("./Pages/InnovationsProjectPage"));
+const AiOpsCoePage = lazy(() => import("./Pages/AiOpsCoePage"));
 const Profile = lazy(() => import("./components/AboutPageComponent/profile"));
 const AwardsAndCertificationsPage = lazy(() => import("./Pages/AwardsAndCertificationsPage"));
 const PartnershipCards = lazy(() => import("./components/AboutPageComponent/Cards"));
@@ -160,6 +159,7 @@ function App() {
             <Route path="/about" element={<AboutCache />} />
             <Route path="/innovations" element={<InnovationsPage />} />
             <Route path="/innovations/projects/:slug" element={<InnovationsProjectPage />} />
+            <Route path="/ai-ops-coe" element={<AiOpsCoePage />} />
             <Route path="/about/profile" element={<Profile />} />
             <Route path="/about/awards" element={<AwardsAndCertificationsPage />} />
             <Route path="/about/certifications" element={<Navigate to="/about/awards" replace />} />
@@ -182,7 +182,6 @@ function App() {
         </main>
         <Footer />
         <CookieBanner />
-        {/* <FloatingChatbot /> */}
         <AnalyticsPageViews />
       </div>
     </>

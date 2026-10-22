@@ -45,12 +45,5 @@ export default defineConfig({
     watch: {
       ignored: ['**/dist/**', '**/dist.zip', '**/*.zip'],
     },
-    // Proxy API to backend (chat)
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3001',
-        changeOrigin: true,
-      },
-    },
   },
 })

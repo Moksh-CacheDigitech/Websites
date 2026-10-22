@@ -4,8 +4,6 @@ import { BrowserRouter, HashRouter } from "react-router-dom";
 import { ContentProvider } from "./context/ContentContext";
 import { PlacementsProvider } from "./context/PlacementsContext";
 import { AppLoaderProvider } from "./context/AppLoaderContext";
-import { ChatFocusProvider } from "./context/ChatFocusContext";
-import { ChatProvider } from "./context/ChatContext";
 import { LenisProvider } from "./context/LenisContext";
 import { CookieConsentProvider } from "./context/CookieConsentContext";
 import { isKnownSpaRoute } from "../spaRouteAllowlist.js";
@@ -38,15 +36,11 @@ createRoot(document.getElementById("root")).render(
       <AppLoaderProvider>
       <ContentProvider>
         <PlacementsProvider>
-          <ChatFocusProvider>
-            <ChatProvider>
-              <LenisProvider>
-                <CookieConsentProvider>
-                  <App />
-                </CookieConsentProvider>
-              </LenisProvider>
-            </ChatProvider>
-          </ChatFocusProvider>
+          <LenisProvider>
+            <CookieConsentProvider>
+              <App />
+            </CookieConsentProvider>
+          </LenisProvider>
         </PlacementsProvider>
       </ContentProvider>
       </AppLoaderProvider>

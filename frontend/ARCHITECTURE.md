@@ -23,8 +23,6 @@ flowchart TB
   router["Router (BrowserRouter or HashRouter)"]
   content["ContentProvider"]
   placements["PlacementsProvider"]
-  chatFocus["ChatFocusProvider"]
-  chat["ChatProvider"]
   lenis["LenisProvider"]
   cookie["CookieConsentProvider"]
   app["App"]
@@ -34,14 +32,12 @@ flowchart TB
   main --> router
   router --> content
   content --> placements
-  placements --> chatFocus
-  chatFocus --> chat
-  chat --> lenis
+  placements --> lenis
   lenis --> cookie
   cookie --> app
 ```
 
-**Provider order** (outer to inner): Router → ContentProvider → PlacementsProvider → ChatFocusProvider → ChatProvider → LenisProvider → CookieConsentProvider → App. When adding new global context, place its provider in this chain in [main.jsx](src/main.jsx).
+**Provider order** (outer to inner): Router → AppLoaderProvider → ContentProvider → PlacementsProvider → LenisProvider → CookieConsentProvider → App. When adding new global context, place its provider in this chain in [main.jsx](src/main.jsx).
 
 ## App shell (layout)
 
@@ -114,7 +110,7 @@ flowchart LR
 | **src/Pages/** | Route-level page components (e.g. ContactUsPage, BlogsPage, Career, PrivacyPolicyPage). One (or a few) pages per route. |
 | **src/Render_Pages/** | HomePage and service-detail - home and service landing pages. |
 | **src/components/** | Reusable and feature-specific UI. Subfolders: **HomeComponent** (Navbar, Footer, HeroSection, CareersSection, etc.), **AboutPageComponent**, **CommunityComponent**, **InsightComponent**, **ServicesComponent**, **figma**, **ui** (shared primitives). |
-| **src/context/** | React context providers: ContentContext, PlacementsContext, ChatFocusContext, ChatContext, LenisContext, CookieConsentContext. |
+| **src/context/** | React context providers: ContentContext, PlacementsContext, AppLoaderContext, LenisContext, CookieConsentContext. |
 | **src/data/** | Static or structured data (e.g. blogsAndHighlights). |
 | **src/utils/** | Helpers (e.g. cookieManager). |
 | **src/css/** | Global or feature CSS (e.g. slider.css, index.css). |

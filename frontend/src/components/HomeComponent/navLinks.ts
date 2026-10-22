@@ -11,25 +11,11 @@ export const navLinks: NavLink[] = [
   { label: "Leadership Team", route: "/about/leadership" },
   { label: "Our Alliances", route: "/about/alliances" },
   { label: "Awards & Certifications", route: "/about/awards" },
-  { label: "Innovations", route: "/innovations" },
-  { label: "Overview", route: "/innovations" },
 
-  // Innovation projects (individual project pages)
-  { label: "Techbank", route: "/innovations/projects/techbank" },
-  { label: "Bid Intelligence", route: "/innovations/projects/bid-intelligence" },
-  { label: "AskCache", route: "/innovations/projects/askcache" },
-  { label: "CRM", route: "/innovations/projects/crm" },
-  { label: "HRMS", route: "/innovations/projects/hrms" },
-  { label: "Employee APP", route: "/innovations/projects/employee-app" },
-  { label: "Employee App", route: "/innovations/projects/employee-app" },
-  { label: "Cache BI", route: "/innovations/projects/cache-bi" },
-  { label: "EDM", route: "/innovations/projects/edm" },
-  { label: "MAIL INTEGRATION", route: "/innovations/projects/mail-integration" },
-  { label: "Mail Integration", route: "/innovations/projects/mail-integration" },
-  { label: "Cache GPT", route: "/innovations/projects/cache-gpt" },
-  { label: "Cache DB", route: "/innovations/projects/cache-db" },
-  { label: "Cache DOC", route: "/innovations/projects/cache-doc" },
-  { label: "Web & App Development", route: "/innovations/projects/custom-app-development" },
+  // AI Ops Center of Excellence
+  { label: "AI Ops CoE", route: "/ai-ops-coe" },
+  { label: "AI Ops Overview", route: "/ai-ops-coe" },
+  { label: "Innovations", route: "/ai-ops-coe", sectionId: "innovations" },
 
   // Search aliases (same page)
   { label: "Awards and Accolades", route: "/about/awards" },

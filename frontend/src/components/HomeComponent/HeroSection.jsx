@@ -1,11 +1,8 @@
 import React, { useState, useRef, useEffect, useMemo, useContext, useCallback, lazy, Suspense } from 'react';
 import ContentContext, { useContent } from '../../context/ContentContext';
 import { useNavigate, Link } from 'react-router-dom';
-import { useChatFocus } from '../../context/ChatFocusContext';
-import { useChat } from '../../context/ChatContext';
 import { useAppLoader } from '../../context/AppLoaderContext';
 import { HARDCODED_HIGHLIGHTS } from '../../data/blogsAndHighlights';
-import ChatMessageContent from '../ChatMessageContent';
 
 const WhoWeAre = lazy(() => import('./Whoweare'));
 const CEOSection = lazy(() =>
@@ -320,38 +317,6 @@ const HeroSection = () => {
     } : {}),
   };
 
-  // Chatbot UI CMS values
-  const chatCms = useContent('home', 'chatbot');
-  const cb = {
-    heading: chatCms.chatHeading || 'Have tech questions?',
-    heading2: chatCms.chatHeadingLine2 || 'Our AI answer engine can help.',
-    placeholder: chatCms.chatPlaceholder || 'Please ask a question or initiate a search',
-    bgFrom: chatCms.chatCardBgFrom || '#e6e0f4',
-    bgMid: chatCms.chatCardBgMid || '#ddd4ef',
-    bgTo: chatCms.chatCardBgTo || '#e2daf2',
-    radius: parseInt(chatCms.chatCardRadius) || 28,
-    height: parseInt(chatCms.chatCardHeight) || 580,
-    maxWidth: parseInt(chatCms.chatCardMaxWidth) || 600,
-    accentFrom: chatCms.chatAccentFrom || '#6366f1',
-    accentTo: chatCms.chatAccentTo || '#a855f7',
-    aiBubbleBg: chatCms.chatAiBubbleBg || 'rgba(255,255,255,0.8)',
-    aiBubbleText: chatCms.chatAiBubbleText || '#1d1d1f',
-    userBubbleText: chatCms.chatUserBubbleText || '#ffffff',
-    headingSize: parseFloat(chatCms.chatHeadingFontSize) || 22,
-    bodySize: parseFloat(chatCms.chatBodyFontSize) || 13.5,
-  };
-
-  const { messages, input, setInput, loading, chatError, hasAsked, sendMessage } = useChat();
-  const { setChatFocused } = useChatFocus();
-  const messagesEndRef = useRef(null);
-  const chatInputRef = useRef(null);
-
-  // Sync chatFocused with hasAsked
-  useEffect(() => {
-    setChatFocused(hasAsked);
-    return () => setChatFocused(false);
-  }, [hasAsked, setChatFocused]);
-
   // Hero entrance: Lenis-style RAF + lerp for smooth animation; starts after app loader is gone
   const { loaderDone } = useAppLoader();
   const HERO_DELAY_MS = 0;
@@ -424,22 +389,6 @@ const HeroSection = () => {
     setCsOpen(false);
     const industryParam = CASE_STUDY_INDUSTRY_PARAM[study] ?? study;
     navigate(`/case-studies?industry=${encodeURIComponent(industryParam)}`);
-  };
-
-  const scrollToBottom = () => {
-    const el = messagesEndRef.current;
-    if (!el) return;
-    const container = el.parentElement;
-    if (container) container.scrollTop = container.scrollHeight;
-  };
-  useEffect(() => scrollToBottom(), [messages]);
-
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage();
-    }
   };
 
   return (
@@ -582,75 +531,6 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* AI search intro - heading + input, then answers below (hidden, not removed) */}
-      <section className="relative overflow-hidden bg-[#fafafa] hidden" aria-hidden="true">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6 lg:py-8 relative flex flex-col items-center">
-          <div className={`main-search-intro flex flex-col items-center justify-center gap-5 w-full max-w-2xl mx-auto ${hasAsked ? 'main-search-intro-hide-search' : ''}`}>
-            <p className="text-xl lg:text-2xl font-bold text-center text-purple-700">
-              {cb.heading} {cb.heading2}
-            </p>
-
-            {/* Answers between heading and chat box when user has asked */}
-            {hasAsked && (
-              <div className="w-full space-y-4 max-h-[320px] overflow-y-auto scrollbar-hide">
-                {chatError && <div className="text-[13px] text-red-600 bg-red-50/80 p-3 rounded-xl">{chatError}</div>}
-                {messages.map((msg, i) =>
-                  msg.role === 'assistant' ? (
-                    <div key={i} className="flex gap-3">
-                      <div className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ background: `linear-gradient(135deg, ${cb.accentFrom}, ${cb.accentTo})` }}>
-                        <span className="material-symbols-outlined text-white text-[14px]">auto_awesome</span>
-                      </div>
-                      <div className="flex-1 p-4 rounded-xl shadow-sm text-[14px] bg-white/90 border border-slate-100" style={{ color: cb.aiBubbleText }}>
-                        <ChatMessageContent content={msg.content} />
-                      </div>
-                    </div>
-                  ) : (
-                    <div key={i} className="flex justify-end">
-                      <div className="max-w-[85%] p-4 rounded-xl shadow-sm text-[14px] text-white" style={{ background: `linear-gradient(to right, ${cb.accentFrom}, ${cb.accentTo})` }}>
-                        {msg.content}
-                      </div>
-                    </div>
-                  )
-                )}
-                {loading && (
-                  <div className="flex gap-3">
-                    <div className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5" style={{ background: `linear-gradient(135deg, ${cb.accentFrom}, ${cb.accentTo})` }}>
-                      <span className="material-symbols-outlined text-white text-[14px]">auto_awesome</span>
-                    </div>
-                    <div className="text-[13px] text-slate-500 italic py-2">Thinking…</div>
-                  </div>
-                )}
-                <div ref={messagesEndRef} />
-              </div>
-            )}
-
-            <div className="w-full flex flex-col sm:flex-row gap-3 sm:items-center">
-              <div className="relative flex items-center flex-1 bg-white rounded-lg border border-slate-200 shadow-sm px-4 py-3 focus-within:outline-none focus-within:ring-0">
-                <span className="material-symbols-outlined text-[20px] mr-2 shrink-0 text-slate-400" style={{ color: cb.accentFrom }}>search</span>
-                <input
-                  ref={chatInputRef}
-                  className="w-full border-none bg-transparent focus:ring-0 focus:outline-none focus-visible:outline-none focus-visible:ring-0 text-[14px] text-(--apple-black) placeholder:text-slate-400"
-                  placeholder={cb.placeholder}
-                  type="text"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                  disabled={loading}
-                />
-              </div>
-              <button
-                type="button"
-                onClick={() => sendMessage()}
-                disabled={loading || !input.trim()}
-                className="shrink-0 px-5 py-3 rounded-lg font-semibold text-[14px] text-white bg-purple-700 hover:bg-purple-800 transition-colors disabled:opacity-50"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Choose Your Interest */}
       <section className="bg-linear-to-b from-white to-gray-50/80 pt-6 pb-14 px-6 sm:px-8 lg:px-12 overflow-visible relative">
         <div className="max-w-[900px] mx-auto" ref={dropdownAreaRef}>
@@ -746,7 +626,7 @@ const HeroSection = () => {
         <WhoWeAre />
       </Suspense>
 
-      <InnovationsSection />
+      <AiOpsCoeSection />
 
       <Suspense fallback={<BelowFoldFallback />}>
         <AwardsSection />
@@ -756,14 +636,14 @@ const HeroSection = () => {
   );
 };
 
-/* --------- Innovations (home strip) --------- */
-const INNOVATIONS_HERO_IMAGE = '/images/innovations-meeting.webp';
+/* --------- AI Ops CoE (home strip) --------- */
+const AI_OPS_COE_IMAGE = '/hero/aimlimg.webp';
 
-function InnovationsSection() {
-  const [innovImgLoaded, setInnovImgLoaded] = useState(false);
+function AiOpsCoeSection() {
+  const [imgLoaded, setImgLoaded] = useState(false);
   return (
     <section
-      id="innovations"
+      id="ai-ops-coe"
       className="relative overflow-hidden pt-16 lg:pt-24 pb-8 lg:pb-10"
       style={{ background: 'linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #f8fafc 100%)' }}
     >
@@ -775,32 +655,32 @@ function InnovationsSection() {
           {/* Left: Image */}
           <div className="order-2 lg:order-1 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 bg-slate-100/80">
             <img
-              src={INNOVATIONS_HERO_IMAGE}
-              alt="Innovation at Cache Digitech"
-              className={`w-full h-full object-cover aspect-4/3 transition-opacity duration-300 ease-out ${innovImgLoaded ? 'opacity-100' : 'opacity-0'}`}
+              src={AI_OPS_COE_IMAGE}
+              alt="AI Ops Center of Excellence at Cache Digitech"
+              className={`w-full h-full object-cover aspect-4/3 transition-opacity duration-300 ease-out ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
               loading="lazy"
               decoding="async"
               fetchPriority="low"
-              onLoad={() => setInnovImgLoaded(true)}
+              onLoad={() => setImgLoaded(true)}
             />
           </div>
 
           {/* Right: Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
             <p className="text-lg md:text-xl font-extrabold tracking-[0.3em] uppercase text-red-500 mb-3">
-              Innovation at Cache
+              AI Ops Center of Excellence
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-[52px] font-light text-(--apple-black) tracking-tight leading-[1.08] max-w-2xl mb-6">
-              Where ideas meet impact
+              Where we win with AI
             </h2>
             <p className="text-(--apple-gray) text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
-              From research and emerging tech to accelerators and partnerships-we help you turn vision into outcomes. Explore how we innovate.
+              One governed way to take AI from pilot to production - built once, used everywhere.
             </p>
             <Link
-              to="/innovations"
+              to="/ai-ops-coe"
               className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3.5 rounded-full transition-colors duration-300 ease-out shadow-md hover:shadow-lg group"
             >
-              Explore Innovations
+              Explore the AI Ops CoE
               <span className="material-symbols-outlined text-[20px] transition-transform duration-300 ease-out group-hover:translate-x-0.5">arrow_forward</span>
             </Link>
           </div>
