@@ -48,7 +48,7 @@ const CASE_STUDY_INDUSTRY_PARAM = {
 const DEFAULT_HERO = {
   tagline: 'Operational Excellence',
   heading: '',
-  subheading: 'Precision engineering meets adaptive AI. Scale your cloud infrastructure with zero friction through our intelligent interface.',
+  subheading: 'Where we win with AI. Precision engineering meets adaptive AI. Scale your cloud infrastructure with zero friction through our intelligent interface.',
   stat1: '99.999%',
   stat2: '< 1ms',
   stat3: 'SOC2',
@@ -192,7 +192,7 @@ function parseHeadingIntoWords(html) {
 }
 
 const TYPEWRITER_WORDS = [
-  'Analytics', 'Cloud', 'Automation', 'Integration', 'Optimization', 'Scalability', 'Innovation',
+  'Analytics', 'Cloud', 'Automation', 'Integration', 'Optimization', 'AI Ops CoE', 'Scalability', 'Innovation',
 ];
 
 // Lenis-style lerp (same as Lenis scrollTo) for smooth typewriter
@@ -284,7 +284,9 @@ const HeroSection = () => {
 
   const tagline = heroLoaded ? (cms.tagline ?? '') : DEFAULT_HERO.tagline;
   const heading = heroLoaded ? (cms.heading != null ? cms.heading : '') : '';
-  const subheading = heroLoaded ? (cms.subheading ?? '') : DEFAULT_HERO.subheading;
+  const subheading = heroLoaded
+    ? (cms.subheading || DEFAULT_HERO.subheading)
+    : DEFAULT_HERO.subheading;
   const stat1 = heroLoaded ? (cms.stat1 ?? '') : DEFAULT_HERO.stat1;
   const stat2 = heroLoaded ? (cms.stat2 ?? '') : DEFAULT_HERO.stat2;
   const stat3 = heroLoaded ? (cms.stat3 ?? '') : DEFAULT_HERO.stat3;
@@ -626,7 +628,8 @@ const HeroSection = () => {
         <WhoWeAre />
       </Suspense>
 
-      <AiOpsCoeSection />
+      <AiOpsCoeIntroSection />
+      <AiOpsCoeCapabilitiesSection />
 
       <Suspense fallback={<BelowFoldFallback />}>
         <AwardsSection />
@@ -636,15 +639,44 @@ const HeroSection = () => {
   );
 };
 
-/* --------- AI Ops CoE (home strip) --------- */
+/* --------- AI Ops CoE home sections --------- */
 const AI_OPS_COE_IMAGE = '/hero/aimlimg.webp';
 
-function AiOpsCoeSection() {
+const AI_OPS_HOME_PILLARS = [
+  {
+    icon: 'hub',
+    title: 'Shared capability',
+    description: 'Pool talent, reusable assets and governance so each win compounds for the next account.',
+  },
+  {
+    icon: 'smart_toy',
+    title: 'Agentic operations',
+    description: 'AI agents for triage, routing, self-healing and closed-loop incident resolution.',
+  },
+  {
+    icon: 'verified_user',
+    title: 'Governed from day one',
+    description: 'Risk, compliance and audit trails built into every model action and remediation.',
+  },
+  {
+    icon: 'bolt',
+    title: 'Pilot to production',
+    description: 'One standard path from use-case intake to live AI-agent operations.',
+  },
+];
+
+const AI_OPS_HOME_PROOF = [
+  { value: '85%', label: 'Alerts resolved before analyst involvement' },
+  { value: '99.7%', label: 'Detection accuracy after behavioural learning' },
+  { value: '4-5 min', label: 'Triage time vs 4-5 hours previously' },
+];
+
+function AiOpsCoeIntroSection() {
   const [imgLoaded, setImgLoaded] = useState(false);
   return (
     <section
       id="ai-ops-coe"
-      className="relative overflow-hidden pt-16 lg:pt-24 pb-8 lg:pb-10"
+      className="relative overflow-hidden pt-16 lg:pt-24 pb-10 lg:pb-14"
       style={{ background: 'linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #f8fafc 100%)' }}
     >
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-red-100/20 blur-[120px] pointer-events-none" />
@@ -652,7 +684,6 @@ function AiOpsCoeSection() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Image */}
           <div className="order-2 lg:order-1 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 bg-slate-100/80">
             <img
               src={AI_OPS_COE_IMAGE}
@@ -665,23 +696,97 @@ function AiOpsCoeSection() {
             />
           </div>
 
-          {/* Right: Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
-            <p className="text-lg md:text-xl font-extrabold tracking-[0.3em] uppercase text-red-500 mb-3">
+            <p className="text-sm md:text-base font-extrabold tracking-[0.28em] uppercase text-red-500 mb-3">
               AI Ops Center of Excellence
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-[52px] font-light text-(--apple-black) tracking-tight leading-[1.08] max-w-2xl mb-6">
               Where we win with AI
             </h2>
             <p className="text-(--apple-gray) text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
-              One governed way to take AI from pilot to production - built once, used everywhere.
+              One governed way to take AI from pilot to production - built once, used everywhere. From NOC and SOC automation to agentic workflows, the CoE turns client demand into reusable capability.
             </p>
-            <Link
-              to="/ai-ops-coe"
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3.5 rounded-full transition-colors duration-300 ease-out shadow-md hover:shadow-lg group"
+            <div className="flex flex-col sm:flex-row items-center lg:items-stretch justify-center lg:justify-start gap-3">
+              <Link
+                to="/ai-ops-coe"
+                className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3.5 rounded-full transition-colors duration-300 ease-out shadow-md hover:shadow-lg group"
+              >
+                Explore the AI Ops CoE
+                <span className="material-symbols-outlined text-[20px] transition-transform duration-300 ease-out group-hover:translate-x-0.5">arrow_forward</span>
+              </Link>
+              <Link
+                to="/contactus"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-(--apple-black) font-semibold px-6 py-3.5 rounded-full border border-slate-200 transition-colors duration-300 ease-out"
+              >
+                Talk to us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AiOpsCoeCapabilitiesSection() {
+  return (
+    <section
+      className="relative overflow-hidden py-14 lg:py-20 bg-slate-950 text-white"
+      aria-label="AI Ops CoE capabilities"
+    >
+      <div
+        className="absolute inset-0 opacity-40 pointer-events-none bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[48px_48px]"
+        aria-hidden
+      />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_0%,rgba(220,38,38,0.2),transparent)] pointer-events-none" aria-hidden />
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="text-center mb-10 lg:mb-14">
+          <p className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.28em] uppercase text-red-400 mb-3">
+            How the CoE delivers
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight max-w-3xl mx-auto">
+            Shared standards. Compounding value.
+          </h2>
+          <p className="mt-4 text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            Six pillars of operations, an automated incident pipeline, and proof points from alert and log intelligence.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-12 lg:mb-16">
+          {AI_OPS_HOME_PILLARS.map((pillar) => (
+            <div
+              key={pillar.title}
+              className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6 hover:border-red-500/40 hover:bg-white/10 transition-colors duration-300"
             >
-              Explore the AI Ops CoE
-              <span className="material-symbols-outlined text-[20px] transition-transform duration-300 ease-out group-hover:translate-x-0.5">arrow_forward</span>
+              <span className="material-symbols-outlined text-red-400 text-[28px] mb-4 block" aria-hidden>
+                {pillar.icon}
+              </span>
+              <h3 className="text-lg font-bold text-white mb-2">{pillar.title}</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">{pillar.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 lg:p-10">
+          <p className="font-mono text-[11px] font-semibold tracking-[0.22em] uppercase text-red-400 mb-6 text-center sm:text-left">
+            Proof point // alert & log intelligence
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+            {AI_OPS_HOME_PROOF.map((point) => (
+              <div key={point.value} className="text-center sm:text-left">
+                <p className="font-mono text-3xl sm:text-4xl font-bold text-red-400">{point.value}</p>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">{point.label}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center sm:justify-start">
+            <Link
+              to="/ai-ops-coe#incident-pipeline"
+              className="inline-flex items-center gap-2 text-red-400 font-semibold hover:gap-3 transition-all text-sm sm:text-base group"
+            >
+              See the incident pipeline
+              <span className="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
             </Link>
           </div>
         </div>
