@@ -11,6 +11,13 @@
     "dev": "npm run dev --prefix frontend",
     "build": "npm install --prefix frontend --include=dev && npm run build --prefix frontend",
     "start": "npx --yes serve release -s -l 3000",
-    "preview": "npm run build && npm start"
+    "preview": "npm run build && npm start",
+    "docker:build": "docker build -t cachedigitech-website:latest .",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f web",
+    "chat:install": "npm install --prefix chat-api",
+    "chat:extract": "npm run extract --prefix chat-api",
+    "chat:start": "npm start --prefix chat-api"
   }
 }

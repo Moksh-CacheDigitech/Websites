@@ -38,6 +38,7 @@
 }
 
 @import "./components/PageLoader.css";
+@import "./styles/chatbot.css";
 
 @import "tailwindcss";
 

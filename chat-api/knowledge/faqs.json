@@ -1,0 +1,2456 @@
+{
+  "generatedAt": "2026-11-02T09:13:10.030427+00:00",
+  "count": 350,
+  "faqs": [
+    {
+      "id": "faq-1",
+      "group": "Cloud",
+      "topic": "Cloud platforms",
+      "question": "Which cloud platforms does Cache Digitech work with?",
+      "answer": "The Cache Digitech website identifies AWS, Microsoft Azure and Google Cloud Platform (GCP) within its cloud offering. Confirm current partner status, supported services and limitations with the cloud team."
+    },
+    {
+      "id": "faq-2",
+      "group": "Cloud",
+      "topic": "Migration",
+      "question": "What is cloud rehosting or lift-and-shift migration?",
+      "answer": "Rehosting moves a workload to cloud infrastructure with limited application changes. It may accelerate migration, but does not automatically modernize or optimize the application."
+    },
+    {
+      "id": "faq-3",
+      "group": "Cloud",
+      "topic": "Migration",
+      "question": "What is the difference between rehosting and replatforming?",
+      "answer": "Rehosting moves an application with minimal changes. Replatforming makes selected changes to use cloud capabilities without fully redesigning the application."
+    },
+    {
+      "id": "faq-4",
+      "group": "Cloud",
+      "topic": "Migration",
+      "question": "What should be included in a cloud migration assessment?",
+      "answer": "Common areas include workload inventory, dependencies, security, compliance, target architecture, migration options, cost estimates, risks and sequencing. Confirm the formal assessment scope with the cloud team."
+    },
+    {
+      "id": "faq-5",
+      "group": "Cloud",
+      "topic": "Migration",
+      "question": "How can application dependencies be identified before migration?",
+      "answer": "Inventory applications, databases, integrations, network paths, identity dependencies and upstream/downstream services. Dependency mapping helps group workloads into migration waves."
+    },
+    {
+      "id": "faq-6",
+      "group": "Cloud",
+      "topic": "Migration",
+      "question": "How can cloud migration downtime be reduced?",
+      "answer": "Use dependency planning, replication where suitable, rehearsal, phased migration, cutover validation and a tested rollback plan. Downtime commitments must be validated for each workload."
+    },
+    {
+      "id": "faq-7",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "What is a cloud landing zone?",
+      "answer": "A landing zone is a governed cloud foundation that typically includes identity, network design, logging, security policies, account structure and baseline automation."
+    },
+    {
+      "id": "faq-8",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "What is hybrid cloud?",
+      "answer": "Hybrid cloud combines on-premises or private-cloud infrastructure with public cloud services. Design depends on latency, data handling, security, resilience and operations."
+    },
+    {
+      "id": "faq-9",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "What is multi-cloud management?",
+      "answer": "Multi-cloud management coordinates operations, governance and cost visibility across more than one cloud provider. Confirm which management functions are included in the proposed service."
+    },
+    {
+      "id": "faq-10",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "What is cloud-native modernization?",
+      "answer": "Cloud-native modernization adapts applications to use suitable capabilities such as containers, managed services, microservices or serverless components."
+    },
+    {
+      "id": "faq-11",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "What are microservices?",
+      "answer": "Microservices structure an application as smaller services that can be developed and deployed independently. They can improve release flexibility but introduce distributed-system complexity."
+    },
+    {
+      "id": "faq-12",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "What is serverless computing?",
+      "answer": "Serverless lets teams run code or services without managing underlying servers directly. Design should account for runtime limits, cost, security and service dependencies."
+    },
+    {
+      "id": "faq-13",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "What is Kubernetes and when is it useful?",
+      "answer": "Kubernetes orchestrates containerized applications, including scheduling, scaling and service recovery. It is useful for suitable container workloads but adds operational complexity."
+    },
+    {
+      "id": "faq-14",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "When should an enterprise use containers?",
+      "answer": "Containers package applications and dependencies consistently across environments. Suitability depends on portability needs, deployment patterns, isolation and operational capability."
+    },
+    {
+      "id": "faq-15",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "How should workloads be placed across cloud and on-premises?",
+      "answer": "Consider latency, data residency, security, licensing, resilience, integration, performance and total cost. Validate workload placement against the target architecture."
+    },
+    {
+      "id": "faq-16",
+      "group": "Cloud",
+      "topic": "Governance",
+      "question": "What is cloud governance?",
+      "answer": "Cloud governance defines policies, roles and guardrails for identity, security, approved services, tagging, cost ownership and compliance evidence."
+    },
+    {
+      "id": "faq-17",
+      "group": "Cloud",
+      "topic": "Governance",
+      "question": "What is policy-as-code?",
+      "answer": "Policy-as-code expresses governance or security rules in machine-readable form so they can be checked consistently during provisioning and operations."
+    },
+    {
+      "id": "faq-18",
+      "group": "Cloud",
+      "topic": "Governance",
+      "question": "How can an enterprise manage cloud sprawl?",
+      "answer": "Use resource inventory, account governance, tagging, approved provisioning patterns, lifecycle policies and ownership reviews."
+    },
+    {
+      "id": "faq-19",
+      "group": "Cloud",
+      "topic": "Governance",
+      "question": "How can cloud resources be tagged consistently?",
+      "answer": "Define required tags such as application, owner, environment, cost centre and lifecycle. Apply validation at provisioning and monitor non-compliant resources."
+    },
+    {
+      "id": "faq-20",
+      "group": "Cloud",
+      "topic": "Security",
+      "question": "How should cloud access be controlled?",
+      "answer": "Use least-privilege roles, strong authentication, centralized identity, periodic access reviews and monitored privileged access."
+    },
+    {
+      "id": "faq-21",
+      "group": "Cloud",
+      "topic": "Security",
+      "question": "What is cloud security posture management?",
+      "answer": "Cloud security posture management identifies cloud misconfigurations and policy deviations. Exact capabilities depend on tools, platforms and integrations."
+    },
+    {
+      "id": "faq-22",
+      "group": "Cloud",
+      "topic": "Security",
+      "question": "How can cloud data be protected?",
+      "answer": "Use suitable identity controls, encryption, key management, network restrictions, backups, logging and data classification based on data sensitivity and risk."
+    },
+    {
+      "id": "faq-23",
+      "group": "Cloud",
+      "topic": "Operations",
+      "question": "What is cloud monitoring?",
+      "answer": "Cloud monitoring collects metrics, logs and events to show service health, performance, capacity and availability. Alerts should have clear owners and runbooks."
+    },
+    {
+      "id": "faq-24",
+      "group": "Cloud",
+      "topic": "Operations",
+      "question": "How should cloud backup and disaster recovery be designed?",
+      "answer": "Identify critical workloads, recovery time objectives, recovery point objectives, retention, isolation and restoration testing. Targets should be agreed and tested."
+    },
+    {
+      "id": "faq-25",
+      "group": "Cloud",
+      "topic": "Optimization",
+      "question": "What is cloud workload right-sizing?",
+      "answer": "Right-sizing adjusts compute, memory or other resources to match observed demand. Changes must be validated against performance, resilience and growth requirements."
+    },
+    {
+      "id": "faq-26",
+      "group": "Cloud",
+      "topic": "FinOps",
+      "question": "What is FinOps?",
+      "answer": "FinOps is a collaborative operating practice that connects engineering, finance and business teams to understand cloud spend and balance cost, performance and value."
+    },
+    {
+      "id": "faq-27",
+      "group": "Cloud",
+      "topic": "FinOps",
+      "question": "What does a cloud cost assessment examine?",
+      "answer": "It may review spend trends, resource utilization, idle assets, commitments, storage, data transfer, tagging and ownership. Findings should use the customer's billing and usage data."
+    },
+    {
+      "id": "faq-28",
+      "group": "Cloud",
+      "topic": "FinOps",
+      "question": "How can cloud costs be allocated to business units?",
+      "answer": "Use consistent tags, accounts or subscriptions, shared-cost rules and reporting by application, team or cost centre."
+    },
+    {
+      "id": "faq-29",
+      "group": "Cloud",
+      "topic": "FinOps",
+      "question": "What are reserved instances or savings plans?",
+      "answer": "These are provider-specific commitment models that may reduce rates in exchange for usage or spend commitments. Assess demand stability and utilization risk first."
+    },
+    {
+      "id": "faq-30",
+      "group": "Cloud",
+      "topic": "FinOps",
+      "question": "How can idle cloud resources be identified?",
+      "answer": "Use inventory and usage data to identify low-utilization resources, then verify ownership and dependencies before resizing or decommissioning them."
+    },
+    {
+      "id": "faq-31",
+      "group": "Cloud",
+      "topic": "FinOps",
+      "question": "Can cloud cost savings be guaranteed?",
+      "answer": "Savings depend on the current environment, usage, pricing, architecture and approved changes. Any numerical or guaranteed claim must be confirmed with Cache Digitech before publication."
+    },
+    {
+      "id": "faq-32",
+      "group": "Cloud",
+      "topic": "Commercial",
+      "question": "Does Cache Digitech offer a cloud cost assessment?",
+      "answer": "The cloud page advertises a complimentary 14-day cloud cost assessment. Confirm current eligibility, included scope, access requirements and terms before publishing this offer."
+    },
+    {
+      "id": "faq-33",
+      "group": "Cloud",
+      "topic": "Commercial",
+      "question": "How is cloud migration pricing determined?",
+      "answer": "Pricing depends on workload complexity, target architecture, data volumes, migration windows, testing, licensing and post-migration support."
+    },
+    {
+      "id": "faq-34",
+      "group": "Cloud",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech manage billing across multiple clouds?",
+      "answer": "The website describes multi-cloud billing and spend management across AWS, Azure and GCP. Confirm billing consolidation, discounts, rebates and invoicing arrangements for the specific account."
+    },
+    {
+      "id": "faq-35",
+      "group": "Cloud",
+      "topic": "Commercial",
+      "question": "What information is needed for a cloud consultation?",
+      "answer": "Useful inputs include cloud providers, workload inventory, current spend, architecture, performance concerns, governance needs and desired outcomes. Do not share credentials in a public form."
+    },
+    {
+      "id": "faq-36",
+      "group": "Cloud",
+      "topic": "Commercial",
+      "question": "What happens after cloud migration is completed?",
+      "answer": "Post-migration work may include validation, monitoring, documentation, knowledge transfer, cost review and operational handover. Ongoing operations depend on the agreed service scope."
+    },
+    {
+      "id": "faq-37",
+      "group": "Cloud",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech support cloud exit planning?",
+      "answer": "A cloud exit plan considers data export, application dependencies, proprietary services, licensing, network design, contracts and migration testing. Confirm whether this advisory work is in scope."
+    },
+    {
+      "id": "faq-38",
+      "group": "Cloud",
+      "topic": "Commercial",
+      "question": "How can I request a cloud architecture review?",
+      "answer": "Share business goals, current cloud/on-premises footprint, workloads, security constraints, performance issues and timeline through the official contact route."
+    },
+    {
+      "id": "faq-39",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "What is the difference between public and private cloud?",
+      "answer": "Public cloud services are delivered by a cloud provider; private cloud is dedicated to one organization. Selection depends on workload, control, security, performance and cost."
+    },
+    {
+      "id": "faq-40",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "How should databases be migrated to cloud?",
+      "answer": "Consider engine compatibility, data volume, replication, consistency, downtime tolerance, application connectivity, security and recovery. Confirm supported source and target databases."
+    },
+    {
+      "id": "faq-41",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "How should cloud cost anomalies be handled?",
+      "answer": "Define spend baselines, alert thresholds and investigation workflows. Distinguish legitimate demand changes from misconfiguration, unexpected data transfer or unauthorized use."
+    },
+    {
+      "id": "faq-42",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "How should cloud workloads be validated after migration?",
+      "answer": "Test functionality, data integrity, performance, security, integrations, monitoring, backup and user acceptance against criteria agreed before cutover."
+    },
+    {
+      "id": "faq-43",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "What should be considered when adopting managed cloud services?",
+      "answer": "Define covered accounts, workloads, service hours, monitoring, change authority, escalation, reporting, security responsibilities and commercial terms."
+    },
+    {
+      "id": "faq-44",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "How should cloud operating costs be forecast?",
+      "answer": "Use historical billing, workload growth, seasonality, pricing models, commitments, storage and data-transfer estimates. Revisit forecasts as usage changes."
+    },
+    {
+      "id": "faq-45",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "What is cloud compliance evidence?",
+      "answer": "It is documented information showing how selected controls are implemented and monitored. Evidence requirements depend on the framework, architecture and audit scope."
+    },
+    {
+      "id": "faq-46",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "How should cloud operations be handed over?",
+      "answer": "Provide architecture records, runbooks, monitoring, access procedures, known issues, escalation paths and knowledge-transfer sessions."
+    },
+    {
+      "id": "faq-47",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "What is a cloud workload recovery test?",
+      "answer": "A recovery test validates whether workloads and data can be restored within agreed recovery objectives. Record results, issues and remediation actions."
+    },
+    {
+      "id": "faq-48",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "How can cloud performance be optimized?",
+      "answer": "Measure workload latency, throughput, utilization, dependencies and user experience, then test changes against agreed performance and resilience requirements."
+    },
+    {
+      "id": "faq-49",
+      "group": "Cloud",
+      "topic": "Technical",
+      "question": "What should be included in a cloud governance dashboard?",
+      "answer": "Potential measures include resource inventory, policy compliance, spend by owner, anomalies, security findings, utilization and unresolved actions."
+    },
+    {
+      "id": "faq-50",
+      "group": "Data & AI",
+      "topic": "Data strategy",
+      "question": "What data and AI services does Cache Digitech offer?",
+      "answer": "Cache Digitech describes data analytics and AI capabilities, including data-driven insights and predictive dashboards. Its cloud page also references customized LLMs, RAG pipelines and agentic workflows; confirm current scope."
+    },
+    {
+      "id": "faq-51",
+      "group": "Data & AI",
+      "topic": "AI readiness",
+      "question": "What is an AI readiness assessment?",
+      "answer": "It evaluates business use cases, data quality and access, architecture, skills, security, governance and expected value to prioritize feasible AI initiatives."
+    },
+    {
+      "id": "faq-52",
+      "group": "Data & AI",
+      "topic": "AI strategy",
+      "question": "How should an enterprise select an AI use case?",
+      "answer": "Prioritize a clear business problem, measurable outcome, accessible data, manageable risk, accountable owner and realistic production path."
+    },
+    {
+      "id": "faq-53",
+      "group": "Data & AI",
+      "topic": "Data platforms",
+      "question": "What is a data lake?",
+      "answer": "A data lake stores large volumes of structured, semi-structured and unstructured data. Governance, metadata, access controls and quality practices are essential."
+    },
+    {
+      "id": "faq-54",
+      "group": "Data & AI",
+      "topic": "Data platforms",
+      "question": "What is a data warehouse?",
+      "answer": "A data warehouse organizes curated data for reporting and analytics, typically using defined schemas and quality controls."
+    },
+    {
+      "id": "faq-55",
+      "group": "Data & AI",
+      "topic": "Data platforms",
+      "question": "What is a lakehouse architecture?",
+      "answer": "A lakehouse combines aspects of data lakes and data warehouses to support varied data workloads with shared governance and management."
+    },
+    {
+      "id": "faq-56",
+      "group": "Data & AI",
+      "topic": "Data engineering",
+      "question": "What is data integration?",
+      "answer": "Data integration combines information from different systems using methods such as batch pipelines, APIs, streaming or replication, depending on freshness and reliability needs."
+    },
+    {
+      "id": "faq-57",
+      "group": "Data & AI",
+      "topic": "Data engineering",
+      "question": "What is master data management?",
+      "answer": "Master data management creates consistent, governed records for key entities such as customers, products or suppliers across systems."
+    },
+    {
+      "id": "faq-58",
+      "group": "Data & AI",
+      "topic": "Data governance",
+      "question": "What is data lineage?",
+      "answer": "Data lineage records where data originated, how it changed and where it is consumed, supporting impact analysis, troubleshooting and auditability."
+    },
+    {
+      "id": "faq-59",
+      "group": "Data & AI",
+      "topic": "Data quality",
+      "question": "How is data quality assessed?",
+      "answer": "Common dimensions include accuracy, completeness, consistency, timeliness, validity and uniqueness. Rules should reflect the business use of the data."
+    },
+    {
+      "id": "faq-60",
+      "group": "Data & AI",
+      "topic": "Data quality",
+      "question": "How can duplicate or inconsistent data be reduced?",
+      "answer": "Use data standards, validation rules, matching logic, ownership and remediation workflows tailored to source systems and the risks of incorrect merges."
+    },
+    {
+      "id": "faq-61",
+      "group": "Data & AI",
+      "topic": "Data governance",
+      "question": "What is data governance?",
+      "answer": "Data governance defines ownership, policies, access, quality standards, metadata and lifecycle controls for data."
+    },
+    {
+      "id": "faq-62",
+      "group": "Data & AI",
+      "topic": "Data governance",
+      "question": "How should access to sensitive datasets be controlled?",
+      "answer": "Apply least-privilege access, role-based permissions, data classification, encryption, audit logging and periodic access reviews."
+    },
+    {
+      "id": "faq-63",
+      "group": "Data & AI",
+      "topic": "Analytics",
+      "question": "What is a KPI dashboard?",
+      "answer": "A KPI dashboard presents selected business measures with definitions, trends and context. Metrics should have clear ownership and consistent calculations."
+    },
+    {
+      "id": "faq-64",
+      "group": "Data & AI",
+      "topic": "Analytics",
+      "question": "How can predictive analytics help a business?",
+      "answer": "Predictive analytics uses data to estimate likely outcomes, such as demand or risk. Usefulness depends on data quality, validation and operational integration."
+    },
+    {
+      "id": "faq-65",
+      "group": "Data & AI",
+      "topic": "Analytics",
+      "question": "What is real-time analytics?",
+      "answer": "Real-time analytics processes data with low latency so teams can act on recent events. Its value depends on how quickly decisions must be made."
+    },
+    {
+      "id": "faq-66",
+      "group": "Data & AI",
+      "topic": "Generative AI",
+      "question": "What is generative AI?",
+      "answer": "Generative AI uses models to produce content such as text, code or summaries. Enterprise use requires accuracy evaluation, privacy, security and human review."
+    },
+    {
+      "id": "faq-67",
+      "group": "Data & AI",
+      "topic": "Generative AI",
+      "question": "What is a large language model (LLM)?",
+      "answer": "An LLM is trained on large amounts of text and can support tasks such as summarization, extraction and question answering. Outputs can be incorrect."
+    },
+    {
+      "id": "faq-68",
+      "group": "Data & AI",
+      "topic": "RAG",
+      "question": "What is Retrieval-Augmented Generation (RAG)?",
+      "answer": "RAG retrieves relevant information from approved sources and provides it as context to a generative model. It can improve grounding but does not eliminate errors."
+    },
+    {
+      "id": "faq-69",
+      "group": "Data & AI",
+      "topic": "RAG",
+      "question": "How can an enterprise chatbot answer from internal documents?",
+      "answer": "A common design indexes approved documents, retrieves relevant passages, applies access controls and generates grounded responses. Permissions, freshness and evaluation must be designed."
+    },
+    {
+      "id": "faq-70",
+      "group": "Data & AI",
+      "topic": "Knowledge engines",
+      "question": "What is an enterprise knowledge engine?",
+      "answer": "It helps users discover and query information across approved documents or systems, often using indexing, retrieval, metadata and natural-language interfaces."
+    },
+    {
+      "id": "faq-71",
+      "group": "Data & AI",
+      "topic": "AI quality",
+      "question": "How should AI hallucinations be managed?",
+      "answer": "Use grounded retrieval, evaluations, citations where possible, human review and escalation for unsupported questions. No single technique eliminates all hallucinations."
+    },
+    {
+      "id": "faq-72",
+      "group": "Data & AI",
+      "topic": "AI evaluation",
+      "question": "How should an LLM be evaluated before production?",
+      "answer": "Evaluate task accuracy, groundedness, safety, latency, cost, robustness, privacy and representative test cases, then monitor after release."
+    },
+    {
+      "id": "faq-73",
+      "group": "Data & AI",
+      "topic": "AI security",
+      "question": "What is prompt injection?",
+      "answer": "Prompt injection attempts to manipulate a model through untrusted instructions. Defences include separating instructions from data, limiting tool permissions and testing attack scenarios."
+    },
+    {
+      "id": "faq-74",
+      "group": "Data & AI",
+      "topic": "AI privacy",
+      "question": "How can enterprise data be protected when using AI models?",
+      "answer": "Review data handling, retention, access control, encryption, logging, training settings and deployment location for the chosen model and hosting arrangement."
+    },
+    {
+      "id": "faq-75",
+      "group": "Data & AI",
+      "topic": "Private AI",
+      "question": "Can AI run in a private or controlled environment?",
+      "answer": "Deployment options depend on model, infrastructure, licensing and operational requirements. The solution team must confirm which private or customer-controlled models are supported."
+    },
+    {
+      "id": "faq-76",
+      "group": "Data & AI",
+      "topic": "Fine-tuning",
+      "question": "What is fine-tuning?",
+      "answer": "Fine-tuning further trains a model on curated examples to adapt behaviour to a task. It differs from RAG, which supplies retrieved context at inference time."
+    },
+    {
+      "id": "faq-77",
+      "group": "Data & AI",
+      "topic": "Fine-tuning",
+      "question": "When should an enterprise use RAG versus fine-tuning?",
+      "answer": "RAG is often suitable for current or source-specific information; fine-tuning may help with consistent task behaviour. Select by evaluating the use case."
+    },
+    {
+      "id": "faq-78",
+      "group": "Data & AI",
+      "topic": "AI agents",
+      "question": "What is an AI agent?",
+      "answer": "An AI agent uses a model to interpret a goal, select actions and interact with approved tools within defined permissions. Enterprise agents need guardrails and monitoring."
+    },
+    {
+      "id": "faq-79",
+      "group": "Data & AI",
+      "topic": "AI agents",
+      "question": "What is an agentic workflow?",
+      "answer": "An agentic workflow coordinates model-driven steps, tools and decisions to complete a task. Define permitted actions, failure handling, approvals and audit logs."
+    },
+    {
+      "id": "faq-80",
+      "group": "Data & AI",
+      "topic": "AI agents",
+      "question": "How can AI agents integrate with enterprise applications?",
+      "answer": "Integration commonly uses APIs or controlled tool interfaces with scoped credentials and input/output validation. Test permissions, reliability and data exposure."
+    },
+    {
+      "id": "faq-81",
+      "group": "Data & AI",
+      "topic": "AI agents",
+      "question": "How should AI agent permissions be managed?",
+      "answer": "Use least-privilege identities, narrowly scoped tools, approval gates for high-impact actions, secret management, logging and periodic reviews."
+    },
+    {
+      "id": "faq-82",
+      "group": "Data & AI",
+      "topic": "Human oversight",
+      "question": "What is human-in-the-loop AI?",
+      "answer": "It requires people to review or approve selected outputs or actions, especially where errors have significant consequences or accountability requires human judgement."
+    },
+    {
+      "id": "faq-83",
+      "group": "Data & AI",
+      "topic": "AI operations",
+      "question": "What is MLOps?",
+      "answer": "MLOps applies engineering practices to model lifecycle activities such as data/model versioning, testing, deployment, monitoring and retraining."
+    },
+    {
+      "id": "faq-84",
+      "group": "Data & AI",
+      "topic": "AI operations",
+      "question": "What is LLMOps?",
+      "answer": "LLMOps covers operational practices for LLM applications, including prompt/model versioning, evaluations, monitoring, latency, cost, safety and retrieval quality."
+    },
+    {
+      "id": "faq-85",
+      "group": "Data & AI",
+      "topic": "AI operations",
+      "question": "How should model drift be monitored?",
+      "answer": "Monitor changes in input data, output quality, user feedback and business outcomes against a baseline. Define thresholds and remediation actions."
+    },
+    {
+      "id": "faq-86",
+      "group": "Data & AI",
+      "topic": "AI infrastructure",
+      "question": "What is GPU infrastructure used for?",
+      "answer": "GPUs accelerate parallel workloads such as model training, inference and scientific computing. Sizing depends on model, concurrency, memory, latency and utilization."
+    },
+    {
+      "id": "faq-87",
+      "group": "Data & AI",
+      "topic": "AI infrastructure",
+      "question": "How should GPU capacity be planned?",
+      "answer": "Estimate workload size, model memory, concurrency, throughput, utilization, network and storage needs, power/cooling and growth; benchmark representative workloads."
+    },
+    {
+      "id": "faq-88",
+      "group": "Data & AI",
+      "topic": "AI governance",
+      "question": "What is responsible AI governance?",
+      "answer": "It defines accountability, permitted use, risk assessment, evaluation, human oversight, transparency and monitoring across the AI lifecycle."
+    },
+    {
+      "id": "faq-89",
+      "group": "Data & AI",
+      "topic": "AI privacy",
+      "question": "How can sensitive data be kept out of model prompts?",
+      "answer": "Use data classification, access controls, redaction where appropriate, approved connectors and prompt inspection. Do not send confidential data to unapproved endpoints."
+    },
+    {
+      "id": "faq-90",
+      "group": "Data & AI",
+      "topic": "AI delivery",
+      "question": "What is an AI proof of concept (PoC)?",
+      "answer": "A PoC tests feasibility and value against agreed success criteria using representative data. It should consider risks, costs and a decision path to production."
+    },
+    {
+      "id": "faq-91",
+      "group": "Data & AI",
+      "topic": "AI delivery",
+      "question": "What is required to move an AI pilot into production?",
+      "answer": "Production readiness includes security review, data permissions, evaluation, integration, reliability, monitoring, cost controls, support ownership and incident procedures."
+    },
+    {
+      "id": "faq-92",
+      "group": "Data & AI",
+      "topic": "AI delivery",
+      "question": "How should AI project success be measured?",
+      "answer": "Use use-case-specific measures such as task accuracy, processing time, adoption, error rates, cost per task and business impact with a defined baseline."
+    },
+    {
+      "id": "faq-93",
+      "group": "Data & AI",
+      "topic": "AI commercial",
+      "question": "Can Cache Digitech build custom AI solutions?",
+      "answer": "The website references data analytics, customized LLMs, RAG pipelines and agentic workflows. Confirm current platforms, deployment models and engagement scope."
+    },
+    {
+      "id": "faq-94",
+      "group": "Data & AI",
+      "topic": "AI commercial",
+      "question": "Which information should I share to discuss an AI use case?",
+      "answer": "Share the business problem, intended users, data sources, current systems, desired outcome, risk constraints and timeline. Do not submit confidential data through a general form."
+    },
+    {
+      "id": "faq-95",
+      "group": "Data & AI",
+      "topic": "AI integration",
+      "question": "Can AI be integrated with existing business systems?",
+      "answer": "Integration may use APIs, connectors or data pipelines, subject to the target system's capabilities, permissions and security requirements."
+    },
+    {
+      "id": "faq-96",
+      "group": "Data & AI",
+      "topic": "AI economics",
+      "question": "How is enterprise AI cost estimated?",
+      "answer": "Costs may include model usage, compute/GPU, data engineering, storage, integration, evaluation, security and operations. Estimate using expected workload volume and tests."
+    },
+    {
+      "id": "faq-97",
+      "group": "Data & AI",
+      "topic": "AI risk",
+      "question": "How should AI outputs be reviewed before use?",
+      "answer": "Review requirements depend on error impact. Use validation rules, evidence, human approval, audit trails and escalation for uncertain or high-impact cases."
+    },
+    {
+      "id": "faq-98",
+      "group": "Data & AI",
+      "topic": "AI architecture",
+      "question": "What is the difference between a chatbot and an AI agent?",
+      "answer": "A chatbot primarily interacts through conversation; an AI agent may also plan steps and use tools to act toward a goal. Actual capabilities depend on design and permissions."
+    },
+    {
+      "id": "faq-99",
+      "group": "Infrastructure & Engineering",
+      "topic": "Service overview",
+      "question": "What infrastructure services does Cache Digitech offer?",
+      "answer": "The website describes infrastructure consulting, design, build, operation and management, including servers, storage, networking, virtualization, cloud integration and data-centre migration."
+    },
+    {
+      "id": "faq-100",
+      "group": "Infrastructure & Engineering",
+      "topic": "Assessment",
+      "question": "What is an infrastructure assessment?",
+      "answer": "It reviews assets, dependencies, capacity, performance, lifecycle, risks and operations to identify gaps and modernization priorities."
+    },
+    {
+      "id": "faq-101",
+      "group": "Infrastructure & Engineering",
+      "topic": "Capacity",
+      "question": "What is infrastructure capacity planning?",
+      "answer": "It compares current utilization and performance with forecast demand to identify future compute, storage, network or facility needs."
+    },
+    {
+      "id": "faq-102",
+      "group": "Infrastructure & Engineering",
+      "topic": "Lifecycle",
+      "question": "What is a technology refresh?",
+      "answer": "A refresh replaces or upgrades ageing hardware or software to address supportability, performance, security, capacity or lifecycle concerns."
+    },
+    {
+      "id": "faq-103",
+      "group": "Infrastructure & Engineering",
+      "topic": "Compute",
+      "question": "What is the role of enterprise servers?",
+      "answer": "Enterprise servers provide compute for applications, databases, virtualization, analytics and other workloads. Selection depends on performance, availability and support requirements."
+    },
+    {
+      "id": "faq-104",
+      "group": "Infrastructure & Engineering",
+      "topic": "Compute",
+      "question": "How should server sizing be determined?",
+      "answer": "Use workload profiles, CPU/memory utilization, peak demand, growth, availability, software requirements and performance tests."
+    },
+    {
+      "id": "faq-105",
+      "group": "Infrastructure & Engineering",
+      "topic": "Virtualization",
+      "question": "What is server virtualization?",
+      "answer": "It uses a hypervisor or platform to run multiple virtual machines on physical hosts. It requires capacity planning, licensing, security and high-availability design."
+    },
+    {
+      "id": "faq-106",
+      "group": "Infrastructure & Engineering",
+      "topic": "Virtualization",
+      "question": "What is the difference between a virtual machine and a container?",
+      "answer": "A virtual machine includes a guest OS on virtualized hardware; a container packages an application and dependencies while sharing the host kernel."
+    },
+    {
+      "id": "faq-107",
+      "group": "Infrastructure & Engineering",
+      "topic": "HCI",
+      "question": "What is hyperconverged infrastructure (HCI)?",
+      "answer": "HCI combines compute, storage and virtualization management into an integrated platform. Suitability depends on scale, performance, resilience and licensing."
+    },
+    {
+      "id": "faq-108",
+      "group": "Infrastructure & Engineering",
+      "topic": "Storage",
+      "question": "What is the difference between SAN and NAS?",
+      "answer": "SAN provides block-level storage, often for servers and databases. NAS provides file-level access. Selection depends on application and performance needs."
+    },
+    {
+      "id": "faq-109",
+      "group": "Infrastructure & Engineering",
+      "topic": "Storage",
+      "question": "How should enterprise storage capacity be planned?",
+      "answer": "Plan usable capacity, growth, performance, protection overhead, snapshots, replication, retention and recovery needs."
+    },
+    {
+      "id": "faq-110",
+      "group": "Infrastructure & Engineering",
+      "topic": "Storage",
+      "question": "What is storage tiering?",
+      "answer": "Storage tiering places data on different storage types based on performance, access frequency, cost and retention needs."
+    },
+    {
+      "id": "faq-111",
+      "group": "Infrastructure & Engineering",
+      "topic": "Storage",
+      "question": "How can storage performance be troubleshot?",
+      "answer": "Review latency, IOPS, throughput, queue depth, cache, host paths, network and workload patterns across the application, server and storage layers."
+    },
+    {
+      "id": "faq-112",
+      "group": "Infrastructure & Engineering",
+      "topic": "Networking",
+      "question": "What is enterprise network design?",
+      "answer": "It defines connectivity, segmentation, routing, capacity, resilience, security and management across sites and workloads."
+    },
+    {
+      "id": "faq-113",
+      "group": "Infrastructure & Engineering",
+      "topic": "Networking",
+      "question": "What is network segmentation?",
+      "answer": "It divides an environment into zones with controlled communication, helping limit exposure and lateral movement when paired with suitable access controls."
+    },
+    {
+      "id": "faq-114",
+      "group": "Infrastructure & Engineering",
+      "topic": "Networking",
+      "question": "What is software-defined networking (SDN)?",
+      "answer": "SDN enables policy-driven network management through software. Suitability depends on the platform, use case and existing network design."
+    },
+    {
+      "id": "faq-115",
+      "group": "Infrastructure & Engineering",
+      "topic": "Branch infrastructure",
+      "question": "How should branch or remote-site infrastructure be managed?",
+      "answer": "Standardized configurations, secure connectivity, centralized monitoring, patching, asset inventory and remote support can simplify distributed operations."
+    },
+    {
+      "id": "faq-116",
+      "group": "Infrastructure & Engineering",
+      "topic": "Data centre",
+      "question": "What is data-centre modernization?",
+      "answer": "It assesses and updates compute, storage, networking, virtualization, management and resilience to meet current requirements."
+    },
+    {
+      "id": "faq-117",
+      "group": "Infrastructure & Engineering",
+      "topic": "Data centre",
+      "question": "What should be included in a data-centre migration plan?",
+      "answer": "Include inventory, dependency mapping, target design, sequencing, backup, change windows, testing, cutover, rollback and post-migration validation."
+    },
+    {
+      "id": "faq-118",
+      "group": "Infrastructure & Engineering",
+      "topic": "Data centre",
+      "question": "Can a data-centre migration be completed with zero downtime?",
+      "answer": "Downtime depends on application architecture, replication, dependencies and cutover method. Any zero-downtime claim must be assessed and tested per workload."
+    },
+    {
+      "id": "faq-119",
+      "group": "Infrastructure & Engineering",
+      "topic": "Availability",
+      "question": "What is high availability?",
+      "answer": "High availability reduces service interruption through redundancy, failover and elimination of single points of failure, supported by testing and operations."
+    },
+    {
+      "id": "faq-120",
+      "group": "Infrastructure & Engineering",
+      "topic": "Recovery",
+      "question": "What is disaster recovery?",
+      "answer": "Disaster recovery restores systems and data after disruption. Plans should define RTO, RPO, dependencies, runbooks, ownership and regular tests."
+    },
+    {
+      "id": "faq-121",
+      "group": "Infrastructure & Engineering",
+      "topic": "Recovery",
+      "question": "What are RTO and RPO?",
+      "answer": "RTO is the target time to restore a service. RPO is the target maximum data loss measured in time. Both should be agreed and tested."
+    },
+    {
+      "id": "faq-122",
+      "group": "Infrastructure & Engineering",
+      "topic": "Backup",
+      "question": "How should backups be designed?",
+      "answer": "Consider scope, frequency, retention, isolation, encryption, access controls and restoration testing. Successful backup jobs alone do not prove recoverability."
+    },
+    {
+      "id": "faq-123",
+      "group": "Infrastructure & Engineering",
+      "topic": "Private cloud",
+      "question": "What is a private cloud?",
+      "answer": "A private cloud provides cloud-like resource provisioning in an environment dedicated to one organization. Design depends on automation, governance and operating model."
+    },
+    {
+      "id": "faq-124",
+      "group": "Infrastructure & Engineering",
+      "topic": "Hybrid",
+      "question": "How can on-premises infrastructure integrate with public cloud?",
+      "answer": "Plan connectivity, identity, monitoring, data movement, security policies, workload dependencies and operational ownership."
+    },
+    {
+      "id": "faq-125",
+      "group": "Infrastructure & Engineering",
+      "topic": "Monitoring",
+      "question": "What is infrastructure monitoring?",
+      "answer": "It tracks health and performance of servers, storage, networks and related services through metrics, logs and alerts tied to owners and runbooks."
+    },
+    {
+      "id": "faq-126",
+      "group": "Infrastructure & Engineering",
+      "topic": "Operations",
+      "question": "What is proactive infrastructure management?",
+      "answer": "It uses health checks, trend analysis, preventive maintenance, patch planning and capacity reviews to reduce avoidable disruptions."
+    },
+    {
+      "id": "faq-127",
+      "group": "Infrastructure & Engineering",
+      "topic": "Troubleshooting",
+      "question": "How should infrastructure incidents be investigated?",
+      "answer": "Correlate impact, timeline, monitoring data and recent changes; identify dependencies, mitigate safely and document root cause and corrective actions."
+    },
+    {
+      "id": "faq-128",
+      "group": "Infrastructure & Engineering",
+      "topic": "Configuration",
+      "question": "What is configuration management?",
+      "answer": "It maintains controlled records of system settings and changes, supporting consistency, troubleshooting and auditability."
+    },
+    {
+      "id": "faq-129",
+      "group": "Infrastructure & Engineering",
+      "topic": "Patching",
+      "question": "How should firmware and patches be managed?",
+      "answer": "Use inventories, vendor advisories, risk prioritization, compatibility checks, maintenance windows, testing, backups and rollback plans."
+    },
+    {
+      "id": "faq-130",
+      "group": "Infrastructure & Engineering",
+      "topic": "Engineering",
+      "question": "What are infrastructure engineering services?",
+      "answer": "They include designing, integrating and implementing components such as compute, storage, networks, virtualization and cloud connectivity."
+    },
+    {
+      "id": "faq-131",
+      "group": "Infrastructure & Engineering",
+      "topic": "Integration",
+      "question": "What is system integration?",
+      "answer": "It connects technology components into a coherent environment, addressing compatibility, interfaces, identity, data flows, security and testing."
+    },
+    {
+      "id": "faq-132",
+      "group": "Infrastructure & Engineering",
+      "topic": "Design",
+      "question": "How should a new infrastructure solution be designed?",
+      "answer": "Start with workload requirements, current architecture, capacity, availability, security, compliance, supportability and growth, then document target design and acceptance criteria."
+    },
+    {
+      "id": "faq-133",
+      "group": "Infrastructure & Engineering",
+      "topic": "Documentation",
+      "question": "What is infrastructure documentation?",
+      "answer": "It records architecture, inventories, configurations, dependencies, support details, procedures and standards, with ownership and version control."
+    },
+    {
+      "id": "faq-134",
+      "group": "Infrastructure & Engineering",
+      "topic": "Technical debt",
+      "question": "How can infrastructure technical debt be reduced?",
+      "answer": "Identify unsupported platforms, inconsistent configurations, manual processes and fragile dependencies; prioritize by risk, supportability, cost and feasibility."
+    },
+    {
+      "id": "faq-135",
+      "group": "Infrastructure & Engineering",
+      "topic": "Performance",
+      "question": "How can server performance be improved?",
+      "answer": "Measure CPU, memory, storage latency, network throughput and application behaviour under representative load, then address the actual bottleneck."
+    },
+    {
+      "id": "faq-136",
+      "group": "Infrastructure & Engineering",
+      "topic": "Scalability",
+      "question": "How should infrastructure scalability be designed?",
+      "answer": "Use demand forecasts, modular architecture, automation and tested expansion procedures, including licensing, network, storage and support capacity."
+    },
+    {
+      "id": "faq-137",
+      "group": "Infrastructure & Engineering",
+      "topic": "Hardening",
+      "question": "How can infrastructure be hardened?",
+      "answer": "Apply secure configuration baselines, least privilege, patching, segmentation, logging, vulnerability remediation and controlled administrative access."
+    },
+    {
+      "id": "faq-138",
+      "group": "Infrastructure & Engineering",
+      "topic": "Privileged access",
+      "question": "How should privileged access to infrastructure be controlled?",
+      "answer": "Use named accounts, strong authentication, least privilege, logging, periodic reviews and controlled emergency access."
+    },
+    {
+      "id": "faq-139",
+      "group": "Infrastructure & Engineering",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech design and deploy infrastructure?",
+      "answer": "The website describes infrastructure consulting, design, build and operation/management. Confirm equipment, implementation scope, responsibilities and support terms."
+    },
+    {
+      "id": "faq-140",
+      "group": "Infrastructure & Engineering",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech support a mixed-vendor infrastructure environment?",
+      "answer": "Support depends on technologies, versions, interoperability, access and contractual scope. Provide an inventory for compatibility review."
+    },
+    {
+      "id": "faq-141",
+      "group": "Infrastructure & Engineering",
+      "topic": "Commercial",
+      "question": "How is an infrastructure project scoped?",
+      "answer": "Scope depends on current-state findings, target architecture, equipment/software, dependencies, migration, testing, documentation and support."
+    },
+    {
+      "id": "faq-142",
+      "group": "Infrastructure & Engineering",
+      "topic": "Commercial",
+      "question": "What should I prepare before an infrastructure consultation?",
+      "answer": "Prepare a high-level inventory, workload needs, growth estimates, architecture, risks, lifecycle constraints and desired outcomes."
+    },
+    {
+      "id": "faq-143",
+      "group": "Infrastructure & Engineering",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech manage infrastructure after deployment?",
+      "answer": "The website describes managed infrastructure, monitoring, proactive management and optimization. Confirm service hours, covered assets, response commitments and exclusions."
+    },
+    {
+      "id": "faq-144",
+      "group": "Infrastructure & Engineering",
+      "topic": "Commercial",
+      "question": "How do I request a data-centre or infrastructure assessment?",
+      "answer": "Describe the environment, sites, platforms, challenges, timing and objectives through the official contact route."
+    },
+    {
+      "id": "faq-145",
+      "group": "Infrastructure & Engineering",
+      "topic": "Commercial",
+      "question": "What deliverables can an infrastructure design engagement include?",
+      "answer": "Potential deliverables include current-state findings, target architecture, capacity estimates, design decisions, implementation sequence and documentation; confirm the agreed scope."
+    },
+    {
+      "id": "faq-146",
+      "group": "Infrastructure & Engineering",
+      "topic": "Commercial",
+      "question": "How should infrastructure project success be measured?",
+      "answer": "Measures may include availability, performance, capacity headroom, incident rates, recovery tests, milestones and handover quality."
+    },
+    {
+      "id": "faq-147",
+      "group": "Cybersecurity",
+      "topic": "Service overview",
+      "question": "What cybersecurity services does Cache Digitech offer?",
+      "answer": "The website describes security architecture and compliance solutions, security assessments, managed detection and response, and NOC/SOC monitoring. Confirm exact tools, scope and service boundaries."
+    },
+    {
+      "id": "faq-148",
+      "group": "Cybersecurity",
+      "topic": "Assessment",
+      "question": "What is a cybersecurity posture assessment?",
+      "answer": "It reviews controls, configurations, processes and risks against agreed criteria and identifies gaps and remediation priorities."
+    },
+    {
+      "id": "faq-149",
+      "group": "Cybersecurity",
+      "topic": "Strategy",
+      "question": "What is a cybersecurity roadmap?",
+      "answer": "It sequences improvements by risk, business priority, dependencies and resources, with owners, milestones and measures."
+    },
+    {
+      "id": "faq-150",
+      "group": "Cybersecurity",
+      "topic": "Architecture",
+      "question": "What is defence in depth?",
+      "answer": "It uses complementary controls across identity, endpoints, networks, applications, data and monitoring so one failed control does not expose everything."
+    },
+    {
+      "id": "faq-151",
+      "group": "Cybersecurity",
+      "topic": "Zero trust",
+      "question": "What is zero-trust security?",
+      "answer": "Zero trust avoids implicit trust based only on network location and evaluates identity, device, context and access continuously."
+    },
+    {
+      "id": "faq-152",
+      "group": "Cybersecurity",
+      "topic": "IAM",
+      "question": "What is Identity and Access Management (IAM)?",
+      "answer": "IAM manages identities and access to applications and resources, including authentication, authorization, lifecycle and access reviews."
+    },
+    {
+      "id": "faq-153",
+      "group": "Cybersecurity",
+      "topic": "IAM",
+      "question": "What is Multi-Factor Authentication (MFA)?",
+      "answer": "MFA requires two or more distinct types of evidence to verify identity, reducing risk from stolen passwords."
+    },
+    {
+      "id": "faq-154",
+      "group": "Cybersecurity",
+      "topic": "PAM",
+      "question": "What is Privileged Access Management (PAM)?",
+      "answer": "PAM controls high-risk administrative accounts and sessions through mechanisms such as credential vaulting, just-in-time access and session recording."
+    },
+    {
+      "id": "faq-155",
+      "group": "Cybersecurity",
+      "topic": "Identity",
+      "question": "What is identity lifecycle management?",
+      "answer": "It governs account creation, role changes and access removal when people join, change roles or leave."
+    },
+    {
+      "id": "faq-156",
+      "group": "Cybersecurity",
+      "topic": "Identity",
+      "question": "How often should user access be reviewed?",
+      "answer": "Review frequency should reflect data sensitivity, privilege, regulatory requirements and risk; privileged access usually warrants more frequent review."
+    },
+    {
+      "id": "faq-157",
+      "group": "Cybersecurity",
+      "topic": "Endpoint",
+      "question": "What is Endpoint Detection and Response (EDR)?",
+      "answer": "EDR collects endpoint telemetry and supports detection, investigation and response to suspicious activity. Capabilities depend on product and configuration."
+    },
+    {
+      "id": "faq-158",
+      "group": "Cybersecurity",
+      "topic": "Endpoint",
+      "question": "What is Extended Detection and Response (XDR)?",
+      "answer": "XDR correlates security signals across domains such as endpoints, identity, email, network and cloud to improve investigation and response."
+    },
+    {
+      "id": "faq-159",
+      "group": "Cybersecurity",
+      "topic": "Endpoint",
+      "question": "What is the difference between antivirus and EDR?",
+      "answer": "Antivirus focuses on detecting malicious files and activity; EDR adds deeper telemetry, investigation and response workflows."
+    },
+    {
+      "id": "faq-160",
+      "group": "Cybersecurity",
+      "topic": "Endpoint",
+      "question": "How should endpoint security be deployed?",
+      "answer": "Define supported devices, policies, rollout rings, exclusions, alert handling and response actions; pilot and validate compatibility first."
+    },
+    {
+      "id": "faq-161",
+      "group": "Cybersecurity",
+      "topic": "SOC",
+      "question": "What is a Security Operations Center (SOC)?",
+      "answer": "A SOC monitors and investigates security events and coordinates incident handling. Cache Digitech describes a dedicated SOC and round-the-clock monitoring; confirm scope and SLAs."
+    },
+    {
+      "id": "faq-162",
+      "group": "Cybersecurity",
+      "topic": "NOC/SOC",
+      "question": "What is the difference between a NOC and a SOC?",
+      "answer": "A NOC focuses on network and infrastructure availability/performance; a SOC focuses on security threats, investigation and response."
+    },
+    {
+      "id": "faq-163",
+      "group": "Cybersecurity",
+      "topic": "SIEM",
+      "question": "What is SIEM?",
+      "answer": "Security Information and Event Management collects and correlates logs and security events to support detection, investigation and reporting."
+    },
+    {
+      "id": "faq-164",
+      "group": "Cybersecurity",
+      "topic": "Logging",
+      "question": "What is security log management?",
+      "answer": "It collects, retains and makes logs searchable for monitoring, investigations and audits, considering coverage, integrity, retention and privacy."
+    },
+    {
+      "id": "faq-165",
+      "group": "Cybersecurity",
+      "topic": "Threat hunting",
+      "question": "What is threat hunting?",
+      "answer": "Threat hunting proactively searches telemetry for suspicious activity that may not trigger existing alerts. It requires suitable data and analyst expertise."
+    },
+    {
+      "id": "faq-166",
+      "group": "Cybersecurity",
+      "topic": "Alert triage",
+      "question": "How are security alerts prioritized?",
+      "answer": "Prioritize by severity, asset criticality, threat confidence, exposure, business impact and evidence of active compromise."
+    },
+    {
+      "id": "faq-167",
+      "group": "Cybersecurity",
+      "topic": "Incident response",
+      "question": "What is incident response?",
+      "answer": "It is the coordinated process of preparing for, detecting, containing, investigating and recovering from security incidents, followed by lessons learned."
+    },
+    {
+      "id": "faq-168",
+      "group": "Cybersecurity",
+      "topic": "Incident response",
+      "question": "What should an organization do after a suspected ransomware incident?",
+      "answer": "Activate the response plan, contact authorized responders, isolate affected systems where appropriate and preserve evidence. Avoid uncoordinated changes."
+    },
+    {
+      "id": "faq-169",
+      "group": "Cybersecurity",
+      "topic": "Incident response",
+      "question": "Can a SOC guarantee that every threat will be detected?",
+      "answer": "No monitoring service can guarantee detection of every threat. Coverage depends on telemetry, configuration, threat techniques and response processes."
+    },
+    {
+      "id": "faq-170",
+      "group": "Cybersecurity",
+      "topic": "Exercises",
+      "question": "What is a tabletop incident-response exercise?",
+      "answer": "It simulates incident decisions and tests roles, communication and escalation without necessarily changing production systems."
+    },
+    {
+      "id": "faq-171",
+      "group": "Cybersecurity",
+      "topic": "Vulnerability management",
+      "question": "What is vulnerability management?",
+      "answer": "It identifies, prioritizes, remediates and tracks weaknesses across systems and applications using risk-based criteria."
+    },
+    {
+      "id": "faq-172",
+      "group": "Cybersecurity",
+      "topic": "Vulnerability management",
+      "question": "What is the difference between a vulnerability scan and a penetration test?",
+      "answer": "A scan identifies potential weaknesses using automated checks; a penetration test attempts controlled exploitation within an agreed scope."
+    },
+    {
+      "id": "faq-173",
+      "group": "Cybersecurity",
+      "topic": "Vulnerability management",
+      "question": "How should vulnerabilities be prioritized?",
+      "answer": "Consider severity, exploit availability, exposure, asset criticality, business impact and remediation feasibility."
+    },
+    {
+      "id": "faq-174",
+      "group": "Cybersecurity",
+      "topic": "Attack surface",
+      "question": "What is attack-surface management?",
+      "answer": "It identifies exposed assets and evaluates associated risks. Results depend on discovery coverage, ownership and validation."
+    },
+    {
+      "id": "faq-175",
+      "group": "Cybersecurity",
+      "topic": "Network security",
+      "question": "What is a firewall?",
+      "answer": "A firewall enforces traffic rules between networks or systems. Secure operation includes rule review, change control, logging and updates."
+    },
+    {
+      "id": "faq-176",
+      "group": "Cybersecurity",
+      "topic": "Network security",
+      "question": "What is Secure Access Service Edge (SASE)?",
+      "answer": "SASE combines networking and security capabilities in a cloud-centric service model. Suitability depends on users, locations and applications."
+    },
+    {
+      "id": "faq-177",
+      "group": "Cybersecurity",
+      "topic": "Application security",
+      "question": "What is web application security?",
+      "answer": "It protects applications against risks such as injection, broken access control, insecure configuration and data exposure."
+    },
+    {
+      "id": "faq-178",
+      "group": "Cybersecurity",
+      "topic": "Application security",
+      "question": "What is API security?",
+      "answer": "It protects interfaces through authentication, authorization, input validation, rate limiting, monitoring and lifecycle controls."
+    },
+    {
+      "id": "faq-179",
+      "group": "Cybersecurity",
+      "topic": "Data protection",
+      "question": "What is Data Loss Prevention (DLP)?",
+      "answer": "DLP detects or restricts movement of sensitive information across endpoints, networks, email or cloud services."
+    },
+    {
+      "id": "faq-180",
+      "group": "Cybersecurity",
+      "topic": "Data protection",
+      "question": "How should encryption be used?",
+      "answer": "Use encryption for data at rest and in transit where appropriate, with controlled key management. Encryption does not replace access controls."
+    },
+    {
+      "id": "faq-181",
+      "group": "Cybersecurity",
+      "topic": "Cloud security",
+      "question": "What is Cloud Security Posture Management (CSPM)?",
+      "answer": "CSPM identifies cloud configuration risks and policy violations. Coverage depends on product, platform permissions and integrations."
+    },
+    {
+      "id": "faq-182",
+      "group": "Cybersecurity",
+      "topic": "Cloud security",
+      "question": "What is cloud workload protection?",
+      "answer": "It can include configuration controls, vulnerability management, runtime monitoring, identity safeguards and data protection for cloud workloads."
+    },
+    {
+      "id": "faq-183",
+      "group": "Cybersecurity",
+      "topic": "GRC",
+      "question": "What is Governance, Risk and Compliance (GRC)?",
+      "answer": "GRC combines policies, risk management, control ownership, compliance activities and evidence. Cache Digitech lists compliance, audit, IT risk and privacy offerings."
+    },
+    {
+      "id": "faq-184",
+      "group": "Cybersecurity",
+      "topic": "GRC",
+      "question": "Which frameworks does Cache Digitech list on its website?",
+      "answer": "The website lists ISO 27001, ISO 22301, ISO 27701, PCI DSS, NIST, CIS, COBIT, SOX/ITGC, DORA and others. Confirm the exact service provided for each framework."
+    },
+    {
+      "id": "faq-185",
+      "group": "Cybersecurity",
+      "topic": "GRC",
+      "question": "Can Cache Digitech guarantee regulatory compliance?",
+      "answer": "Compliance depends on obligations, implementation, evidence and ongoing controls. Do not promise compliance without defined scope and documented evidence."
+    },
+    {
+      "id": "faq-186",
+      "group": "Cybersecurity",
+      "topic": "Third-party risk",
+      "question": "What is a third-party security risk assessment?",
+      "answer": "It evaluates risks introduced by vendors, often reviewing controls, access, data handling, resilience and contractual obligations."
+    },
+    {
+      "id": "faq-187",
+      "group": "Cybersecurity",
+      "topic": "Audit",
+      "question": "What is an IT audit?",
+      "answer": "An IT audit evaluates selected technology controls, processes and evidence against defined criteria. Scope and independence requirements should be clear."
+    },
+    {
+      "id": "faq-188",
+      "group": "Cybersecurity",
+      "topic": "Privacy",
+      "question": "What is a privacy impact assessment?",
+      "answer": "It evaluates how a project processes personal information, identifies privacy risks and recommends safeguards."
+    },
+    {
+      "id": "faq-189",
+      "group": "Cybersecurity",
+      "topic": "Hardening",
+      "question": "How can infrastructure be hardened against cyber threats?",
+      "answer": "Apply secure baselines, patching, least privilege, segmentation, logging, vulnerability remediation and controlled administrative access."
+    },
+    {
+      "id": "faq-190",
+      "group": "Cybersecurity",
+      "topic": "Security metrics",
+      "question": "What security metrics should leaders track?",
+      "answer": "Potential measures include risk remediation age, coverage, incident trends, control effectiveness, response times and unresolved high-risk findings."
+    },
+    {
+      "id": "faq-191",
+      "group": "Cybersecurity",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech provide managed detection and response?",
+      "answer": "The website describes managed detection and response and a dedicated SOC. Confirm included telemetry, coverage, response authority and SLAs."
+    },
+    {
+      "id": "faq-192",
+      "group": "Cybersecurity",
+      "topic": "Commercial",
+      "question": "How can I request a cybersecurity assessment?",
+      "answer": "Describe the environment, concern, platforms, scope boundaries and desired outcome through the official contact route. Do not submit credentials or sensitive logs."
+    },
+    {
+      "id": "faq-193",
+      "group": "Cybersecurity",
+      "topic": "Commercial",
+      "question": "What information is needed for a SOC consultation?",
+      "answer": "Useful inputs include log sources, endpoints, cloud platforms, identity systems, current monitoring, incident processes and desired coverage."
+    },
+    {
+      "id": "faq-194",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Service overview",
+      "question": "What consulting and audit services does Cache Digitech offer?",
+      "answer": "The website describes infrastructure consulting, IT audits, gap analyses, risk assessments, compliance reviews and GRC services covering compliance, audit, IT risk and privacy."
+    },
+    {
+      "id": "faq-195",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Audit",
+      "question": "What is an IT infrastructure audit?",
+      "answer": "It reviews selected assets, configurations, capacity, lifecycle, controls and operational practices against agreed criteria."
+    },
+    {
+      "id": "faq-196",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Audit",
+      "question": "What is an information systems audit?",
+      "answer": "It evaluates technology controls, processes and evidence within a defined scope. Objectives, criteria and report type should be agreed before work."
+    },
+    {
+      "id": "faq-197",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Audit",
+      "question": "What is the difference between an audit and an assessment?",
+      "answer": "An audit evaluates evidence against defined criteria and may require formal independence; an assessment is often advisory and identifies maturity or improvement opportunities."
+    },
+    {
+      "id": "faq-198",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Audit",
+      "question": "What should an IT audit report include?",
+      "answer": "It commonly includes scope, criteria, methodology, observations, risk ratings, evidence, recommendations and management responses."
+    },
+    {
+      "id": "faq-199",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Risk",
+      "question": "What is IT risk management?",
+      "answer": "It identifies and evaluates risks to technology, data and services, then assigns treatment actions and accountable owners."
+    },
+    {
+      "id": "faq-200",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Risk",
+      "question": "How is technology risk prioritized?",
+      "answer": "Consider likelihood, impact, exposure, asset criticality, existing controls and treatment cost using consistent criteria."
+    },
+    {
+      "id": "faq-201",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Risk",
+      "question": "What is a risk register?",
+      "answer": "It records risks, causes, consequences, ratings, owners, treatment plans and status, and should be regularly reviewed."
+    },
+    {
+      "id": "faq-202",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Third-party risk",
+      "question": "What is third-party risk management?",
+      "answer": "It evaluates vendor risks throughout selection, onboarding, service changes and offboarding, including security, privacy, resilience and access."
+    },
+    {
+      "id": "faq-203",
+      "group": "Consulting & Audit / GRC",
+      "topic": "M&A",
+      "question": "What is IT risk in mergers and acquisitions?",
+      "answer": "Technology due diligence reviews systems, architecture, security, licensing, contracts, technical debt and integration complexity."
+    },
+    {
+      "id": "faq-204",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Compliance",
+      "question": "What is a compliance gap analysis?",
+      "answer": "It compares current controls and evidence against selected requirements, identifies deficiencies and prioritizes remediation; it is not a certification."
+    },
+    {
+      "id": "faq-205",
+      "group": "Consulting & Audit / GRC",
+      "topic": "ISMS",
+      "question": "What is an Information Security Management System (ISMS)?",
+      "answer": "An ISMS is a structured system of policies, risk management, controls, monitoring and continual improvement for information security."
+    },
+    {
+      "id": "faq-206",
+      "group": "Consulting & Audit / GRC",
+      "topic": "ISO",
+      "question": "What is ISO 27001?",
+      "answer": "ISO/IEC 27001 specifies requirements for establishing, implementing, maintaining and improving an information security management system."
+    },
+    {
+      "id": "faq-207",
+      "group": "Consulting & Audit / GRC",
+      "topic": "ISO",
+      "question": "What is ISO 22301?",
+      "answer": "ISO 22301 specifies requirements for a business continuity management system to prepare for disruption and maintain critical activities."
+    },
+    {
+      "id": "faq-208",
+      "group": "Consulting & Audit / GRC",
+      "topic": "ISO",
+      "question": "What is ISO 27701?",
+      "answer": "ISO 27701 addresses privacy information management and supports organizations in managing personal information within a defined framework."
+    },
+    {
+      "id": "faq-209",
+      "group": "Consulting & Audit / GRC",
+      "topic": "PCI DSS",
+      "question": "What is PCI DSS?",
+      "answer": "PCI DSS is a security standard for environments that store, process or transmit payment card data and entities that can affect its security."
+    },
+    {
+      "id": "faq-210",
+      "group": "Consulting & Audit / GRC",
+      "topic": "NIST",
+      "question": "What is the NIST Cybersecurity Framework?",
+      "answer": "It structures cybersecurity risk management across governance, identification, protection, detection, response and recovery. Confirm the current version."
+    },
+    {
+      "id": "faq-211",
+      "group": "Consulting & Audit / GRC",
+      "topic": "CIS",
+      "question": "What are CIS Controls?",
+      "answer": "CIS Controls are prioritized safeguards intended to help organizations improve cybersecurity, tailored to environment and maturity."
+    },
+    {
+      "id": "faq-212",
+      "group": "Consulting & Audit / GRC",
+      "topic": "COBIT",
+      "question": "What is COBIT used for?",
+      "answer": "COBIT provides a framework for governance and management of enterprise information and technology."
+    },
+    {
+      "id": "faq-213",
+      "group": "Consulting & Audit / GRC",
+      "topic": "DORA",
+      "question": "What is DORA?",
+      "answer": "The Digital Operational Resilience Act is an EU regulation addressing digital operational resilience in the financial sector. Applicability requires legal review."
+    },
+    {
+      "id": "faq-214",
+      "group": "Consulting & Audit / GRC",
+      "topic": "SOX",
+      "question": "What are SOX IT General Controls?",
+      "answer": "SOX-related ITGCs support technology controls relevant to financial reporting, often including access, change management and IT operations."
+    },
+    {
+      "id": "faq-215",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Assurance",
+      "question": "What is an SSAE report?",
+      "answer": "SSAE refers to U.S. attestation standards, including engagements that may result in SOC reports. Report type and independence requirements need specialist confirmation."
+    },
+    {
+      "id": "faq-216",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Assurance",
+      "question": "What is ISAE 3402?",
+      "answer": "ISAE 3402 concerns assurance on controls at a service organization relevant to user entities' financial reporting."
+    },
+    {
+      "id": "faq-217",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Frameworks",
+      "question": "Can one assessment cover multiple frameworks?",
+      "answer": "A coordinated assessment can map overlapping controls, but each framework's distinct requirements and evidence still need to be addressed."
+    },
+    {
+      "id": "faq-218",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Privacy",
+      "question": "What is data protection and privacy management?",
+      "answer": "It covers governance and controls for collecting, using, storing, sharing and deleting personal information according to applicable requirements."
+    },
+    {
+      "id": "faq-219",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Privacy",
+      "question": "What is India's Digital Personal Data Protection Act?",
+      "answer": "India's DPDP Act, 2023 establishes a framework for processing digital personal data. Current commencement, rules and applicability should be validated by legal experts."
+    },
+    {
+      "id": "faq-220",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Privacy",
+      "question": "What is GDPR?",
+      "answer": "GDPR is an EU data protection law that can apply based on organizational activities and processing of personal data. Applicability depends on circumstances."
+    },
+    {
+      "id": "faq-221",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Privacy",
+      "question": "What is HIPAA?",
+      "answer": "HIPAA is a U.S. law with requirements affecting protected health information for covered entities and business associates. Applicability depends on role and context."
+    },
+    {
+      "id": "faq-222",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Privacy",
+      "question": "How should data retention requirements be assessed?",
+      "answer": "Map data categories, purpose, legal and contractual obligations, operational needs and deletion requirements, with owners and exception processes."
+    },
+    {
+      "id": "faq-223",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Evidence",
+      "question": "What evidence is typically needed for compliance assessment?",
+      "answer": "Evidence may include policies, configurations, access reviews, logs, incident records, risk registers, training records, vendor assessments and test results."
+    },
+    {
+      "id": "faq-224",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Remediation",
+      "question": "How should audit findings be remediated?",
+      "answer": "Assign an owner, risk priority, corrective action, due date and evidence requirement to each finding. Validate closure before marking complete."
+    },
+    {
+      "id": "faq-225",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Controls",
+      "question": "What is a control owner?",
+      "answer": "A control owner is accountable for operating or overseeing a defined control and maintaining evidence that it works as intended."
+    },
+    {
+      "id": "faq-226",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Monitoring",
+      "question": "What is continuous compliance monitoring?",
+      "answer": "It uses recurring or automated checks to detect changes in control status, with owners and processes to investigate exceptions."
+    },
+    {
+      "id": "faq-227",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Governance",
+      "question": "What is an IT governance framework?",
+      "answer": "It defines decision rights, accountabilities, policies, oversight and performance measures for technology, aligned to business objectives and risk appetite."
+    },
+    {
+      "id": "faq-228",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Policies",
+      "question": "How should technology policies be maintained?",
+      "answer": "Policies need an owner, approval authority, version history, review cycle, communication plan and exception process."
+    },
+    {
+      "id": "faq-229",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Segregation",
+      "question": "What is segregation of duties?",
+      "answer": "It separates conflicting responsibilities so one person cannot complete a sensitive process without appropriate independent oversight."
+    },
+    {
+      "id": "faq-230",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Exceptions",
+      "question": "How should compliance exceptions be handled?",
+      "answer": "Document rationale, risk assessment, approver, compensating controls, expiry date and review process."
+    },
+    {
+      "id": "faq-231",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Engagement",
+      "question": "What happens during a GRC engagement?",
+      "answer": "A typical engagement defines scope and criteria, collects evidence, assesses controls and risks, documents gaps and prioritizes remediation. Confirm exact deliverables."
+    },
+    {
+      "id": "faq-232",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Regulatory readiness",
+      "question": "Can an organization prepare for a regulatory examination?",
+      "answer": "Preparation may include scope mapping, evidence organization, control walkthroughs, gap remediation and stakeholder readiness."
+    },
+    {
+      "id": "faq-233",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Metrics",
+      "question": "How should compliance metrics be reported to leadership?",
+      "answer": "Track control coverage, open findings by risk, overdue remediation, exception age, audit readiness and recurring issues."
+    },
+    {
+      "id": "faq-234",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech certify our organization to ISO 27001?",
+      "answer": "The website lists ISO 27001 and GRC services, but its role in advisory, implementation, internal audit or certification must be confirmed. Do not imply certification authority without evidence."
+    },
+    {
+      "id": "faq-235",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Commercial",
+      "question": "How do I request a GRC or IT audit consultation?",
+      "answer": "Identify the framework, jurisdiction, scope, target date and desired deliverable through the official contact route."
+    },
+    {
+      "id": "faq-236",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Commercial",
+      "question": "Does a gap analysis guarantee a successful audit?",
+      "answer": "No. Results depend on implementation, evidence, scope, ongoing controls and the assessor's criteria."
+    },
+    {
+      "id": "faq-237",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech help remediate assessment findings?",
+      "answer": "Remediation support may include prioritization, control design and implementation planning, subject to agreed scope and control ownership."
+    },
+    {
+      "id": "faq-238",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Commercial",
+      "question": "How are GRC engagements scoped and priced?",
+      "answer": "Scope depends on frameworks, entities, locations, systems, control count, evidence availability, deadlines and deliverables."
+    },
+    {
+      "id": "faq-239",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Commercial",
+      "question": "What should we prepare before a compliance assessment?",
+      "answer": "Prepare the selected framework, scope boundaries, inventories, policies, prior findings, evidence owners and timeline. Share sensitive records securely."
+    },
+    {
+      "id": "faq-240",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Frameworks",
+      "question": "How do I confirm whether a particular framework is supported?",
+      "answer": "Name the framework, jurisdiction and desired service-assessment, advisory, implementation support or assurance-and ask the GRC team to confirm current capability."
+    },
+    {
+      "id": "faq-241",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Reporting",
+      "question": "How should compliance actions be tracked?",
+      "answer": "Use a register of findings, owners, due dates, risk ratings, evidence and approval status, reviewed through an agreed governance process."
+    },
+    {
+      "id": "faq-242",
+      "group": "Managed Services",
+      "topic": "Overview",
+      "question": "What managed services does Cache Digitech offer?",
+      "answer": "The website describes managed infrastructure, remote infrastructure management, cloud operations, IT staffing/support, contract and vendor management, and NOC/SOC monitoring."
+    },
+    {
+      "id": "faq-243",
+      "group": "Managed Services",
+      "topic": "Overview",
+      "question": "What is a managed service?",
+      "answer": "A managed service is an ongoing service in which a provider performs defined activities under a documented scope, responsibilities and service levels."
+    },
+    {
+      "id": "faq-244",
+      "group": "Managed Services",
+      "topic": "Overview",
+      "question": "What is the difference between managed services and staff augmentation?",
+      "answer": "Managed services focus on defined operational responsibilities; staff augmentation supplies people who work within the customer's direction and processes."
+    },
+    {
+      "id": "faq-245",
+      "group": "Managed Services",
+      "topic": "Overview",
+      "question": "What is remote infrastructure management?",
+      "answer": "It monitors and administers systems such as servers, networks, storage and cloud environments from a centralized team or operations centre."
+    },
+    {
+      "id": "faq-246",
+      "group": "Managed Services",
+      "topic": "Overview",
+      "question": "What is the difference between NOC and SOC services?",
+      "answer": "A NOC focuses on infrastructure availability and performance; a SOC focuses on security monitoring, threat investigation and incident response."
+    },
+    {
+      "id": "faq-247",
+      "group": "Managed Services",
+      "topic": "NOC",
+      "question": "What does a NOC monitor?",
+      "answer": "A NOC may monitor network devices, servers, connectivity, availability, capacity and performance through defined alerts and runbooks."
+    },
+    {
+      "id": "faq-248",
+      "group": "Managed Services",
+      "topic": "NOC",
+      "question": "Does Cache Digitech offer 24x7 monitoring?",
+      "answer": "The website states 24x7 support and monitoring and describes round-the-clock NOC/SOC operations. Confirm which services, assets and SLAs the statement applies to."
+    },
+    {
+      "id": "faq-249",
+      "group": "Managed Services",
+      "topic": "NOC",
+      "question": "What happens when a monitoring alert is triggered?",
+      "answer": "The process should classify the alert, validate impact, create or update an incident, follow an approved runbook and escalate as required."
+    },
+    {
+      "id": "faq-250",
+      "group": "Managed Services",
+      "topic": "NOC",
+      "question": "How are network incidents escalated?",
+      "answer": "Escalation should use severity criteria, service impact, ownership, contact trees and time thresholds agreed before service starts."
+    },
+    {
+      "id": "faq-251",
+      "group": "Managed Services",
+      "topic": "NOC",
+      "question": "What is proactive monitoring?",
+      "answer": "It uses telemetry and trend analysis to identify degradation or risk before a major outage, with actionable thresholds and follow-up."
+    },
+    {
+      "id": "faq-252",
+      "group": "Managed Services",
+      "topic": "SOC",
+      "question": "What does a SOC service include?",
+      "answer": "SOC scope may include log monitoring, alert triage, threat investigation, incident escalation and reporting. Confirm tools, telemetry and response authority."
+    },
+    {
+      "id": "faq-253",
+      "group": "Managed Services",
+      "topic": "SOC",
+      "question": "Does SOC monitoring automatically include remediation?",
+      "answer": "Not necessarily. The contract must specify whether the provider detects and advises or can perform agreed containment and remediation."
+    },
+    {
+      "id": "faq-254",
+      "group": "Managed Services",
+      "topic": "SOC",
+      "question": "Which log sources can a SOC monitor?",
+      "answer": "Potential sources include endpoints, identity platforms, firewalls, servers, cloud services and applications. Actual coverage depends on compatibility and onboarding."
+    },
+    {
+      "id": "faq-255",
+      "group": "Managed Services",
+      "topic": "SOC",
+      "question": "How is a security incident communicated to a customer?",
+      "answer": "Define severity, notification channels, escalation contacts, reporting cadence and incident information in the service agreement."
+    },
+    {
+      "id": "faq-256",
+      "group": "Managed Services",
+      "topic": "SLA",
+      "question": "What is an SLA?",
+      "answer": "A service-level agreement defines measurable commitments such as availability, response, resolution targets, reporting and responsibilities."
+    },
+    {
+      "id": "faq-257",
+      "group": "Managed Services",
+      "topic": "SLA",
+      "question": "What is the difference between response and resolution time?",
+      "answer": "Response time measures time to acknowledge or begin handling an issue; resolution time measures time to restore service or resolve it under the agreed definition."
+    },
+    {
+      "id": "faq-258",
+      "group": "Managed Services",
+      "topic": "ITSM",
+      "question": "How are incidents and service requests managed?",
+      "answer": "A process records, categorizes, prioritizes, assigns and tracks incidents and requests through closure, with escalation and communication rules."
+    },
+    {
+      "id": "faq-259",
+      "group": "Managed Services",
+      "topic": "ITSM",
+      "question": "What is root-cause analysis?",
+      "answer": "It investigates underlying factors that caused an incident, then records corrective and preventive actions with owners."
+    },
+    {
+      "id": "faq-260",
+      "group": "Managed Services",
+      "topic": "ITSM",
+      "question": "What is a runbook?",
+      "answer": "A runbook documents repeatable steps for an operational task or incident, including checks, actions, approvals and escalation."
+    },
+    {
+      "id": "faq-261",
+      "group": "Managed Services",
+      "topic": "ITSM",
+      "question": "What is change management?",
+      "answer": "It evaluates, approves, schedules and records changes to reduce disruption, typically including risk assessment, testing, communications and rollback."
+    },
+    {
+      "id": "faq-262",
+      "group": "Managed Services",
+      "topic": "Remote operations",
+      "question": "What does remote server management involve?",
+      "answer": "It may include health monitoring, administration, patch coordination, performance checks, backup verification and incident handling."
+    },
+    {
+      "id": "faq-263",
+      "group": "Managed Services",
+      "topic": "Remote operations",
+      "question": "Can managed services cover storage and network systems?",
+      "answer": "The website describes remote storage and network management alongside server and cloud management. Confirm supported vendors, types and versions."
+    },
+    {
+      "id": "faq-264",
+      "group": "Managed Services",
+      "topic": "Onboarding",
+      "question": "How are managed services onboarded?",
+      "answer": "Onboarding commonly covers asset inventory, access, monitoring, runbooks, contacts, baselines, incident workflows and service acceptance."
+    },
+    {
+      "id": "faq-265",
+      "group": "Managed Services",
+      "topic": "Security",
+      "question": "What access does a provider need to manage infrastructure remotely?",
+      "answer": "Access should be approved, least-privilege, logged, strongly authenticated and limited to agreed systems and tasks."
+    },
+    {
+      "id": "faq-266",
+      "group": "Managed Services",
+      "topic": "Security",
+      "question": "How is remote administration secured?",
+      "answer": "Use secure management paths, strong authentication, scoped privileges, logging, session monitoring and periodic access reviews."
+    },
+    {
+      "id": "faq-267",
+      "group": "Managed Services",
+      "topic": "Cloud operations",
+      "question": "Can Cache Digitech manage multi-cloud environments?",
+      "answer": "The website describes cloud management across AWS, Azure and GCP. Confirm the operational activities, accounts, workloads and escalation arrangements included."
+    },
+    {
+      "id": "faq-268",
+      "group": "Managed Services",
+      "topic": "Cloud operations",
+      "question": "What does managed cloud optimization involve?",
+      "answer": "It may include utilization reviews, rightsizing recommendations, cost anomaly review, policy compliance, capacity planning and reporting."
+    },
+    {
+      "id": "faq-269",
+      "group": "Managed Services",
+      "topic": "Cloud operations",
+      "question": "How are cloud incidents handled?",
+      "answer": "Define monitoring, classification, provider escalation, customer communication, recovery steps and post-incident review, including shared responsibilities."
+    },
+    {
+      "id": "faq-270",
+      "group": "Managed Services",
+      "topic": "Staffing",
+      "question": "What is managed IT manpower or staff augmentation?",
+      "answer": "Cache Digitech describes dedicated resources, project teams and specialized expertise to supplement customer teams. Confirm role, location, duration and terms."
+    },
+    {
+      "id": "faq-271",
+      "group": "Managed Services",
+      "topic": "Staffing",
+      "question": "Can a customer request a dedicated technical team?",
+      "answer": "The website describes dedicated teams and flexible engagement. Team composition depends on required skills, scope, availability and commercial terms."
+    },
+    {
+      "id": "faq-272",
+      "group": "Managed Services",
+      "topic": "Staffing",
+      "question": "How are technical resources matched to a project?",
+      "answer": "Define required skills, seniority, location, work model, responsibilities and duration. Confirm candidate availability and selection steps."
+    },
+    {
+      "id": "faq-273",
+      "group": "Managed Services",
+      "topic": "Vendor management",
+      "question": "What is IT contract management?",
+      "answer": "It tracks vendor agreements, obligations, renewals, service levels, commercial terms and changes through the contract lifecycle."
+    },
+    {
+      "id": "faq-274",
+      "group": "Managed Services",
+      "topic": "Vendor management",
+      "question": "How can vendor service levels be tracked?",
+      "answer": "Track agreed metrics, service reports, incidents, exceptions, credits and corrective actions against contract terms."
+    },
+    {
+      "id": "faq-275",
+      "group": "Managed Services",
+      "topic": "Procurement",
+      "question": "Can Cache Digitech help optimize technology procurement?",
+      "answer": "The website describes contract negotiation, vendor relations and procurement optimization. Confirm whether the need is sourcing, negotiation, administration or technical evaluation."
+    },
+    {
+      "id": "faq-276",
+      "group": "Managed Services",
+      "topic": "Governance",
+      "question": "How are managed-service responsibilities divided?",
+      "answer": "A responsibility matrix should identify owners for monitoring, approvals, changes, incidents, access, backups, escalation and reporting."
+    },
+    {
+      "id": "faq-277",
+      "group": "Managed Services",
+      "topic": "Reporting",
+      "question": "What reports should a managed service provide?",
+      "answer": "Reports may cover availability, incidents, response/resolution metrics, recurring issues, capacity, risks, changes and improvement actions."
+    },
+    {
+      "id": "faq-278",
+      "group": "Managed Services",
+      "topic": "Improvement",
+      "question": "How is service improvement managed?",
+      "answer": "Regular service reviews examine performance, recurring incidents, risks and customer feedback, with owners and dates for improvement actions."
+    },
+    {
+      "id": "faq-279",
+      "group": "Managed Services",
+      "topic": "Recovery",
+      "question": "How should managed services support disaster recovery?",
+      "answer": "Define backup monitoring, recovery procedures, escalation, testing responsibilities and coordination with business continuity plans."
+    },
+    {
+      "id": "faq-280",
+      "group": "Managed Services",
+      "topic": "Backup",
+      "question": "How are backups verified in managed operations?",
+      "answer": "Verification may include job checks, alert handling, restore tests and evidence review. Successful backup jobs alone do not prove recoverability."
+    },
+    {
+      "id": "faq-281",
+      "group": "Managed Services",
+      "topic": "Security",
+      "question": "How is privileged access managed in a managed service?",
+      "answer": "Use approved named accounts, least privilege, strong authentication, logging, time-bound elevation where possible and periodic access reviews."
+    },
+    {
+      "id": "faq-282",
+      "group": "Managed Services",
+      "topic": "Incident response",
+      "question": "What happens if a provider detects a security incident?",
+      "answer": "Follow the agreed playbook, notify designated contacts, preserve evidence and take only authorized containment actions."
+    },
+    {
+      "id": "faq-283",
+      "group": "Managed Services",
+      "topic": "Commercial",
+      "question": "How are managed services priced?",
+      "answer": "Pricing depends on covered assets, complexity, service hours, locations, monitoring depth, response commitments, staffing and tools."
+    },
+    {
+      "id": "faq-284",
+      "group": "Managed Services",
+      "topic": "Commercial",
+      "question": "Can managed services be customized?",
+      "answer": "Scope can be discussed based on the environment and desired responsibilities, subject to delivery capability and agreement."
+    },
+    {
+      "id": "faq-285",
+      "group": "Managed Services",
+      "topic": "Commercial",
+      "question": "What information is needed for a managed-services proposal?",
+      "answer": "Provide asset inventory, locations, platforms, support hours, incident volumes, required SLAs, contacts and scope boundaries."
+    },
+    {
+      "id": "faq-286",
+      "group": "Managed Services",
+      "topic": "Commercial",
+      "question": "Can managed services coexist with an internal IT team?",
+      "answer": "Yes, if responsibilities, escalation, access, decision rights and handoffs are clearly defined in a RACI matrix and operating procedures."
+    },
+    {
+      "id": "faq-287",
+      "group": "Managed Services",
+      "topic": "Commercial",
+      "question": "How can I request a managed-services consultation?",
+      "answer": "Describe the systems, operating hours, pain points, required service levels and desired outcomes through the official contact route."
+    },
+    {
+      "id": "faq-288",
+      "group": "Managed Services",
+      "topic": "Transition",
+      "question": "How is transition from an existing provider managed?",
+      "answer": "Plan for contracts, asset inventory, access, documentation, open incidents, monitoring, knowledge transfer, risks and acceptance criteria."
+    },
+    {
+      "id": "faq-289",
+      "group": "Managed Services",
+      "topic": "Exit",
+      "question": "What should happen at the end of a managed-services contract?",
+      "answer": "Exit planning should cover data/configuration handover, access revocation, documentation, open issues, transition assistance and retention obligations."
+    },
+    {
+      "id": "faq-290",
+      "group": "Managed Services",
+      "topic": "Performance",
+      "question": "How should managed-service performance be reviewed?",
+      "answer": "Review SLA metrics alongside incident trends, customer experience, recurring problems, risks, capacity and improvement actions."
+    },
+    {
+      "id": "faq-291",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "What does Cache Digitech do?",
+      "answer": "Cache Digitech describes itself as an enterprise technology, system integration, consulting and IT infrastructure partner. Its website presents cloud, data and AI, infrastructure and engineering, cybersecurity, consulting and audit, and managed services."
+    },
+    {
+      "id": "faq-292",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "What are Cache Digitech's core service areas?",
+      "answer": "The website lists Cloud, Data & AI, Infrastructure & Engineering, Cybersecurity, Consulting & Audit, and Managed Services. Confirm current official naming before publication."
+    },
+    {
+      "id": "faq-293",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "Which industries does Cache Digitech serve?",
+      "answer": "The website lists telecom, retail, banking and financial services, automobile and manufacturing, IT/ITES, healthcare and hospitality, and government and public sector."
+    },
+    {
+      "id": "faq-294",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "Where does Cache Digitech operate?",
+      "answer": "The company profile references New Delhi, Mumbai and Dubai and describes pan-India service coverage. Confirm current locations and service geography."
+    },
+    {
+      "id": "faq-295",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "How long has Cache Digitech been operating?",
+      "answer": "The website uses different experience/legacy figures on different pages. Marketing should confirm one approved current figure before the chatbot repeats it."
+    },
+    {
+      "id": "faq-296",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "Does Cache Digitech provide 24x7 support?",
+      "answer": "The website states 24x7 support and monitoring. Confirm the service lines, assets, response commitments and contractual conditions this applies to."
+    },
+    {
+      "id": "faq-297",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "What certifications does Cache Digitech list?",
+      "answer": "The website displays ISO 9001:2015, ISO 27001:2022, MSME registration, NISC registration and WEConnect International women-owned business certification. Verify validity and scope."
+    },
+    {
+      "id": "faq-298",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "What technology partners does Cache Digitech list?",
+      "answer": "The website displays Dell, Cisco, Microsoft, HP, IBM, Trellix, Google Cloud and AWS, with partner-level labels. Confirm current partner status before publication."
+    },
+    {
+      "id": "faq-299",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "What is Cache Digitech's approach to customer engagements?",
+      "answer": "The website emphasizes a customer-first mindset, agility, flexibility and technology solutions aligned with business goals. Marketing should approve final wording."
+    },
+    {
+      "id": "faq-300",
+      "group": "Corporate & Lead Generation",
+      "topic": "Company profile",
+      "question": "Where can I learn about Cache Digitech's innovations?",
+      "answer": "The website includes an Innovation section covering research, emerging technology, accelerators and partnerships. Insert the current approved page URL."
+    },
+    {
+      "id": "faq-301",
+      "group": "Corporate & Lead Generation",
+      "topic": "Service routing",
+      "question": "Which team should I contact for cloud migration?",
+      "answer": "The Cloud team is the starting point for readiness, migration, rehosting, replatforming, modernization and hybrid/multi-cloud planning."
+    },
+    {
+      "id": "faq-302",
+      "group": "Corporate & Lead Generation",
+      "topic": "Service routing",
+      "question": "Which team should I contact for servers, storage or networking?",
+      "answer": "Infrastructure & Engineering is the relevant starting point for server, storage, network, virtualization and data-centre requirements."
+    },
+    {
+      "id": "faq-303",
+      "group": "Corporate & Lead Generation",
+      "topic": "Service routing",
+      "question": "Which team should I contact for security monitoring?",
+      "answer": "Cybersecurity or Managed Services is the likely route for SOC, threat monitoring, incident handling and security controls."
+    },
+    {
+      "id": "faq-304",
+      "group": "Corporate & Lead Generation",
+      "topic": "Service routing",
+      "question": "Which team should I contact for an IT audit or compliance gap analysis?",
+      "answer": "Consulting & Audit / GRC is the starting point for IT audit, compliance assessment, control gap analysis, risk management and privacy enquiries."
+    },
+    {
+      "id": "faq-305",
+      "group": "Corporate & Lead Generation",
+      "topic": "Service routing",
+      "question": "Which team should I contact for analytics or AI?",
+      "answer": "Data & AI is the starting point for data platforms, analytics, AI readiness, generative AI, RAG and agentic workflow enquiries."
+    },
+    {
+      "id": "faq-306",
+      "group": "Corporate & Lead Generation",
+      "topic": "Service routing",
+      "question": "Which team should I contact for ongoing infrastructure operations?",
+      "answer": "Managed Services is the starting point for remote infrastructure management, monitoring, NOC/SOC operations, cloud operations and support staffing."
+    },
+    {
+      "id": "faq-307",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "Can I request a consultation with Cache Digitech?",
+      "answer": "Share your organization, role, business email, service area, requirement and preferred timeline through the official contact route."
+    },
+    {
+      "id": "faq-308",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "Can I request a technical assessment?",
+      "answer": "Availability depends on service area and scope. State the need-cloud, infrastructure, cybersecurity, GRC, data or AI-so the team can confirm deliverables."
+    },
+    {
+      "id": "faq-309",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "Can I request a proposal or quotation?",
+      "answer": "Provide the requirement, technologies, locations, scale, timeline and procurement process. Pricing should be confirmed after scope review."
+    },
+    {
+      "id": "faq-310",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "Can Cache Digitech respond to an RFP or RFI?",
+      "answer": "The team can review requirements, response format and deadline to determine participation. Commitments must be confirmed by sales and solution stakeholders."
+    },
+    {
+      "id": "faq-311",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "Can I request a proof of concept or demonstration?",
+      "answer": "This depends on the solution, use case, resources and eligibility. Share the objective and success criteria so the team can confirm feasibility."
+    },
+    {
+      "id": "faq-312",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "What information should I provide in a business enquiry?",
+      "answer": "Provide name, organization, role, business email, service area, brief requirement and timeline. Do not include credentials or sensitive data."
+    },
+    {
+      "id": "faq-313",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "Can I speak to a subject-matter expert?",
+      "answer": "Describe the technical topic and business requirement so the enquiry can be routed to the relevant service team."
+    },
+    {
+      "id": "faq-314",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "What if I do not know which service I need?",
+      "answer": "Describe the problem, current environment and desired outcome. The chatbot can route the enquiry to the most relevant team."
+    },
+    {
+      "id": "faq-315",
+      "group": "Corporate & Lead Generation",
+      "topic": "Lead generation",
+      "question": "Can I enquire on behalf of a client or group company?",
+      "answer": "Yes, explain your role and the organization involved, and share only information you are authorized to disclose."
+    },
+    {
+      "id": "faq-316",
+      "group": "Corporate & Lead Generation",
+      "topic": "Commercial",
+      "question": "Does Cache Digitech publish standard prices?",
+      "answer": "Enterprise technology pricing depends on scope, platforms, scale, service levels, licensing and commercial terms. Request a proposal for your requirements."
+    },
+    {
+      "id": "faq-317",
+      "group": "Corporate & Lead Generation",
+      "topic": "Commercial",
+      "question": "How are project timelines determined?",
+      "answer": "Timelines depend on technical complexity, dependencies, access, procurement, change windows and testing. Confirm schedules after scope review."
+    },
+    {
+      "id": "faq-318",
+      "group": "Corporate & Lead Generation",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech work with our existing vendors?",
+      "answer": "This depends on technologies, compatibility, access, vendor terms and agreed scope. Provide vendor and platform details for review."
+    },
+    {
+      "id": "faq-319",
+      "group": "Corporate & Lead Generation",
+      "topic": "Commercial",
+      "question": "Can Cache Digitech support multi-location organizations?",
+      "answer": "The website describes pan-India coverage and infrastructure and managed-service capabilities. Confirm specific locations, onsite needs and remote coverage."
+    },
+    {
+      "id": "faq-320",
+      "group": "Corporate & Lead Generation",
+      "topic": "Commercial",
+      "question": "How is a project scope defined?",
+      "answer": "Define objectives, systems, deliverables, assumptions, dependencies, responsibilities, exclusions, acceptance criteria and change control."
+    },
+    {
+      "id": "faq-321",
+      "group": "Corporate & Lead Generation",
+      "topic": "Delivery",
+      "question": "Will Cache Digitech provide documentation and handover?",
+      "answer": "Documentation and handover should be agreed in the statement of work or service description. Confirm specific deliverables with the solution owner."
+    },
+    {
+      "id": "faq-322",
+      "group": "Corporate & Lead Generation",
+      "topic": "Delivery",
+      "question": "Does Cache Digitech provide managed services after implementation?",
+      "answer": "The website lists managed infrastructure, cloud management, NOC/SOC operations and related services. Ongoing support depends on agreed scope."
+    },
+    {
+      "id": "faq-323",
+      "group": "Corporate & Lead Generation",
+      "topic": "Delivery",
+      "question": "How are project risks managed?",
+      "answer": "Identify and track risks with impact, likelihood, owner, mitigation and escalation. Review major assumptions and dependencies throughout delivery."
+    },
+    {
+      "id": "faq-324",
+      "group": "Corporate & Lead Generation",
+      "topic": "Privacy",
+      "question": "Can I send passwords or confidential files through the chatbot?",
+      "answer": "No. Do not submit passwords, tokens, sensitive personal data, confidential logs or restricted architecture files through a general chatbot."
+    },
+    {
+      "id": "faq-325",
+      "group": "Corporate & Lead Generation",
+      "topic": "Privacy",
+      "question": "How does Cache Digitech handle personal information submitted through the website?",
+      "answer": "The final answer must link to the current privacy notice and accurately describe approved collection, use, retention and contact processes."
+    },
+    {
+      "id": "faq-326",
+      "group": "Corporate & Lead Generation",
+      "topic": "Privacy",
+      "question": "Can Cache Digitech meet our data residency requirements?",
+      "answer": "Data residency depends on architecture, cloud provider, service components, processing locations and contract terms. The solution team must confirm the design."
+    },
+    {
+      "id": "faq-327",
+      "group": "Corporate & Lead Generation",
+      "topic": "Website",
+      "question": "Where can I find Cache Digitech's contact details?",
+      "answer": "Use the Contact page on the official Cache Digitech website. Verify and insert the current URL and approved contact details."
+    },
+    {
+      "id": "faq-328",
+      "group": "Corporate & Lead Generation",
+      "topic": "Website",
+      "question": "Where can I find careers information?",
+      "answer": "Use the Careers section on the official website. Verify the current URL and application instructions."
+    },
+    {
+      "id": "faq-329",
+      "group": "Corporate & Lead Generation",
+      "topic": "Partnerships",
+      "question": "How can a company explore a technology partnership with Cache Digitech?",
+      "answer": "Share the company profile, technology offering, target industries and proposed collaboration model through the approved business enquiry channel."
+    },
+    {
+      "id": "faq-330",
+      "group": "Corporate & Lead Generation",
+      "topic": "Suppliers",
+      "question": "How can a supplier ask about onboarding?",
+      "answer": "Supplier registration requirements should be confirmed by procurement. Provide only an approved registration link or contact route."
+    },
+    {
+      "id": "faq-331",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "Can the chatbot provide a binding technical design?",
+      "answer": "It can explain approved service information and route enquiries. Final architecture, sizing, compatibility and implementation decisions require solution-expert review."
+    },
+    {
+      "id": "faq-332",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "Can the chatbot confirm exact product compatibility?",
+      "answer": "Only when compatibility is documented in a current approved source. Otherwise, it should collect relevant platform details and route the question to an expert."
+    },
+    {
+      "id": "faq-333",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "Can the chatbot confirm SLAs, prices or savings?",
+      "answer": "Only if details are current, approved and scoped to the relevant service. Otherwise, route the enquiry for confirmation."
+    },
+    {
+      "id": "faq-334",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "What should the chatbot do when it does not know an answer?",
+      "answer": "It should say it cannot confirm the detail, avoid guessing and offer a route to a human expert. Unknown questions should be logged for content improvement."
+    },
+    {
+      "id": "faq-335",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "How should the chatbot handle a reported security incident?",
+      "answer": "It should avoid troubleshooting an active incident through a marketing bot and provide the approved security escalation route."
+    },
+    {
+      "id": "faq-336",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "How should the chatbot handle a demonstration request?",
+      "answer": "Collect only necessary business contact details, solution area and use case, then route the request. Do not promise a date before confirmation."
+    },
+    {
+      "id": "faq-337",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "How can the chatbot identify a visitor's technical requirement?",
+      "answer": "Use guided options for cloud, infrastructure, security, audit/compliance, data/AI and ongoing operations, then ask concise follow-up questions."
+    },
+    {
+      "id": "faq-338",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "Should the chatbot answer questions about services not listed on the website?",
+      "answer": "It should not claim an unlisted service is available. It can capture the requirement and route it for confirmation."
+    },
+    {
+      "id": "faq-339",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "How should chatbot answers stay up to date?",
+      "answer": "Assign owners to FAQ groups, review on a defined cadence and after service, partner, policy or pricing changes, and track approval/version dates."
+    },
+    {
+      "id": "faq-340",
+      "group": "Corporate & Lead Generation",
+      "topic": "Chatbot",
+      "question": "What metrics should evaluate chatbot performance?",
+      "answer": "Track usefulness, unresolved questions, escalation rate, lead completion, topic coverage, incorrect-answer reports and qualified enquiries."
+    },
+    {
+      "id": "faq-341",
+      "group": "Cloud",
+      "topic": "Architecture",
+      "question": "What is cloud workload portability?",
+      "answer": "Cloud workload portability is the ability to move or operate a workload across environments with limited redesign. It depends on architecture, data dependencies, licensing and use of provider-specific services."
+    },
+    {
+      "id": "faq-342",
+      "group": "Data & AI",
+      "topic": "AI governance",
+      "question": "How should access permissions be enforced in a RAG application?",
+      "answer": "A RAG application should retrieve only content the requesting user is authorized to access. Apply source-level permissions, secure indexing, identity-aware retrieval, audit logging and regular access testing."
+    },
+    {
+      "id": "faq-343",
+      "group": "Infrastructure & Engineering",
+      "topic": "Data centre",
+      "question": "What is data-centre consolidation?",
+      "answer": "Data-centre consolidation reduces or reorganizes facilities, platforms or workloads to improve utilization, standardization or manageability. It requires dependency mapping, capacity analysis, migration planning and risk review."
+    },
+    {
+      "id": "faq-344",
+      "group": "Infrastructure & Engineering",
+      "topic": "Engineering",
+      "question": "What is a bill of materials (BOM) in infrastructure design?",
+      "answer": "A bill of materials lists the proposed hardware, software, licences and related components for a solution. It should be validated against compatibility, support, capacity and commercial requirements."
+    },
+    {
+      "id": "faq-345",
+      "group": "Cybersecurity",
+      "topic": "Email security",
+      "question": "What is email security?",
+      "answer": "Email security combines controls such as anti-phishing protection, malicious attachment/link analysis, authentication policies and monitoring to reduce email-borne threats. The exact controls depend on the platform and service scope."
+    },
+    {
+      "id": "faq-346",
+      "group": "Cybersecurity",
+      "topic": "Security architecture",
+      "question": "What is security architecture review?",
+      "answer": "A security architecture review evaluates how identity, network, application, data and monitoring controls fit together against the threat model and requirements. Findings should be prioritized by risk."
+    },
+    {
+      "id": "faq-347",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Risk",
+      "question": "What is risk treatment?",
+      "answer": "Risk treatment selects how to address a risk, such as mitigating it, avoiding the activity, transferring part of the exposure or formally accepting it. Decisions should follow the organization's risk appetite and approval process."
+    },
+    {
+      "id": "faq-348",
+      "group": "Consulting & Audit / GRC",
+      "topic": "Audit evidence",
+      "question": "What is an audit evidence repository?",
+      "answer": "An audit evidence repository organizes approved control documents and records with ownership, access controls, versioning and retention. Evidence should be traceable to the relevant requirement and assessment period."
+    },
+    {
+      "id": "faq-349",
+      "group": "Managed Services",
+      "topic": "Service transition",
+      "question": "What is a service transition plan?",
+      "answer": "A service transition plan defines onboarding activities, dependencies, access, asset discovery, documentation, knowledge transfer, risks and acceptance criteria when a service moves between teams or providers."
+    },
+    {
+      "id": "faq-350",
+      "group": "Cybersecurity",
+      "topic": "Email security",
+      "question": "What is email authentication using SPF, DKIM and DMARC?",
+      "answer": "SPF, DKIM and DMARC are email authentication mechanisms that help receiving systems assess whether messages are authorized and whether message content or sender identity may have been tampered with. Correct deployment requires domain-specific configuration and monitoring."
+    }
+  ]
+}
