@@ -320,7 +320,7 @@ const HeroSection = () => {
   };
 
   // Hero entrance: Lenis-style RAF + lerp for smooth animation; starts after app loader is gone
-  const { loaderDone } = useAppLoader();
+  const { loaderDone, setHeroEntranceDone } = useAppLoader();
   const HERO_DELAY_MS = 0;
   const HERO_TILT_HOLD_MS = 500;
   const HERO_LERP = 0.08; // Slide and text entrance
@@ -330,6 +330,7 @@ const HeroSection = () => {
   const progressRef = useRef({ text: 0, slide: 0, tilt: 0 });
   const targetRef = useRef({ text: 0, slide: 0, tilt: 0 });
   const tiltScheduledRef = useRef(false);
+  const heroDoneSentRef = useRef(false);
   const rafRef = useRef(null);
 
   useEffect(() => {
@@ -359,11 +360,15 @@ const HeroSection = () => {
         setTimeout(() => { targetRef.current.tilt = 1; }, HERO_TILT_HOLD_MS);
       }
       const done = nextText >= 1 && nextSlide >= 1 && nextTilt >= 1;
+      if (done && !heroDoneSentRef.current) {
+        heroDoneSentRef.current = true;
+        setHeroEntranceDone(true);
+      }
       if (!done) rafRef.current = requestAnimationFrame(tick);
     };
     rafRef.current = requestAnimationFrame(tick);
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
-  }, [loaderDone]);
+  }, [loaderDone, setHeroEntranceDone]);
 
   // Dropdown state for "Choose your interest"
   const [capOpen, setCapOpen] = useState(false);

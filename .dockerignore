@@ -13,7 +13,6 @@ terminals
 **/*.log
 **/.DS_Store
 **/Thumbs.db
-chat-api
 studio
 release/globe
 **/*.zip

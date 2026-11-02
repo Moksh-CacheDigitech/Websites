@@ -1,35 +1,10 @@
-# Cache Digitech website + chat-api
-# Web: host 8080 -> container 80 (override: HOST_PORT=3000)
-# Chat: host 3001 -> container 3001 (override: CHAT_HOST_PORT=3001)
-# Nginx proxies /api and /health to the chat service (same-origin chatbot).
+# Cache Digitech website (static React + frontend FAQ chatbot)
+# Host 8080 -> container 80 (override: HOST_PORT=3000)
 services:
-  chat:
-    build: ./chat-api
-    image: cachedigitech-chat-api:latest
-    container_name: cachedigitech-chat
-    ports:
-      - "${CHAT_HOST_PORT:-3001}:3001"
-    environment:
-      PORT: "3001"
-      ALLOWED_ORIGIN: "${ALLOWED_ORIGIN:-https://www.cachedigitech.com,https://cachedigitech.com,http://localhost:8080,http://127.0.0.1:8080,http://localhost:5178,http://127.0.0.1:5178}"
-      OPENAI_API_KEY: "${OPENAI_API_KEY:-}"
-      CHAT_MODEL: "${CHAT_MODEL:-gpt-4o-mini}"
-      EMBEDDING_MODEL: "${EMBEDDING_MODEL:-text-embedding-3-small}"
-      SIMILARITY_THRESHOLD: "${SIMILARITY_THRESHOLD:-0.22}"
-      FAQ_MATCH_THRESHOLD: "${FAQ_MATCH_THRESHOLD:-0.55}"
-      RATE_LIMIT_WINDOW_MS: "${RATE_LIMIT_WINDOW_MS:-60000}"
-      RATE_LIMIT_MAX: "${RATE_LIMIT_MAX:-20}"
-    env_file:
-      - path: ./chat-api/.env
-        required: false
-    restart: unless-stopped
-
   web:
     build: .
     image: cachedigitech-website:latest
     container_name: cachedigitech-web
     ports:
       - "${HOST_PORT:-8080}:80"
-    depends_on:
-      - chat
     restart: unless-stopped

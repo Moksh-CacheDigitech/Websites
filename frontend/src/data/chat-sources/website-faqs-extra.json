@@ -1,0 +1,632 @@
+[
+  {
+    "group": "Company",
+    "topic": "Overview",
+    "question": "What does Cache Digitech do?",
+    "answer": "We are a global system integrator that partners with leaders in business and society to tackle their most important challenges. Our core offerings span system integration and IT infrastructure, cybersecurity, cloud and digital transformation, consulting and audit, data analytics and AI, and managed services. Reach us at info@cachedigitech.com if you want to explore a fit for your organization."
+  },
+  {
+    "group": "Company",
+    "topic": "History",
+    "question": "When was Cache Digitech founded?",
+    "answer": "We were founded in 1991 by Prarthana Gupta. Since then we have grown into an enterprise system integrator serving organizations across India and beyond. For partnership or engagement questions, email info@cachedigitech.com."
+  },
+  {
+    "group": "Company",
+    "topic": "Scale",
+    "question": "How large is Cache Digitech?",
+    "answer": "Our public profile highlights founding in 1991, 800cr+ annual revenue, and service across 300+ Indian cities spanning multiple industries. We also present 32+ years of legacy, pan-India coverage, and 24x7 support and monitoring. Contact info@cachedigitech.com to discuss scale for your program."
+  },
+  {
+    "group": "Company",
+    "topic": "Mission",
+    "question": "What is Cache Digitech's mission?",
+    "answer": "We are dedicated to unlocking the potential of the world's innovators. Our approach is guided by innovative solutions, collaborative growth, and integrity and leadership. We challenge conventional thinking, partner for lasting value, and operate with transparency and accountability."
+  },
+  {
+    "group": "Company",
+    "topic": "Differentiation",
+    "question": "Why choose Cache Digitech?",
+    "answer": "What makes us different is our agility, flexibility, and customer-first mindset. We combine deep technical expertise with human understanding, offering accessible global support, world-class infrastructure, and a skilled team that delivers with speed and empathy. Every engagement reflects our commitment to quality, innovation, and enduring partnerships - write to info@cachedigitech.com to start a conversation."
+  },
+  {
+    "group": "Company",
+    "topic": "Leadership",
+    "question": "Who leads Cache Digitech?",
+    "answer": "Prarthana Gupta is Founder and Chairperson of Cache Digitech Pvt. Ltd., and is also listed as Managing Director of Calipers Consulting Pvt. Ltd. and Founder of the CIO Digital Foundation (CIDIF). Shraddha Gupta is listed as Chief Executive Officer on our leadership team. Our broader leadership includes finance, security, infrastructure, operations, legal, HR, and sales leaders."
+  },
+  {
+    "group": "Company",
+    "topic": "Women-owned",
+    "question": "Is Cache Digitech a women-owned business?",
+    "answer": "Yes - we highlight women-owned status across our site and hold WEConnect International women-owned business certification. This reflects both our ownership profile and our commitment to inclusive enterprise. For supplier diversity or partnership inquiries, email info@cachedigitech.com."
+  },
+  {
+    "group": "Company",
+    "topic": "Legal entity",
+    "question": "What is Cache Digitech's legal name?",
+    "answer": "We operate as Cache Digitech Pvt. Ltd. You will see that name in our site footer and company materials. For contracting or commercial questions, reach our team at info@cachedigitech.com."
+  },
+  {
+    "group": "Contact",
+    "topic": "Email",
+    "question": "How can I email Cache Digitech?",
+    "answer": "You can reach us at info@cachedigitech.com. Our contact page notes that we reply within 24 hours. You can also use the contact form on our Contact Us page."
+  },
+  {
+    "group": "Contact",
+    "topic": "Phone",
+    "question": "What is Cache Digitech's phone number?",
+    "answer": "You can call us at +91 180030 94333. Phone support hours listed on our contact page are Mon-Fri, 9am-6pm IST. For written inquiries, email info@cachedigitech.com."
+  },
+  {
+    "group": "Contact",
+    "topic": "Delhi office",
+    "question": "Where is Cache Digitech's Delhi office?",
+    "answer": "Our Delhi office is at CRC2 Building, Sultanpur, Delhi 110030. We also maintain offices in Mumbai and Dubai. Reach us at info@cachedigitech.com to schedule a visit or discussion."
+  },
+  {
+    "group": "Contact",
+    "topic": "Mumbai office",
+    "question": "Where is Cache Digitech's Mumbai office?",
+    "answer": "Our Mumbai office is at 404, C-Wing, Eastern Court Junction, Tejapal and Parleshwar Road, Vile Parle East, Mumbai 400057. Email info@cachedigitech.com if you need directions or want to arrange a meeting."
+  },
+  {
+    "group": "Contact",
+    "topic": "Dubai office",
+    "question": "Does Cache Digitech have an office in the UAE?",
+    "answer": "Yes. Our Dubai / UAE presence is listed at Compass Building, Al Hulaila, AL Hulaila Industrial Zone-FZ, Ras Al Khaimah, UAE. For regional inquiries, contact info@cachedigitech.com."
+  },
+  {
+    "group": "Contact",
+    "topic": "Locations",
+    "question": "How many office locations does Cache Digitech have?",
+    "answer": "Our progress metrics highlight three office locations - Delhi, Mumbai, and Ras Al Khaimah (UAE). Alongside offices, we emphasize pan-India service coverage. Write to info@cachedigitech.com to connect with the right regional team."
+  },
+  {
+    "group": "Contact",
+    "topic": "Social",
+    "question": "Where can I follow Cache Digitech online?",
+    "answer": "We are active on LinkedIn as Cache Digitech Pvt. Ltd., on Instagram at cache.digitech, on Facebook as CacheDigitech01, and on X under digitech_cache. For direct business inquiries, email info@cachedigitech.com."
+  },
+  {
+    "group": "How We Deliver",
+    "topic": "Methodology",
+    "question": "How does Cache Digitech deliver projects?",
+    "answer": "We use a four-phase model: Assess, Design, Deploy, and Operate and optimize. Assessment covers goals, landscape, audits, gap analysis, and a roadmap before build begins. Design covers architecture, security, and integration blueprints. Deploy uses structured rollout with migration pipelines, automation, testing, and certified cutover, then we stay on for managed NOC/SOC, monitoring, FinOps, and continuous improvement."
+  },
+  {
+    "group": "How We Deliver",
+    "topic": "Accountability",
+    "question": "Do you hand off after go-live?",
+    "answer": "We do not hand off at go-live. We own the journey from discovery and architecture through deployment, managed operations, and continuous improvement so technology investments keep delivering value. Our model is built for enterprise scale with certified engineers, ITIL-aligned processes, and 24x7 NOC/SOC coverage. Contact info@cachedigitech.com to discuss an engagement model."
+  },
+  {
+    "group": "How We Deliver",
+    "topic": "Outcomes",
+    "question": "What outcomes does Cache Digitech highlight for clients?",
+    "answer": "On our How We Deliver page we highlight benchmarks such as faster cloud and infrastructure deployment, faster incident resolution via 24x7 NOC and intelligent operations, lower infrastructure spend through optimized architectures, and faster threat detection through cybersecurity and compliance automation. Exact results depend on your environment - email info@cachedigitech.com to discuss your goals."
+  },
+  {
+    "group": "How We Deliver",
+    "topic": "Differentiators",
+    "question": "What differentiates Cache Digitech's delivery model?",
+    "answer": "We emphasize single-point accountability with ITIL-aligned service delivery from strategy through operations. We bring deep OEM and hyperscaler partnerships, industry expertise across telecom, BFSI, manufacturing, and public sector, and end-to-end ownership of assessment, design, deployment, and managed services. Let's talk at info@cachedigitech.com."
+  },
+  {
+    "group": "Services",
+    "topic": "Core offerings",
+    "question": "What are Cache Digitech's core offerings?",
+    "answer": "Our core offerings include System Integration and IT Infrastructure Solutions, Cybersecurity, Cloud and Digital Transformation, Consulting and Audit, Data Analytics and Artificial Intelligence, and Managed Services. Together these form a full lifecycle technology partnership. Email info@cachedigitech.com to map offerings to your priorities."
+  },
+  {
+    "group": "Cloud",
+    "topic": "Platforms",
+    "question": "Which cloud platforms does Cache Digitech support?",
+    "answer": "We work as partners with AWS, Microsoft Azure, and Google Cloud Platform (GCP). Our cloud practice bridges legacy on-premises architecture with multi-cloud innovation, migration, modernization, FinOps, and 24x7/365 operations. Reach info@cachedigitech.com for a cloud consultation."
+  },
+  {
+    "group": "Cloud",
+    "topic": "Migration",
+    "question": "What cloud migration services do you offer?",
+    "answer": "We support seamless cloud migration and rehosting as well as application replatforming and modernization. That includes lift-and-shift of VMs, ERPs, and databases, plus refactoring monoliths into microservices, containers, and serverless stacks on AWS, Azure, or GCP. Contact info@cachedigitech.com to discuss your migration roadmap."
+  },
+  {
+    "group": "Cloud",
+    "topic": "FinOps",
+    "question": "Can Cache Digitech help optimize cloud costs?",
+    "answer": "Yes. Continuous cloud optimization and FinOps are core pillars of our cloud practice, including rightsizing, reservations, spend discipline, and multi-cloud billing consolidation. Our cloud messaging highlights meaningful cost optimization opportunities through operational and commercial discipline. Write to info@cachedigitech.com for a cost conversation."
+  },
+  {
+    "group": "Cloud",
+    "topic": "Managed cloud",
+    "question": "Do you provide managed cloud and NOC/SOC for cloud?",
+    "answer": "Yes. Our cloud managed services combine enterprise-grade NOC and SOC coverage with multi-cloud monitoring, threat triage, and incident response. Highlights include 24x7/365 live monitoring across multi-cloud endpoints and SIEM-driven autonomous threat triage. Email info@cachedigitech.com to explore managed cloud coverage."
+  },
+  {
+    "group": "Cloud",
+    "topic": "Heritage",
+    "question": "Why is Cache Digitech positioned for hybrid cloud?",
+    "answer": "We bring deep expertise in hybrid architecture, SAN storage, and physical networking alongside hyperscaler cloud capabilities. That heritage helps enterprises that cannot ignore legacy hardware constraints while moving to cloud. Connect with us at info@cachedigitech.com to review your hybrid landscape."
+  },
+  {
+    "group": "Cybersecurity",
+    "topic": "Capabilities",
+    "question": "What cybersecurity services does Cache Digitech offer?",
+    "answer": "We deliver end-to-end security architectures and managed detection and response. Capabilities include consulting, firewall management, EDR/MDR/XDR, NAC, SIEM, vulnerability management, ZTNA, WAF, DLP, SASE, NDR, CASB and CSPM, database activity monitoring, email security, and security audits. Email info@cachedigitech.com to scope a security program."
+  },
+  {
+    "group": "Cybersecurity",
+    "topic": "Approach",
+    "question": "How does Cache Digitech approach cybersecurity engagements?",
+    "answer": "Our cybersecurity methodology runs through Audit, Consult, Design, Implement, and Operate and Manage. We focus on Zero Trust and defense-in-depth across identity, data, and network layers, then operate with continuous threat monitoring and improvement. Reach info@cachedigitech.com to start with a posture discussion."
+  },
+  {
+    "group": "Cybersecurity",
+    "topic": "Specialized services",
+    "question": "Do you offer attack simulations and digital forensics?",
+    "answer": "Yes. Specialized services include social engineering and attack simulations such as phishing, smishing, and vishing, plus Red and Blue Team assessments. We also provide digital forensics and root cause analysis with evidence preservation after incidents. Contact info@cachedigitech.com for specialized security assessments."
+  },
+  {
+    "group": "Cybersecurity",
+    "topic": "Benefits",
+    "question": "What benefits do your cybersecurity programs emphasize?",
+    "answer": "We emphasize holistic coverage across perimeter, endpoint, network, cloud, identity, and data. Programs are tailored to enterprise risks and industry regulations, with continuous resilience and compliance embedded by design. Talk to us at info@cachedigitech.com about your risk profile."
+  },
+  {
+    "group": "Infrastructure",
+    "topic": "Lifecycle",
+    "question": "What infrastructure services does Cache Digitech provide?",
+    "answer": "We consult, design, build, operate, and manage enterprise infrastructure, and we also support data center migration. Coverage includes servers, storage, networking, virtualization, cloud integration, monitoring, and performance optimization. Email info@cachedigitech.com to discuss your infrastructure roadmap."
+  },
+  {
+    "group": "Infrastructure",
+    "topic": "Data center migration",
+    "question": "Can you migrate data centers with minimal downtime?",
+    "answer": "Yes. Our data center migration services cover planning and execution for relocating IT infrastructure, including legacy-to-modern and cloud destinations. We emphasize data protection, continuity, and post-migration validation. Reach info@cachedigitech.com to plan a migration assessment."
+  },
+  {
+    "group": "Networking",
+    "topic": "Assessment",
+    "question": "Do you audit enterprise networks?",
+    "answer": "Yes. Our network audit services assess LAN/WAN performance, security configurations, bandwidth utilization, and connectivity. We identify bottlenecks, vulnerabilities, and optimization opportunities against current and future business needs. Contact info@cachedigitech.com to request a network assessment."
+  },
+  {
+    "group": "Networking",
+    "topic": "Consulting",
+    "question": "What networking consulting does Cache Digitech offer?",
+    "answer": "We help organizations develop network strategies aligned to business objectives, including WAN/LAN planning, enterprise wireless and mobility strategy, and standards and policies. The goal is optimal connectivity, security, and performance. Write to info@cachedigitech.com to engage our networking team."
+  },
+  {
+    "group": "Networking",
+    "topic": "Managed network",
+    "question": "What is included in Network Managed Services?",
+    "answer": "Our Network Managed Services cover end-to-end management of enterprise LAN, WAN, Wi-Fi, SD-WAN, Internet Edge, and data center networks. We use 24x7 monitoring, automation, predictive analytics, and ITIL practices to maximize availability and reduce downtime. Email info@cachedigitech.com for managed network options."
+  },
+  {
+    "group": "Data & AI",
+    "topic": "Services",
+    "question": "What data and AI services does Cache Digitech offer?",
+    "answer": "We offer data modernization, advanced analytics, AI and agentic automation, intelligent CRM and customer insights, and cybersecurity and governance around data solutions. Platforms and partners referenced include Snowflake, Databricks, Senpiper, Bridge AI, and GCP/AWS/Azure. Contact info@cachedigitech.com to explore a data and AI use case."
+  },
+  {
+    "group": "Data & AI",
+    "topic": "Industries",
+    "question": "Which industries benefit from your AI and analytics work?",
+    "answer": "We serve multiple sectors with proven focus in BFSI, Telecom, Retail, Manufacturing, and Healthcare, where data-driven intelligence creates measurable impact. Whether modernizing platforms or starting from limited infrastructure, we design modular and future-ready architectures. Reach info@cachedigitech.com to discuss your sector needs."
+  },
+  {
+    "group": "Data & AI",
+    "topic": "Timelines",
+    "question": "How long do data and AI implementations typically take?",
+    "answer": "Implementation timelines depend on scope and complexity. Our published guidance notes that most solutions are deployed within 8 to 16 weeks using an agile and iterative methodology. Email info@cachedigitech.com with your use case for a more precise estimate."
+  },
+  {
+    "group": "Data & AI",
+    "topic": "Security",
+    "question": "Is data secure when implementing AI with Cache Digitech?",
+    "answer": "Security is intrinsic to our solutions. We implement frameworks for data protection, access control, and regulatory compliance so trust and transparency remain part of every digital ecosystem. For a security and AI discussion, contact info@cachedigitech.com."
+  },
+  {
+    "group": "Telecom",
+    "topic": "Overview",
+    "question": "How does Cache Digitech support telecom operators?",
+    "answer": "For over three decades we have helped service providers and network operators design, build, secure, and scale digital infrastructure. Capabilities include infrastructure modernization, telco cybersecurity, network automation and monitoring, cloud and data center transformation, and global support with field engineering. Email info@cachedigitech.com for telecom engagements."
+  },
+  {
+    "group": "Telecom",
+    "topic": "Scale",
+    "question": "What telecom delivery scale does Cache Digitech claim?",
+    "answer": "Our telecom content highlights 32+ years of system integration expertise, a 500+ certified technocrat workforce, 750+ support locations, and management of over 75,000 devices nationwide. We also reference large-scale IPDR, DNS, CGNAT, broadband gateway, and H-Cloud deployments. Connect at info@cachedigitech.com to discuss operator requirements."
+  },
+  {
+    "group": "Telecom",
+    "topic": "Security",
+    "question": "What cybersecurity capabilities do you provide for telcos?",
+    "answer": "We deploy SIEM, SOAR, UEBA, NGAV, and Zero Trust frameworks for network and enterprise security. Supporting capabilities include firewall policy orchestration, event management, endpoint protection, network visibility, and managed SOC with compliance reporting such as PCI-DSS, GDPR, and SOX. Reach info@cachedigitech.com for telco security discussions."
+  },
+  {
+    "group": "Telecom",
+    "topic": "Future vision",
+    "question": "What is Cache Digitech's telecom future vision?",
+    "answer": "We are investing in AI-driven network operations, green telecom, 5G testbeds and co-innovation labs with partners such as Dell and Cisco, global managed services expansion, and Sanchalan.ai - our indigenous GRC platform for Telecom and BFSI. Talk to us at info@cachedigitech.com about co-innovation."
+  },
+  {
+    "group": "Consulting",
+    "topic": "Overview",
+    "question": "What consulting and auditing services do you offer?",
+    "answer": "Our Consulting and Audit practice helps organizations establish integrity, transparency, and accountability through compliance and audit solutions. Capabilities include regulatory compliance management, intelligent audit automation, enterprise risk and control assessment, policy and document governance, and third-party compliance. Email info@cachedigitech.com to start a consulting conversation."
+  },
+  {
+    "group": "Consulting",
+    "topic": "Standards",
+    "question": "Which compliance standards can Cache Digitech support?",
+    "answer": "Our consulting frameworks align with standards including ISO 27001, SOC 2, and GDPR, and for regulated industries we support obligations such as PCI-DSS, HIPAA, and RBI guidelines. Approach themes include automation-centric frameworks, comprehensive visibility, seamless integration, and security by design. Contact info@cachedigitech.com for a compliance scoping discussion."
+  },
+  {
+    "group": "GRC",
+    "topic": "Overview",
+    "question": "What is included in your GRC offering?",
+    "answer": "Our Governance, Risk and Compliance offering unifies compliance management, information system audit and assurance, IT risk management, and data protection and privacy. It is designed as a single place to address regulatory, audit, risk, and privacy needs. Write to info@cachedigitech.com to explore GRC support."
+  },
+  {
+    "group": "GRC",
+    "topic": "Compliance frameworks",
+    "question": "Which compliance frameworks does Cache Digitech cover?",
+    "answer": "Compliance management coverage includes ISO 27001 ISMS, ISO 22301 BCMS, ISO 27701 PIMS, PCI DSS, Cyber Essentials, NIST, HITRUST, DORA, COBIT, CIS, and SOX applications and ITGC. Coverage details are tailored per engagement. Reach info@cachedigitech.com for framework-specific guidance."
+  },
+  {
+    "group": "GRC",
+    "topic": "Audit domains",
+    "question": "Which audit and assurance domains do you support?",
+    "answer": "Information system audit and assurance spans domains such as RBI, Payment and Settlement Systems, co-operative banks, PPI, IRDA ISNP, SEBI, NPCI, P2P lending, NBFC, GST Suvidha Provider, UIDAI Aadhaar, eSign ASP, and related security standards. Email info@cachedigitech.com to match your audit need."
+  },
+  {
+    "group": "GRC",
+    "topic": "Privacy",
+    "question": "Which privacy regulations does Cache Digitech address?",
+    "answer": "Data protection and privacy coverage includes GDPR, CCPA, India's DPDPA, LGPD, PIPEDA (Canada), Singapore PDPA, and HIPAA. We help organizations align privacy controls with the jurisdictions that matter to them. Contact info@cachedigitech.com for privacy program support."
+  },
+  {
+    "group": "Managed Services",
+    "topic": "Overview",
+    "question": "What managed services does Cache Digitech provide?",
+    "answer": "Managed services sit at the heart of our delivery excellence, with a 24x7 Global NOC and dedicated SOC for continuous monitoring, rapid response, and compliance. Offerings include IT audit and assessment, managed manpower, contract and vendor management, NOC/SOC monitoring and protection, and remote infrastructure management. Email info@cachedigitech.com to discuss coverage."
+  },
+  {
+    "group": "Managed Services",
+    "topic": "NOC SOC",
+    "question": "Do you offer 24x7 NOC and SOC?",
+    "answer": "Yes. We operate round-the-clock Network Operations Center and Security Operations Center capabilities for monitoring, threat detection, incident response, and proactive maintenance. Our How We Deliver and managed services content both emphasize always-on operations. Reach info@cachedigitech.com for NOC/SOC engagement options."
+  },
+  {
+    "group": "Managed Services",
+    "topic": "Staffing",
+    "question": "Can Cache Digitech provide managed IT staffing?",
+    "answer": "Yes. Our managed manpower services provide skilled IT professionals and dedicated support teams, including dedicated resources, project-based teams, and specialized expertise. Teams integrate with your existing organization and can scale with project needs. Contact info@cachedigitech.com to discuss staffing requirements."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Overview",
+    "question": "What is the Cache Digitech AI Ops Center of Excellence?",
+    "answer": "Our AI Ops Center of Excellence is where we win with AI - one governed way to take AI from pilot to production, built once and used everywhere. It pools talent, reusable assets, and governance so each client win becomes capability the next account can use. Email info@cachedigitech.com to learn how the CoE can support your roadmap."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Why now",
+    "question": "Why did Cache Digitech create an AI Ops CoE?",
+    "answer": "Client demand for AI Ops is rising fast, and scattered ops and delivery keep talent, assets, and practices siloed. A shared CoE changes that by pooling standards and compounding value across accounts. Talk to us at info@cachedigitech.com about moving from pilots to governed production."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Pillars",
+    "question": "What are the six pillars of the AI Ops CoE?",
+    "answer": "The six pillars are a component-centric model, a core ops and AI team, data management, a flexible development approach, common infrastructure, and risk and compliance. Together they align business goals with technical delivery under shared governance. Contact info@cachedigitech.com for a CoE walkthrough."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Mandate",
+    "question": "What is the AI Ops CoE accountable for?",
+    "answer": "The CoE owns the shared capability that turns client needs into governed, reusable AI solutions. Mandate dimensions include cost optimisation, service-level excellence, an AI adoption index, and closed-loop use-case adoption. Write to info@cachedigitech.com to discuss CoE-backed outcomes."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Proof points",
+    "question": "What proof points does the AI Ops CoE share for alert intelligence?",
+    "answer": "Our CoE proof points for alert and log intelligence include 85% of alerts resolved before analyst involvement, 99.7% detection accuracy after a 2-3 month behavioural learning period, triage time reduced to 4-5 minutes versus 4-5 hours previously, and leaner storage by filtering noise at source. Results are context-specific - email info@cachedigitech.com to explore applicability."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Operating model",
+    "question": "How does the AI Ops operating model work?",
+    "answer": "Operating tiers cover operation process, service and optimisation, and stability process. Agent roles span autonomous resolution and escalation, triage, routing and self-healing, and predictive alerting with root-cause analysis. Operational functions include AI NOC/SOC, AI solutions development, field operations, engineering, security operations, and deployment and rollout."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Pipeline",
+    "question": "How does the AI Ops incident pipeline work?",
+    "answer": "The pipeline ingests inventory, performance, and live alarm streams, normalises vendor schemas into one telemetry model, correlates and enriches alerts with topology context, auto-opens incidents when correlated clusters breach thresholds, then runs a multi-agent loop to gather evidence, rank root causes, remediate, and verify recovery. Contact info@cachedigitech.com to discuss AI Ops for your estate."
+  },
+  {
+    "group": "Innovations",
+    "topic": "iConnectPlus ERP",
+    "question": "What is iConnectPlus ERP?",
+    "answer": "iConnectPlus ERP is our integrated enterprise resource planning platform that unifies finance, inventory, procurement, sales, and operations in one system. It gives leadership real-time visibility, streamlines approvals and compliance, and reduces manual handoffs between departments. Built for mid-to-large enterprises, it supports modular scale and role-based access - email info@cachedigitech.com for a demo conversation."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Techbank",
+    "question": "What is Techbank.Ai?",
+    "answer": "Techbank.Ai is an AI-powered talent acquisition and resume intelligence platform. Candidates upload resumes while AI extracts skills, experience, certifications, and education, and administrators track pipelines with semantic matching and ranking. Dedicated portals cover guests, freelancers, and employees across the hiring lifecycle. Reach info@cachedigitech.com to learn more."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Bid Intelligence",
+    "question": "What is Bid Intelligence?",
+    "answer": "Bid Intelligence is an AI-powered RFP and tender analysis platform. It extracts requirements, technical specifications, and financial parameters from tender documents, analyzes risk and compliance needs, and helps teams generate cost estimates and structured responses. The goal is faster, more accurate bids with higher win rates. Contact info@cachedigitech.com for details."
+  },
+  {
+    "group": "Innovations",
+    "topic": "AskCache",
+    "question": "What is AskCache.ai?",
+    "answer": "AskCache.ai is an enterprise AI knowledge and solution architecture assistant built with Retrieval-Augmented Generation. It combines internal knowledge bases, technical documentation, and infrastructure guidelines to answer complex technology queries. It can also produce architecture diagrams, bills of materials, solution designs, and estimated pricing for IT and sales engineering teams."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Cache CRM",
+    "question": "What is Cache CRM?",
+    "answer": "Cache CRM is a centralized enterprise CRM that manages the customer lifecycle from lead generation and sales tracking through order processing, compliance management, and deployment workflows. Workflow-driven architecture keeps actions, documents, and approvals traceable in real time for transparency and audit readiness. Email info@cachedigitech.com if you want to explore it."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Cache HRMS",
+    "question": "What is Cache HRMS?",
+    "answer": "Cache HRMS digitizes and automates HR operations by centralizing employee records, attendance, leave, expenses, payroll, and approval workflows in one secure system. Strong access controls and audit tracking reduce operational errors and give management real-time workforce visibility. Contact info@cachedigitech.com for HRMS inquiries."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Employee App",
+    "question": "What does the Employee Performance App do?",
+    "answer": "The Employee Performance App supports structured goal setting, continuous performance monitoring, and detailed manager feedback. Integrated geo-location tracking provides visibility into field operations and employee presence to support data-driven performance decisions. Write to info@cachedigitech.com to discuss workforce performance tools."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Cache BI",
+    "question": "What is Cache BI?",
+    "answer": "Cache BI is our in-house business intelligence and analytics platform built on a centralized enterprise data lake. It consolidates data from CRM, operational databases, and business applications into customized dashboards and visual analytics. Leadership and teams use it to turn raw data into actionable decisions."
+  },
+  {
+    "group": "Innovations",
+    "topic": "EDM",
+    "question": "What is the Enterprise Digital Marketing platform?",
+    "answer": "Our EDM platform centralizes digital marketing assets and lead generation tracking. Administrators can upload whitepapers, brochures, and downloadable resources while capturing engagement and lead data. Marketing teams can analyze asset performance, export leads, and feed insights into sales workflows."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Mail Integration",
+    "question": "What is the AI Mail Operations Platform?",
+    "answer": "The AI Mail Operations Platform manages high-volume enterprise email by reading messages, classifying intent, prioritizing urgency, and routing to the right departments. It also detects leads, escalations, and spam while generating intelligent summaries. The result is lower manual workload and fewer missed critical communications."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Cache GPT",
+    "question": "What is Cache GPT?",
+    "answer": "Cache GPT is a secure, on-premises generative AI platform designed as an enterprise alternative to public AI chat systems. It supports knowledge retrieval, document assistance, and internal productivity while keeping data inside your infrastructure. Email info@cachedigitech.com if private GenAI deployment is a priority."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Cache DB",
+    "question": "What is Cache DB?",
+    "answer": "Cache DB is an automated database management platform for secure enterprise deployments. It simplifies provisioning, monitoring, backup management, and performance optimization through automated workflows and centralized administration. Built-in security and reliability help teams manage critical data infrastructure efficiently."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Cache DOC",
+    "question": "What is Cache DOC?",
+    "answer": "Cache DOC is an enterprise document management system with secure storage, version control, and collaborative workflows. Organizations use it for contracts, reports, policies, and internal documentation with structured access controls and complete version history. That supports traceability, compliance, and knowledge management across teams."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Custom development",
+    "question": "Do you build custom web and mobile applications?",
+    "answer": "Yes. Our Web and App Development practice delivers end-to-end software around your workflows and goals, from web and mobile apps to internal tools and integrations. We build scalable, secure systems using modern stacks and best practices, with ongoing support and iterative improvement. Contact info@cachedigitech.com to discuss a build."
+  },
+  {
+    "group": "Innovations",
+    "topic": "AI Ops featured",
+    "question": "Which innovations are featured with the AI Ops CoE?",
+    "answer": "Featured AI Ops CoE projects include Techbank, Bid Intelligence, Cache CRM, Cache HRMS, Mail Integration, iConnectPlus ERP, and custom web and app development. These products show how we turn AI and automation into reusable enterprise capability. Email info@cachedigitech.com to explore any of them."
+  },
+  {
+    "group": "Partners",
+    "topic": "Technology partners",
+    "question": "Who are Cache Digitech's technology partners?",
+    "answer": "Strategic partners highlighted on our site include Microsoft, Amazon AWS, Cisco, Red Hat, CloudSek, IBM, SentinelOne, Palo Alto, Dell, Fortinet, Trellix, and Tenable. Broader cybersecurity and infrastructure alliances also include brands such as CrowdStrike, Check Point, Zscaler, Nutanix, and others. Reach info@cachedigitech.com to discuss partner-led solutions."
+  },
+  {
+    "group": "Partners",
+    "topic": "Benefits",
+    "question": "How do partnerships benefit Cache Digitech clients?",
+    "answer": "Partnerships give us certified excellence with leading vendors, access to global resources and innovations, strategic alliances for comprehensive delivery, and industry-specific solution focus. Deep OEM and hyperscaler ties also support co-innovation and joint solutions. Contact info@cachedigitech.com if you want a partner-aligned architecture discussion."
+  },
+  {
+    "group": "Certifications",
+    "topic": "Quality and security",
+    "question": "What certifications does Cache Digitech hold?",
+    "answer": "Our certifications page highlights ISO 9001:2015 for quality management, ISO 27001:2022 for information security management, MSME registration, NISC registration, and WEConnect International women-owned business certification. Cybersecurity content also references additional ISO and SOC certifications and CMMI. Email info@cachedigitech.com for current certification details relevant to your RFP."
+  },
+  {
+    "group": "Certifications",
+    "topic": "CMMI",
+    "question": "Does Cache Digitech reference CMMI?",
+    "answer": "Yes. Our progress metrics highlight CMMI Level 5, and our cybersecurity and innovations content reference CMMI among governance and delivery credentials. Certifications help us innovate with governance and trust. For formal evidence in a bid, write to info@cachedigitech.com."
+  },
+  {
+    "group": "Industries",
+    "topic": "Sectors served",
+    "question": "Which industries does Cache Digitech serve?",
+    "answer": "We serve Telecom, BFSI, Automobile and Manufacturing, Retail, Healthcare and Hospitality, Governance / Government and Public Sector, and IT and ITES. Industry vertical storytelling also covers digital transformation for banking, healthcare, retail and e-commerce, and telecommunications including 5G and fiber. Contact info@cachedigitech.com with your industry context."
+  },
+  {
+    "group": "Industries",
+    "topic": "BFSI",
+    "question": "How does Cache Digitech support BFSI?",
+    "answer": "For Banking, Financial Services and Insurance we provide digital transformation solutions for secure financial operations, plus compliance and audit support aligned to frameworks such as RBI, ISO, and SOC 2. GRC and cybersecurity capabilities are especially relevant for regulated financial environments. Reach info@cachedigitech.com for BFSI discussions."
+  },
+  {
+    "group": "Industries",
+    "topic": "Healthcare",
+    "question": "Do you serve healthcare organizations?",
+    "answer": "Yes. We support healthcare and medical organizations with digital health solutions, medical system integration, and HIPAA-aligned frameworks for data governance and patient information security where applicable. Email info@cachedigitech.com to explore healthcare technology needs."
+  },
+  {
+    "group": "Industries",
+    "topic": "Retail",
+    "question": "What do you offer for retail and e-commerce?",
+    "answer": "For retail and e-commerce we focus on omnichannel retail solutions and customer experience platforms, along with data privacy compliance, customer data protection, and transaction integrity assurance. Contact info@cachedigitech.com to discuss retail digital priorities."
+  },
+  {
+    "group": "Industries",
+    "topic": "Customers",
+    "question": "Which customers appear in Cache Digitech's trusted-by profile?",
+    "answer": "Our profile marquee highlights organizations such as Airtel, HT Media, Ericsson, iEnergizer, Indus Towers, JK Cement, Jubilant, Dr Lal PathLabs, TCL, Nokia, Cisco, NSE, RJ Corp, CDAC, PhonePe, Hero MotoCorp, and Vodafone. Logos indicate brands we associate with our delivery story. For references relevant to your sector, email info@cachedigitech.com."
+  },
+  {
+    "group": "Careers",
+    "topic": "Culture",
+    "question": "What is it like to work at Cache Digitech?",
+    "answer": "We invite people to explore new opportunities on a team that values innovation, integrity, and impact. Our careers messaging emphasizes combining human ingenuity with breakthrough technology and fostering innovation for an inclusive workplace. Explore open roles on our Careers page or write to info@cachedigitech.com."
+  },
+  {
+    "group": "Careers",
+    "topic": "Open roles",
+    "question": "What kinds of roles does Cache Digitech hire for?",
+    "answer": "Latest jobs listed on our Careers page include Inside Sales Executive, Security Engineer, Networking Engineer, IT Infrastructure Engineer, MIM, and Business Development Manager. Roles shown are based in India | New Delhi under the Technology business area. Check the Careers page for current openings or email info@cachedigitech.com."
+  },
+  {
+    "group": "Company",
+    "topic": "Service domains",
+    "question": "How many service domains does Cache Digitech cover?",
+    "answer": "Our progress metrics highlight 7+ core service domains and 6+ industry verticals served, with pan-India coverage and 24x7 monitoring. Practically that spans cloud, cybersecurity, infrastructure and networking, data and AI, consulting and GRC, managed services, and telecom. Contact info@cachedigitech.com to identify the right domain team."
+  },
+  {
+    "group": "Company",
+    "topic": "Promise",
+    "question": "What is Cache Digitech's customer promise?",
+    "answer": "Our founder message centers on purpose-led innovation across cybersecurity, AI, cloud, and IT infrastructure, with customers first always. The brand promise highlighted with leadership is Growth is Guaranteed - That's Cache's Promise. For a conversation about partnership, email info@cachedigitech.com."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Approach",
+    "question": "How does Cache Digitech approach innovation?",
+    "answer": "Our innovation pillars include ideation and research, technology adoption across AI, GenAI, cloud-native and edge, accelerators and IP, and ecosystem partnerships with OEMs and innovators. Focus areas span AI and GenAI, cloud and digital, cybersecurity, engineering and R&D, and industry solutions. Write to info@cachedigitech.com to co-create."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Cloud innovation",
+    "question": "How does AI Ops CoE relate to cloud innovation?",
+    "answer": "CoE cloud innovation themes include hybrid and multi-cloud strategy across AWS, Azure, GCP, and on-prem with one operating model, migration and modernization, cloud-native and serverless patterns, FinOps and cost optimization, and security and compliance built into every design. Email info@cachedigitech.com to align CoE and cloud priorities."
+  },
+  {
+    "group": "Telecom",
+    "topic": "Field support",
+    "question": "Do you provide field engineering for telecom?",
+    "answer": "Yes. Global support and field engineering services include dedicated NOC/SOC with ITIL-aligned operations and L1-L3 support, plus field engineering presence across 8+ remote locations for leading operators. Engineers hold certifications such as CCNA, NSE, and OEM credentials. Contact info@cachedigitech.com for field and managed support needs."
+  },
+  {
+    "group": "Contact",
+    "topic": "Getting started",
+    "question": "How do I start working with Cache Digitech?",
+    "answer": "The simplest path is to email info@cachedigitech.com or use the Contact Us form on our website. Share your industry, current landscape, and the outcome you need - cloud, security, infrastructure, AI, GRC, or managed services - and our team will route you to the right specialists. Phone support is also available at +91 180030 94333 during listed business hours."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Overview",
+    "question": "What is AI Ops CoE on your website?",
+    "answer": "AI Ops CoE is our AI Ops Center of Excellence - where we win with AI through one governed way to take AI from pilot to production, built once and used everywhere. It pools talent, reusable assets, and governance so each client win becomes capability the next account can use. Email info@cachedigitech.com to learn how the CoE can support your roadmap."
+  },
+  {
+    "group": "Company",
+    "topic": "Overview",
+    "question": "Tell me about Cache Digitech.",
+    "answer": "We are Cache Digitech Pvt. Ltd., a global system integrator founded in 1991 by Prarthana Gupta. We partner with leaders in business and society across system integration and IT infrastructure, cybersecurity, cloud and digital transformation, consulting and audit, data analytics and AI, and managed services. Our public profile highlights 800cr+ annual revenue, service across 300+ Indian cities, pan-India coverage, and 24x7 support. Reach us at info@cachedigitech.com to explore a fit."
+  },
+  {
+    "group": "Contact",
+    "topic": "Response time",
+    "question": "How quickly do you respond to inquiries?",
+    "answer": "Our Contact Us page notes that we reply to email at info@cachedigitech.com within 24 hours. Phone support is listed Mon-Fri, 9am-6pm IST at +91 180030 94333. You can also use the contact form on our Contact Us page."
+  },
+  {
+    "group": "Cloud",
+    "topic": "Multi-cloud",
+    "question": "Do you support multi-cloud environments?",
+    "answer": "Yes. We partner with AWS, Microsoft Azure, and Google Cloud Platform and help enterprises bridge legacy on-premises architecture with multi-cloud innovation, migration, modernization, FinOps, and 24x7x365 operations. Our AI Ops CoE and innovations content also emphasize hybrid and multi-cloud strategy with one operating model. Contact info@cachedigitech.com for a multi-cloud discussion."
+  },
+  {
+    "group": "Cybersecurity",
+    "topic": "Zero Trust",
+    "question": "Do you implement Zero Trust security?",
+    "answer": "Yes. Our cybersecurity approach focuses on Zero Trust and defense-in-depth across identity, data, and network layers, including Zero Trust Network Access (ZTNA). For telecom, we also deploy Zero Trust frameworks alongside SIEM, SOAR, UEBA, and NGAV. Email info@cachedigitech.com to scope a Zero Trust program."
+  },
+  {
+    "group": "Managed Services",
+    "topic": "Remote infrastructure",
+    "question": "Do you offer remote infrastructure management?",
+    "answer": "Yes. Remote infrastructure management is part of our managed services offering, alongside comprehensive cloud operations and system administration, IT audit and assessment, managed manpower, contract and vendor management, and 24x7 NOC/SOC monitoring. Write to info@cachedigitech.com to discuss coverage for your estate."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Products",
+    "question": "What products has Cache Digitech built?",
+    "answer": "Our innovation portfolio includes iConnectPlus ERP, Techbank.Ai, Bid Intelligence, AskCache.ai, Cache CRM, Cache HRMS, the Employee Performance App, Cache BI, our Enterprise Digital Marketing (EDM) platform, the AI Mail Operations Platform, Cache GPT, Cache DB, and Cache DOC, plus custom web and app development. Featured AI Ops CoE projects highlight several of these as reusable enterprise capability. Email info@cachedigitech.com to explore any product."
+  },
+  {
+    "group": "Partners",
+    "topic": "Hyperscalers",
+    "question": "Are you partners with AWS Azure and Google Cloud?",
+    "answer": "Yes. We work as partners with AWS, Microsoft Azure, and Google Cloud Platform (GCP). Our cloud practice covers migration, modernization, FinOps, multi-cloud billing, and managed cloud operations across these hyperscalers. Reach info@cachedigitech.com for a partner-led cloud conversation."
+  },
+  {
+    "group": "Telecom",
+    "topic": "Overview",
+    "question": "Do you work with telecom companies?",
+    "answer": "Yes. For over three decades we have helped service providers and network operators design, build, secure, and scale digital infrastructure. Capabilities include infrastructure modernization, telco cybersecurity, network automation and monitoring, cloud and data center transformation, and global support with field engineering. Our trusted-by profile includes brands such as Airtel, Ericsson, Indus Towers, Nokia, and Vodafone. Contact info@cachedigitech.com for telecom engagements."
+  },
+  {
+    "group": "Company",
+    "topic": "History",
+    "question": "How many years has Cache Digitech been in business?",
+    "answer": "We were founded in 1991, and our public profile highlights 32+ years of legacy as an enterprise system integrator. That experience spans IT infrastructure, cybersecurity, cloud, telecom, and managed services across India and beyond. For partnership questions, email info@cachedigitech.com."
+  },
+  {
+    "group": "How We Deliver",
+    "topic": "Methodology",
+    "question": "What are the phases of your delivery methodology?",
+    "answer": "We use a four-phase model: Assess, Design, Deploy, and Operate and optimize. Assessment covers goals, landscape, audits, gap analysis, and a roadmap. Design covers architecture, security, and integration blueprints. Deploy uses structured rollout with migration pipelines, automation, testing, and certified cutover. Then we stay on for managed NOC/SOC, monitoring, FinOps, and continuous improvement. Reach info@cachedigitech.com to discuss an engagement."
+  },
+  {
+    "group": "AI Ops CoE",
+    "topic": "Use cases",
+    "question": "What AI Ops use cases does Cache Digitech support?",
+    "answer": "Our AI Ops CoE supports closed-loop operational use cases such as alert and log intelligence, autonomous incident resolution and escalation, triage routing and self-healing, predictive alerting and root-cause analysis, AI NOC/SOC, service desk automation, and multi-agent remediation pipelines that ingest, correlate, and remediate across multi-vendor estates. Proof points for alert intelligence include faster triage and high detection accuracy after behavioural learning. Email info@cachedigitech.com to map use cases to your environment."
+  },
+  {
+    "group": "Certifications",
+    "topic": "ISO",
+    "question": "Are you ISO certified?",
+    "answer": "Yes. Our certifications page highlights ISO 9001:2015 for quality management and ISO 27001:2022 for information security management. Cybersecurity content also references additional ISO-aligned credentials alongside SOC and CMMI. For formal evidence in an RFP, write to info@cachedigitech.com."
+  },
+  {
+    "group": "Contact",
+    "topic": "Meeting",
+    "question": "Can I schedule a meeting with Cache Digitech?",
+    "answer": "Yes. Email info@cachedigitech.com or use the Contact Us form on our website to request a meeting - we reply within 24 hours. You can also call +91 180030 94333 during Mon-Fri, 9am-6pm IST. Share your industry and priorities so we can connect you with the right specialists."
+  },
+  {
+    "group": "Innovations",
+    "topic": "Sanchalan.ai",
+    "question": "What is Sanchalan.ai?",
+    "answer": "Sanchalan.ai is our indigenous GRC platform for automating compliance and risk management for Telecom and BFSI. It is highlighted in our telecom future vision alongside AI-driven network operations, green telecom, 5G co-innovation, and global managed services. Contact info@cachedigitech.com to discuss Sanchalan.ai for your compliance needs."
+  }
+]

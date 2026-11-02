@@ -45,16 +45,5 @@ export default defineConfig({
     watch: {
       ignored: ['**/dist/**', '**/dist.zip', '**/*.zip'],
     },
-    // Proxy chat API in local Vite (chat-api default port 3001)
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3001',
-        changeOrigin: true,
-      },
-      '/health': {
-        target: 'http://localhost:3001',
-        changeOrigin: true,
-      },
-    },
   },
 })

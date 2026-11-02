@@ -1,9 +1,11 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
+import { answerFromFaqs } from '../lib/faqChat';
 
 const ChatContext = createContext(null);
 
-// Empty = same-origin / Vite proxy. Production: set VITE_CHAT_API_URL to the Node chat-api URL.
-const CHAT_API_URL = (import.meta.env.VITE_CHAT_API_URL || '').replace(/\/$/, '');
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 export function ChatProvider({ children }) {
   const [messages, setMessages] = useState([]);
@@ -19,22 +21,17 @@ export function ChatProvider({ children }) {
 
     setInput('');
     const userMessage = { role: 'user', content: text };
-    const nextMessages = [...messages, userMessage];
-    setMessages(nextMessages);
+    setMessages((prev) => [...prev, userMessage]);
     setLoading(true);
     setChatError(null);
 
     try {
-      const res = await fetch(`${CHAT_API_URL}/api/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: nextMessages.slice(-12) }),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(data.error || `Chat request failed (${res.status})`);
-      }
-      const reply = String(data.reply || '').trim() || 'Sorry, I could not generate a reply.';
+      // Brief pause so the typing dots feel natural (fully client-side FAQ match)
+      await wait(280 + Math.min(420, text.length * 8));
+      const result = answerFromFaqs(text);
+      const reply =
+        String(result?.reply || '').trim() ||
+        "I'd love to help with Cache Digitech services. Reach us at info@cachedigitech.com.";
       setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
     } catch (err) {
       console.warn('[chat]', err);
@@ -44,16 +41,28 @@ export function ChatProvider({ children }) {
         {
           role: 'assistant',
           content:
-            'Sorry - the assistant is temporarily unavailable. Please email info@cachedigitech.com or use /contactus.',
+            'Sorry - something went wrong. Please email info@cachedigitech.com or use /contactus.',
         },
       ]);
     } finally {
       setLoading(false);
     }
-  }, [input, loading, messages]);
+  }, [input, loading]);
 
   return (
-    <ChatContext.Provider value={{ messages, setMessages, input, setInput, loading, chatError, setChatError, hasAsked, sendMessage }}>
+    <ChatContext.Provider
+      value={{
+        messages,
+        setMessages,
+        input,
+        setInput,
+        loading,
+        chatError,
+        setChatError,
+        hasAsked,
+        sendMessage,
+      }}
+    >
       {children}
     </ChatContext.Provider>
   );

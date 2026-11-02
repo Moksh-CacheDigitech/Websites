@@ -15,9 +15,6 @@
     "docker:build": "docker build -t cachedigitech-website:latest .",
     "docker:up": "docker compose up -d --build",
     "docker:down": "docker compose down",
-    "docker:logs": "docker compose logs -f web",
-    "chat:install": "npm install --prefix chat-api",
-    "chat:extract": "npm run extract --prefix chat-api",
-    "chat:start": "npm start --prefix chat-api"
+    "docker:logs": "docker compose logs -f web"
   }
 }

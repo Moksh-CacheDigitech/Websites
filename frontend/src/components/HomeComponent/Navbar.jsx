@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Menu, ChevronLeft, ChevronRight, ChevronDown, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { navLinks } from "./navLinks";
+import { useAppLoader } from "../../context/AppLoaderContext";
 
 /* -- Sections that are direct links (no dropdown) -- */
 const DIRECT_LINK_SECTIONS = ["Contact", "AI Ops CoE"];
@@ -120,11 +121,51 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   // Hide navbar on scroll down, show on scroll up
   const [navbarVisible, setNavbarVisible] = useState(true);
+  // Hero-style 3D entrance from above / inside (-Z)
+  const [navProgress, setNavProgress] = useState(0);
+  const navProgressRef = useRef(0);
+  const navTargetRef = useRef(0);
+  const navRafRef = useRef(null);
   const lastScrollY = useRef(0);
   const scrollThreshold = 100;
+  const NAV_LERP = 0.08;
 
   const navigate = useNavigate();
   const location = useLocation();
+  const { loaderDone } = useAppLoader();
+
+  useEffect(() => {
+    if (!loaderDone) return undefined;
+    const reduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) {
+      navTargetRef.current = 1;
+      navProgressRef.current = 1;
+      setNavProgress(1);
+      return undefined;
+    }
+    const t = setTimeout(() => {
+      navTargetRef.current = 1;
+    }, 40);
+    return () => clearTimeout(t);
+  }, [loaderDone]);
+
+  useEffect(() => {
+    const tick = () => {
+      const cur = navProgressRef.current;
+      const tgt = navTargetRef.current;
+      const next = cur + (tgt - cur) * NAV_LERP;
+      const settled = Math.abs(next - tgt) < 0.0005 ? tgt : next;
+      navProgressRef.current = settled;
+      if (settled !== cur) setNavProgress(settled);
+      navRafRef.current = requestAnimationFrame(tick);
+    };
+    navRafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (navRafRef.current) cancelAnimationFrame(navRafRef.current);
+    };
+  }, []);
 
   // Use light navbar text + visible bar on pages with dark hero when at top
   const darkHeroPaths = [
@@ -252,7 +293,23 @@ function Navbar() {
       {/* -- Top Navbar: floating, dark translucent, white text, red logo -- */}
       <nav
         ref={megaRef}
-        className={`fixed top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 z-1000 transition-all duration-600 ease-out bg-black/25 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl ${navbarVisible ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-[calc(100%+2rem)] opacity-0 pointer-events-none"}`}
+        className={`fixed top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 z-1000 bg-black/25 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl ${navProgress > 0.2 && navbarVisible ? "pointer-events-auto" : "pointer-events-none"
+          }`}
+        style={{
+          perspective: "1200px",
+          transformStyle: "preserve-3d",
+          backfaceVisibility: "hidden",
+          // From up-screen + deep -Z (same inside feel as hero slide-from-right)
+          transform: navbarVisible
+            ? `translateY(calc(${-100 * (1 - navProgress)}% - ${16 * (1 - navProgress)}vh)) translateZ(${-28 * (1 - navProgress)}px) scale(${0.98 + 0.02 * navProgress})`
+            : "translateY(calc(-100% - 2.5rem)) translateZ(0px)",
+          opacity: navbarVisible ? 0.92 + 0.08 * navProgress : 0,
+          transition:
+            navProgress >= 1
+              ? "transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease"
+              : undefined,
+          willChange: navProgress < 1 || !navbarVisible ? "transform, opacity" : "auto",
+        }}
       >
         <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 lg:px-10 py-4 relative">
           {/* Left: Hamburger (mobile) + Logo (desktop) */}
