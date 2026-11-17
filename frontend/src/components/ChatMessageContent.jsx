@@ -1,45 +1,43 @@
 import React from 'react';
 
-const LINK_RE =
-  /(https?:\/\/[^\s<]+[^.,;:!?\s)]|[\w.+-]+@[\w-]+\.[\w.-]+|\+?\d[\d\s()-]{8,}\d)/g;
-
-const ABBREVIATIONS = [
-  'Pvt.',
-  'Ltd.',
-  'Inc.',
-  'Corp.',
-  'Co.',
-  'LLC.',
-  'Mr.',
-  'Mrs.',
-  'Ms.',
-  'Dr.',
-  'Prof.',
-  'Sr.',
-  'Jr.',
-  'vs.',
-  'etc.',
-  'e.g.',
-  'i.e.',
-  'U.S.',
-  'U.K.',
-  'U.A.E.',
-  'No.',
-  'Dept.',
-  'Fig.',
-  'Vol.',
-  'St.',
-  'Ave.',
-  'Rd.',
-  'approx.',
+// Literal patterns only - avoid runtime RegExp construction (ReDoS SAST).
+const ABBREVIATION_RES = [
+  /Pvt\./gi,
+  /Ltd\./gi,
+  /Inc\./gi,
+  /Corp\./gi,
+  /Co\./gi,
+  /LLC\./gi,
+  /Mr\./gi,
+  /Mrs\./gi,
+  /Ms\./gi,
+  /Dr\./gi,
+  /Prof\./gi,
+  /Sr\./gi,
+  /Jr\./gi,
+  /vs\./gi,
+  /etc\./gi,
+  /e\.g\./gi,
+  /i\.e\./gi,
+  /U\.S\./gi,
+  /U\.K\./gi,
+  /U\.A\.E\./gi,
+  /No\./gi,
+  /Dept\./gi,
+  /Fig\./gi,
+  /Vol\./gi,
+  /St\./gi,
+  /Ave\./gi,
+  /Rd\./gi,
+  /approx\./gi,
 ];
 
 /** Protect abbreviations so sentence splitting does not break "Pvt. Ltd.". */
 function protectAbbreviations(text) {
   let out = text;
   const saved = [];
-  for (const abbr of ABBREVIATIONS) {
-    const re = new RegExp(abbr.replace(/\./g, '\\.'), 'gi');
+  for (const re of ABBREVIATION_RES) {
+    re.lastIndex = 0;
     out = out.replace(re, (match) => {
       const token = `§ABBR${saved.length}§`;
       saved.push(match);
@@ -137,10 +135,12 @@ function normalizeContent(content) {
 function linkifySegment(text, keyPrefix) {
   const nodes = [];
   let last = 0;
-  let match;
   let i = 0;
-  const re = new RegExp(LINK_RE.source, 'g');
-  while ((match = re.exec(text)) !== null) {
+  // Fresh literal each call (no RegExp(source) clone).
+  const re =
+    /(https?:\/\/[^\s<]+[^.,;:!?\s)]|[\w.+-]+@[\w-]+\.[\w.-]+|\+?\d[\d\s()-]{8,}\d)/g;
+  let match = re.exec(text);
+  while (match !== null) {
     if (match.index > last) nodes.push(text.slice(last, match.index));
     const token = match[0];
     const isUrl = /^https?:\/\//i.test(token);
@@ -159,6 +159,7 @@ function linkifySegment(text, keyPrefix) {
     );
     last = match.index + token.length;
     i += 1;
+    match = re.exec(text);
   }
   if (last < text.length) nodes.push(text.slice(last));
   return nodes;

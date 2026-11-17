@@ -33,9 +33,8 @@ export function ChatProvider({ children }) {
         String(result?.reply || '').trim() ||
         "I'd love to help with Cache Digitech services. Reach us at info@cachedigitech.com.";
       setMessages((prev) => [...prev, { role: 'assistant', content: reply }]);
-    } catch (err) {
-      console.warn('[chat]', err);
-      setChatError(err.message || 'Chat is temporarily unavailable.');
+    } catch {
+      setChatError('Chat is temporarily unavailable.');
       setMessages((prev) => [
         ...prev,
         {
